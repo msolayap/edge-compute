@@ -45,9 +45,7 @@ namespace eval Juniper {
 				send "$password\r" ;
 				exp_continue ;
 			}
-			-re $prompt {
-				send "set cli screen-length 0\r" ;
-			}
+			-re $prompt {}
 		}
 		return 0;
 	}
@@ -75,10 +73,10 @@ namespace eval Juniper {
 					expect {
 						-re $prompt {}
 						-re "(ptx1000|JUNOS)" {
-							set device_vendor "juniper"
+							set device_vendor "Juniper"
 						}
 						-re "(Nokia)" {
-							set device_vendor "nokia"
+							set device_vendor "Nokia"
 						}
 						-re "\(more\)" {
 							send -s  "\r" ;

@@ -49,7 +49,10 @@ proc init_terminal {} {
 
 proc detect_device_vendor {} {
 
-	global vendor_detected device_vendor prompt device_vendor
+	global vendor_detected prompt ;
+
+	set d_vendor "unknown" ;
+	set vendor_detected 0 ;
 
 	send -s  "\r" ;
 	expect {
@@ -58,11 +61,11 @@ proc detect_device_vendor {} {
 				send "show version\r" ;
 				expect {
 					-re "(ptx1000|JUNOS)" {
-						set device_vendor "Juniper"
+						set d_vendor "Juniper"
 						expect -re $prompt {}
 					}
 					-re "(Nokia)" {
-						set device_vendor "Nokia"
+						set d_vendor "Nokia"
 						expect -re $prompt {}
 					}
 					-re "\(more\)" {
@@ -75,7 +78,7 @@ proc detect_device_vendor {} {
 			}
 		}
 	}
-	return $device_vendor 
+	return $d_vendor ;
 }
 
 proc get_arp_entries { {arp_filter ""} } {

@@ -129,7 +129,7 @@ proc get_device_list {device_list_file} {
 	set device_list {}
 
 	if { [catch {set dfh [open $device_list_file "r"] } err] } {
-		puts "cannot open file $device_list_file. Error: $err" ;
+		lputs "cannot open file $device_list_file. Error: $err" "ERROR" ;
 		return -code error "cannot open file: $device_list_file"
 	} else {
 # read and close the file 
@@ -169,8 +169,8 @@ proc load_methods_for {vendor} {
 			append device_namespace $dtype {::*}
 			lputs "Importing methods for $device_namespace" ;
 			if { [catch {namespace import -force  $device_namespace} err] } {
-				lputs "loading namespace $device_namespace failed.\nError: $err" ;
-				return -code 1
+				lputs "loading namespace $device_namespace failed. Error: $err" "ERROR" 
+				return 1
 			}
 		}
 		default {

@@ -560,3 +560,344 @@ user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
 2020-12-05T21:05:25UTC ARP_SYNC[7094] INFO Logging into device rancid@100.80.15.102
 2020-12-05T21:05:25UTC ARP_SYNC[7094] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
 2020-12-05T21:05:25UTC ARP_SYNC[7094] INFO Importing methods for ::Nokia::*
+2020-12-05T21:14:31UTC ARP_SYNC[7737] INFO activating syslog. using /bin/logger
+2020-12-05T21:14:31UTC ARP_SYNC[7737] INFO --------------------------------------------------------------------------------
+2020-12-05T21:14:31UTC ARP_SYNC[7737] INFO Starting arp sync activity
+2020-12-05T21:14:31UTC ARP_SYNC[7737] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:14:31UTC ARP_SYNC[7737] INFO --------------------------------------------------------------------------------
+2020-12-05T21:14:32UTC ARP_SYNC[7737] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:14:32UTC ARP_SYNC[7737] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:14:32UTC ARP_SYNC[7737] INFO Importing methods for ::Nokia::*
+2020-12-05T21:15:30UTC ARP_SYNC[7794] INFO activating syslog. using /bin/logger
+2020-12-05T21:15:30UTC ARP_SYNC[7794] INFO --------------------------------------------------------------------------------
+2020-12-05T21:15:30UTC ARP_SYNC[7794] INFO Starting arp sync activity
+2020-12-05T21:15:30UTC ARP_SYNC[7794] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:15:30UTC ARP_SYNC[7794] INFO --------------------------------------------------------------------------------
+2020-12-05T21:15:31UTC ARP_SYNC[7794] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:15:31UTC ARP_SYNC[7794] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:15:31UTC ARP_SYNC[7794] INFO Importing methods for ::Nokia::*
+2020-12-05T21:19:39UTC ARP_SYNC[8041] INFO activating syslog. using /bin/logger
+2020-12-05T21:19:39UTC ARP_SYNC[8041] INFO --------------------------------------------------------------------------------
+2020-12-05T21:19:39UTC ARP_SYNC[8041] INFO Starting arp sync activity
+2020-12-05T21:19:39UTC ARP_SYNC[8041] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:19:39UTC ARP_SYNC[8041] INFO --------------------------------------------------------------------------------
+2020-12-05T21:19:39UTC ARP_SYNC[8041] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:19:39UTC ARP_SYNC[8041] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:19:39UTC ARP_SYNC[8041] INFO Importing methods for ::Nokia::*
+2020-12-05T21:20:18UTC ARP_SYNC[8099] INFO activating syslog. using /bin/logger
+2020-12-05T21:20:18UTC ARP_SYNC[8099] INFO --------------------------------------------------------------------------------
+2020-12-05T21:20:18UTC ARP_SYNC[8099] INFO Starting arp sync activity
+2020-12-05T21:20:18UTC ARP_SYNC[8099] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:20:18UTC ARP_SYNC[8099] INFO --------------------------------------------------------------------------------
+2020-12-05T21:20:18UTC ARP_SYNC[8099] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:20:18UTC ARP_SYNC[8099] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:20:18UTC ARP_SYNC[8099] INFO Importing methods for ::Nokia::*
+2020-12-05T21:20:58UTC ARP_SYNC[8172] INFO activating syslog. using /bin/logger
+2020-12-05T21:20:58UTC ARP_SYNC[8172] INFO --------------------------------------------------------------------------------
+2020-12-05T21:20:58UTC ARP_SYNC[8172] INFO Starting arp sync activity
+2020-12-05T21:20:58UTC ARP_SYNC[8172] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:20:58UTC ARP_SYNC[8172] INFO --------------------------------------------------------------------------------
+2020-12-05T21:20:59UTC ARP_SYNC[8172] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:20:59UTC ARP_SYNC[8172] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:20:59UTC ARP_SYNC[8172] INFO Importing methods for ::Nokia::*
+2020-12-05T21:21:28UTC ARP_SYNC[8189] INFO activating syslog. using /bin/logger
+2020-12-05T21:21:28UTC ARP_SYNC[8189] INFO --------------------------------------------------------------------------------
+2020-12-05T21:21:28UTC ARP_SYNC[8189] INFO Starting arp sync activity
+2020-12-05T21:21:28UTC ARP_SYNC[8189] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:21:28UTC ARP_SYNC[8189] INFO --------------------------------------------------------------------------------
+2020-12-05T21:21:28UTC ARP_SYNC[8189] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:21:29UTC ARP_SYNC[8189] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:21:29UTC ARP_SYNC[8189] INFO Importing methods for ::Nokia::*
+2020-12-05T21:22:13UTC ARP_SYNC[8259] INFO activating syslog. using /bin/logger
+2020-12-05T21:22:13UTC ARP_SYNC[8259] INFO --------------------------------------------------------------------------------
+2020-12-05T21:22:13UTC ARP_SYNC[8259] INFO Starting arp sync activity
+2020-12-05T21:22:13UTC ARP_SYNC[8259] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:22:13UTC ARP_SYNC[8259] INFO --------------------------------------------------------------------------------
+2020-12-05T21:22:14UTC ARP_SYNC[8259] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:22:14UTC ARP_SYNC[8259] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:22:14UTC ARP_SYNC[8259] INFO Importing methods for ::Nokia::*
+2020-12-05T21:22:14UTC ARP_SYNC[8259] FATAL loading namespace ::Nokia::* failed.
+Error: unknown namespace in import pattern "::Nokia::*"
+2020-12-05T21:22:35UTC ARP_SYNC[8284] INFO activating syslog. using /bin/logger
+2020-12-05T21:22:35UTC ARP_SYNC[8284] INFO --------------------------------------------------------------------------------
+2020-12-05T21:22:35UTC ARP_SYNC[8284] INFO Starting arp sync activity
+2020-12-05T21:22:35UTC ARP_SYNC[8284] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:22:35UTC ARP_SYNC[8284] INFO --------------------------------------------------------------------------------
+2020-12-05T21:22:36UTC ARP_SYNC[8284] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:22:36UTC ARP_SYNC[8284] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:22:36UTC ARP_SYNC[8284] INFO Importing methods for ::Nokia::*
+2020-12-05T21:22:36UTC ARP_SYNC[8284] FATAL loading namespace ::Nokia::* failed.
+Error: unknown namespace in import pattern "::Nokia::*"
+2020-12-05T21:22:39UTC ARP_SYNC[8291] INFO activating syslog. using /bin/logger
+2020-12-05T21:22:39UTC ARP_SYNC[8291] INFO --------------------------------------------------------------------------------
+2020-12-05T21:22:39UTC ARP_SYNC[8291] INFO Starting arp sync activity
+2020-12-05T21:22:39UTC ARP_SYNC[8291] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:22:39UTC ARP_SYNC[8291] INFO --------------------------------------------------------------------------------
+2020-12-05T21:22:39UTC ARP_SYNC[8291] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:22:39UTC ARP_SYNC[8291] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:22:39UTC ARP_SYNC[8291] INFO Importing methods for ::Nokia::*
+2020-12-05T21:22:39UTC ARP_SYNC[8291] FATAL loading namespace ::Nokia::* failed.
+Error: unknown namespace in import pattern "::Nokia::*"
+2020-12-05T21:23:36UTC ARP_SYNC[8341] INFO activating syslog. using /bin/logger
+2020-12-05T21:23:36UTC ARP_SYNC[8341] INFO --------------------------------------------------------------------------------
+2020-12-05T21:23:36UTC ARP_SYNC[8341] INFO Starting arp sync activity
+2020-12-05T21:23:36UTC ARP_SYNC[8341] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:23:36UTC ARP_SYNC[8341] INFO --------------------------------------------------------------------------------
+2020-12-05T21:23:37UTC ARP_SYNC[8341] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:23:37UTC ARP_SYNC[8341] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:23:37UTC ARP_SYNC[8341] INFO Importing methods for ::Nokia::*
+2020-12-05T21:23:37UTC ARP_SYNC[8341] FATAL loading namespace ::Nokia::* failed. Error: unknown namespace in import pattern "::Nokia::*"
+2020-12-05T21:24:05UTC ARP_SYNC[8371] INFO activating syslog. using /bin/logger
+2020-12-05T21:24:05UTC ARP_SYNC[8371] INFO --------------------------------------------------------------------------------
+2020-12-05T21:24:05UTC ARP_SYNC[8371] INFO Starting arp sync activity
+2020-12-05T21:24:05UTC ARP_SYNC[8371] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:24:05UTC ARP_SYNC[8371] INFO --------------------------------------------------------------------------------
+2020-12-05T21:24:05UTC ARP_SYNC[8371] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:24:06UTC ARP_SYNC[8371] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:24:06UTC ARP_SYNC[8371] INFO Importing methods for ::Nokia::*
+2020-12-05T21:24:06UTC ARP_SYNC[8371] ERROR loading namespace ::Nokia::* failed. Error: unknown namespace in import pattern "::Nokia::*"
+2020-12-05T21:35:14UTC ARP_SYNC[9147] INFO activating syslog. using /bin/logger
+2020-12-05T21:35:14UTC ARP_SYNC[9147] INFO --------------------------------------------------------------------------------
+2020-12-05T21:35:14UTC ARP_SYNC[9147] INFO Starting arp sync activity
+2020-12-05T21:35:14UTC ARP_SYNC[9147] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:35:14UTC ARP_SYNC[9147] INFO --------------------------------------------------------------------------------
+2020-12-05T21:35:14UTC ARP_SYNC[9147] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:35:15UTC ARP_SYNC[9147] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:35:15UTC ARP_SYNC[9147] INFO Importing methods for ::Nokia::*
+2020-12-05T21:35:15UTC ARP_SYNC[9147] ERROR loading namespace ::Nokia::* failed. Error: unknown namespace in import pattern "::Nokia::*"
+2020-12-05T21:35:16UTC ARP_SYNC[9147] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:35:16UTC ARP_SYNC[9147] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:35:16UTC ARP_SYNC[9147] INFO Importing methods for ::Nokia::*
+2020-12-05T21:35:16UTC ARP_SYNC[9147] ERROR loading namespace ::Nokia::* failed. Error: unknown namespace in import pattern "::Nokia::*"
+2020-12-05T21:35:16UTC ARP_SYNC[9147] INFO Logging into device rancid@
+2020-12-05T21:35:52UTC ARP_SYNC[9198] INFO activating syslog. using /bin/logger
+2020-12-05T21:35:52UTC ARP_SYNC[9198] INFO --------------------------------------------------------------------------------
+2020-12-05T21:35:52UTC ARP_SYNC[9198] INFO Starting arp sync activity
+2020-12-05T21:35:52UTC ARP_SYNC[9198] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:35:52UTC ARP_SYNC[9198] INFO --------------------------------------------------------------------------------
+2020-12-05T21:36:18UTC ARP_SYNC[9223] INFO activating syslog. using /bin/logger
+2020-12-05T21:36:18UTC ARP_SYNC[9223] INFO --------------------------------------------------------------------------------
+2020-12-05T21:36:18UTC ARP_SYNC[9223] INFO Starting arp sync activity
+2020-12-05T21:36:18UTC ARP_SYNC[9223] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:36:18UTC ARP_SYNC[9223] INFO --------------------------------------------------------------------------------
+2020-12-05T21:36:18UTC ARP_SYNC[9223] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:36:35UTC ARP_SYNC[9223] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:36:35UTC ARP_SYNC[9223] INFO Importing methods for ::Nokia::*
+2020-12-05T21:36:35UTC ARP_SYNC[9223] ERROR loading namespace ::Nokia::* failed. Error: unknown namespace in import pattern "::Nokia::*"
+2020-12-05T21:36:36UTC ARP_SYNC[9223] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:36:38UTC ARP_SYNC[9223] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:36:38UTC ARP_SYNC[9223] INFO Importing methods for ::Nokia::*
+2020-12-05T21:36:38UTC ARP_SYNC[9223] ERROR loading namespace ::Nokia::* failed. Error: unknown namespace in import pattern "::Nokia::*"
+2020-12-05T21:36:38UTC ARP_SYNC[9223] INFO Logging into device rancid@
+2020-12-05T21:37:11UTC ARP_SYNC[9291] INFO activating syslog. using /bin/logger
+2020-12-05T21:37:11UTC ARP_SYNC[9291] INFO --------------------------------------------------------------------------------
+2020-12-05T21:37:11UTC ARP_SYNC[9291] INFO Starting arp sync activity
+2020-12-05T21:37:11UTC ARP_SYNC[9291] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:37:11UTC ARP_SYNC[9291] INFO --------------------------------------------------------------------------------
+2020-12-05T21:37:12UTC ARP_SYNC[9291] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:37:19UTC ARP_SYNC[9291] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:37:19UTC ARP_SYNC[9291] INFO Importing methods for ::Nokia::*
+2020-12-05T21:37:19UTC ARP_SYNC[9291] ERROR loading namespace ::Nokia::* failed. Error: unknown namespace in import pattern "::Nokia::*"
+2020-12-05T21:37:20UTC ARP_SYNC[9291] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:37:26UTC ARP_SYNC[9291] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:37:26UTC ARP_SYNC[9291] INFO Importing methods for ::Nokia::*
+2020-12-05T21:37:26UTC ARP_SYNC[9291] ERROR loading namespace ::Nokia::* failed. Error: unknown namespace in import pattern "::Nokia::*"
+2020-12-05T21:37:26UTC ARP_SYNC[9291] INFO Logging into device rancid@
+2020-12-05T21:37:52UTC ARP_SYNC[9342] INFO activating syslog. using /bin/logger
+2020-12-05T21:37:52UTC ARP_SYNC[9342] INFO --------------------------------------------------------------------------------
+2020-12-05T21:37:52UTC ARP_SYNC[9342] INFO Starting arp sync activity
+2020-12-05T21:37:52UTC ARP_SYNC[9342] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:37:52UTC ARP_SYNC[9342] INFO --------------------------------------------------------------------------------
+2020-12-05T21:37:53UTC ARP_SYNC[9342] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:37:55UTC ARP_SYNC[9342] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:37:55UTC ARP_SYNC[9342] INFO Importing methods for ::Nokia::*
+2020-12-05T21:37:56UTC ARP_SYNC[9342] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:37:58UTC ARP_SYNC[9342] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:37:58UTC ARP_SYNC[9342] INFO Importing methods for ::Nokia::*
+2020-12-05T21:37:58UTC ARP_SYNC[9342] INFO Logging into device rancid@
+2020-12-05T21:43:46UTC ARP_SYNC[9729] INFO activating syslog. using /bin/logger
+2020-12-05T21:43:47UTC ARP_SYNC[9729] INFO --------------------------------------------------------------------------------
+2020-12-05T21:43:47UTC ARP_SYNC[9729] INFO Starting arp sync activity
+2020-12-05T21:43:47UTC ARP_SYNC[9729] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:43:47UTC ARP_SYNC[9729] INFO --------------------------------------------------------------------------------
+2020-12-05T21:43:47UTC ARP_SYNC[9729] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:43:49UTC ARP_SYNC[9729] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:43:49UTC ARP_SYNC[9729] INFO Importing methods for ::Nokia::*
+2020-12-05T21:43:50UTC ARP_SYNC[9729] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:43:52UTC ARP_SYNC[9729] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:43:52UTC ARP_SYNC[9729] INFO Importing methods for ::Nokia::*
+2020-12-05T21:43:52UTC ARP_SYNC[9729] INFO Logging into device rancid@
+2020-12-05T21:45:29UTC ARP_SYNC[9829] INFO activating syslog. using /bin/logger
+2020-12-05T21:45:29UTC ARP_SYNC[9829] INFO --------------------------------------------------------------------------------
+2020-12-05T21:45:29UTC ARP_SYNC[9829] INFO Starting arp sync activity
+2020-12-05T21:45:29UTC ARP_SYNC[9829] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:45:29UTC ARP_SYNC[9829] INFO --------------------------------------------------------------------------------
+2020-12-05T21:45:30UTC ARP_SYNC[9829] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:45:32UTC ARP_SYNC[9829] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:45:32UTC ARP_SYNC[9829] INFO Importing methods for ::Nokia::*
+2020-12-05T21:45:33UTC ARP_SYNC[9829] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:45:36UTC ARP_SYNC[9829] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:45:36UTC ARP_SYNC[9829] INFO Importing methods for ::Nokia::*
+2020-12-05T21:45:36UTC ARP_SYNC[9829] INFO Logging into device rancid@
+2020-12-05T21:46:11UTC ARP_SYNC[9898] INFO activating syslog. using /bin/logger
+2020-12-05T21:46:11UTC ARP_SYNC[9898] INFO --------------------------------------------------------------------------------
+2020-12-05T21:46:11UTC ARP_SYNC[9898] INFO Starting arp sync activity
+2020-12-05T21:46:11UTC ARP_SYNC[9898] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:46:11UTC ARP_SYNC[9898] INFO --------------------------------------------------------------------------------
+2020-12-05T21:46:11UTC ARP_SYNC[9898] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:46:42UTC ARP_SYNC[9942] INFO activating syslog. using /bin/logger
+2020-12-05T21:46:42UTC ARP_SYNC[9942] INFO --------------------------------------------------------------------------------
+2020-12-05T21:46:42UTC ARP_SYNC[9942] INFO Starting arp sync activity
+2020-12-05T21:46:42UTC ARP_SYNC[9942] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:46:42UTC ARP_SYNC[9942] INFO --------------------------------------------------------------------------------
+2020-12-05T21:46:42UTC ARP_SYNC[9942] ERROR device records invalid at row: 1
+2020-12-05T21:46:43UTC ARP_SYNC[9942] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:46:43UTC ARP_SYNC[9942] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:46:43UTC ARP_SYNC[9942] INFO Importing methods for ::Nokia::*
+2020-12-05T21:46:43UTC ARP_SYNC[9942] ERROR device records invalid at row: 1
+2020-12-05T21:46:44UTC ARP_SYNC[9942] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:46:50UTC ARP_SYNC[9942] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:46:50UTC ARP_SYNC[9942] INFO Importing methods for ::Nokia::*
+2020-12-05T21:46:50UTC ARP_SYNC[9942] ERROR device records invalid at row: 1
+2020-12-05T21:46:50UTC ARP_SYNC[9942] ERROR device records invalid at row: 1
+2020-12-05T21:46:50UTC ARP_SYNC[9942] ERROR device records invalid at row: 1
+2020-12-05T21:46:50UTC ARP_SYNC[9942] INFO Logging into device rancid@
+2020-12-05T21:48:15UTC ARP_SYNC[10012] INFO activating syslog. using /bin/logger
+2020-12-05T21:48:15UTC ARP_SYNC[10012] INFO --------------------------------------------------------------------------------
+2020-12-05T21:48:15UTC ARP_SYNC[10012] INFO Starting arp sync activity
+2020-12-05T21:48:15UTC ARP_SYNC[10012] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:48:15UTC ARP_SYNC[10012] INFO --------------------------------------------------------------------------------
+2020-12-05T21:48:15UTC ARP_SYNC[10012] ERROR device records invalid at row: 1
+2020-12-05T21:48:59UTC ARP_SYNC[10061] INFO activating syslog. using /bin/logger
+2020-12-05T21:48:59UTC ARP_SYNC[10061] INFO --------------------------------------------------------------------------------
+2020-12-05T21:48:59UTC ARP_SYNC[10061] INFO Starting arp sync activity
+2020-12-05T21:48:59UTC ARP_SYNC[10061] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:48:59UTC ARP_SYNC[10061] INFO --------------------------------------------------------------------------------
+2020-12-05T21:48:59UTC ARP_SYNC[10061] ERROR device records invalid at row: 1
+2020-12-05T21:48:59UTC ARP_SYNC[10061] ERROR device records invalid at row: 1
+2020-12-05T21:48:59UTC ARP_SYNC[10061] ERROR device records invalid at row: 1
+2020-12-05T21:48:59UTC ARP_SYNC[10061] ERROR device records invalid at row: 1
+2020-12-05T21:48:59UTC ARP_SYNC[10061] ERROR device records invalid at row: 1
+2020-12-05T21:49:07UTC ARP_SYNC[10066] INFO activating syslog. using /bin/logger
+2020-12-05T21:49:07UTC ARP_SYNC[10066] INFO --------------------------------------------------------------------------------
+2020-12-05T21:49:07UTC ARP_SYNC[10066] INFO Starting arp sync activity
+2020-12-05T21:49:07UTC ARP_SYNC[10066] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:49:07UTC ARP_SYNC[10066] INFO --------------------------------------------------------------------------------
+2020-12-05T21:49:07UTC ARP_SYNC[10066] ERROR device records invalid at row: 1
+2020-12-05T21:49:07UTC ARP_SYNC[10066] ERROR device records invalid at row: 1
+2020-12-05T21:49:07UTC ARP_SYNC[10066] ERROR device records invalid at row: 1
+2020-12-05T21:49:07UTC ARP_SYNC[10066] ERROR device records invalid at row: 1
+2020-12-05T21:49:07UTC ARP_SYNC[10066] ERROR device records invalid at row: 1
+2020-12-05T21:49:43UTC ARP_SYNC[10087] INFO activating syslog. using /bin/logger
+2020-12-05T21:49:43UTC ARP_SYNC[10087] INFO --------------------------------------------------------------------------------
+2020-12-05T21:49:43UTC ARP_SYNC[10087] INFO Starting arp sync activity
+2020-12-05T21:49:43UTC ARP_SYNC[10087] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:49:43UTC ARP_SYNC[10087] INFO --------------------------------------------------------------------------------
+2020-12-05T21:49:44UTC ARP_SYNC[10087] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:49:44UTC ARP_SYNC[10087] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:49:44UTC ARP_SYNC[10087] INFO Importing methods for ::Nokia::*
+2020-12-05T21:49:45UTC ARP_SYNC[10087] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:49:45UTC ARP_SYNC[10087] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:49:45UTC ARP_SYNC[10087] INFO Importing methods for ::Nokia::*
+2020-12-05T21:49:45UTC ARP_SYNC[10087] ERROR device records invalid at row: 1. skipping to next record
+2020-12-05T21:49:45UTC ARP_SYNC[10087] ERROR device records invalid at row: 1. skipping to next record
+2020-12-05T21:50:04UTC ARP_SYNC[10132] INFO activating syslog. using /bin/logger
+2020-12-05T21:50:04UTC ARP_SYNC[10132] INFO --------------------------------------------------------------------------------
+2020-12-05T21:50:04UTC ARP_SYNC[10132] INFO Starting arp sync activity
+2020-12-05T21:50:04UTC ARP_SYNC[10132] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:50:04UTC ARP_SYNC[10132] INFO --------------------------------------------------------------------------------
+2020-12-05T21:50:05UTC ARP_SYNC[10132] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:50:05UTC ARP_SYNC[10132] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:50:05UTC ARP_SYNC[10132] INFO Importing methods for ::Nokia::*
+2020-12-05T21:50:06UTC ARP_SYNC[10132] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:50:06UTC ARP_SYNC[10132] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:50:06UTC ARP_SYNC[10132] INFO Importing methods for ::Nokia::*
+2020-12-05T21:50:06UTC ARP_SYNC[10132] ERROR device records invalid at row: 1. skipping to next record
+2020-12-05T21:50:06UTC ARP_SYNC[10132] ERROR device records invalid at row: 1. skipping to next record
+2020-12-05T21:51:04UTC ARP_SYNC[10209] INFO activating syslog. using /bin/logger
+2020-12-05T21:51:04UTC ARP_SYNC[10209] INFO --------------------------------------------------------------------------------
+2020-12-05T21:51:04UTC ARP_SYNC[10209] INFO Starting arp sync activity
+2020-12-05T21:51:04UTC ARP_SYNC[10209] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:51:04UTC ARP_SYNC[10209] INFO --------------------------------------------------------------------------------
+2020-12-05T21:51:05UTC ARP_SYNC[10209] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:51:05UTC ARP_SYNC[10209] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:51:05UTC ARP_SYNC[10209] INFO Importing methods for ::Nokia::*
+2020-12-05T21:51:06UTC ARP_SYNC[10209] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:51:06UTC ARP_SYNC[10209] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:51:06UTC ARP_SYNC[10209] INFO Importing methods for ::Nokia::*
+2020-12-05T21:51:06UTC ARP_SYNC[10209] ERROR device records invalid at row: 3. skipping to next record
+2020-12-05T21:51:06UTC ARP_SYNC[10209] ERROR device records invalid at row: 3. skipping to next record
+2020-12-05T21:51:33UTC ARP_SYNC[10236] INFO activating syslog. using /bin/logger
+2020-12-05T21:51:33UTC ARP_SYNC[10236] INFO --------------------------------------------------------------------------------
+2020-12-05T21:51:33UTC ARP_SYNC[10236] INFO Starting arp sync activity
+2020-12-05T21:51:33UTC ARP_SYNC[10236] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:51:33UTC ARP_SYNC[10236] INFO --------------------------------------------------------------------------------
+2020-12-05T21:51:33UTC ARP_SYNC[10236] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:51:33UTC ARP_SYNC[10236] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:51:33UTC ARP_SYNC[10236] INFO Importing methods for ::Nokia::*
+2020-12-05T21:51:34UTC ARP_SYNC[10236] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:51:34UTC ARP_SYNC[10236] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:51:34UTC ARP_SYNC[10236] INFO Importing methods for ::Nokia::*
+2020-12-05T21:51:34UTC ARP_SYNC[10236] ERROR device records invalid at row: 3. skipping to next record
+2020-12-05T21:51:34UTC ARP_SYNC[10236] ERROR device records invalid at row: 3. skipping to next record
+2020-12-05T21:52:34UTC ARP_SYNC[10294] INFO activating syslog. using /bin/logger
+2020-12-05T21:52:34UTC ARP_SYNC[10294] INFO --------------------------------------------------------------------------------
+2020-12-05T21:52:34UTC ARP_SYNC[10294] INFO Starting arp sync activity
+2020-12-05T21:52:34UTC ARP_SYNC[10294] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:52:34UTC ARP_SYNC[10294] INFO --------------------------------------------------------------------------------
+2020-12-05T21:52:35UTC ARP_SYNC[10294] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:52:35UTC ARP_SYNC[10294] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:52:35UTC ARP_SYNC[10294] INFO Importing methods for ::Nokia::*
+2020-12-05T21:52:36UTC ARP_SYNC[10294] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:52:36UTC ARP_SYNC[10294] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:52:36UTC ARP_SYNC[10294] INFO Importing methods for ::Nokia::*
+2020-12-05T21:52:36UTC ARP_SYNC[10294] ERROR device records invalid at row: 3. skipping to next record
+2020-12-05T21:52:36UTC ARP_SYNC[10294] ERROR device records invalid at row: 3. skipping to next record
+2020-12-05T21:54:21UTC ARP_SYNC[10388] INFO activating syslog. using /bin/logger
+2020-12-05T21:54:21UTC ARP_SYNC[10388] INFO --------------------------------------------------------------------------------
+2020-12-05T21:54:21UTC ARP_SYNC[10388] INFO Starting arp sync activity
+2020-12-05T21:54:21UTC ARP_SYNC[10388] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:54:21UTC ARP_SYNC[10388] INFO --------------------------------------------------------------------------------
+2020-12-05T21:54:22UTC ARP_SYNC[10388] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:54:22UTC ARP_SYNC[10388] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:54:22UTC ARP_SYNC[10388] INFO Importing methods for ::Nokia::*
+2020-12-05T21:54:23UTC ARP_SYNC[10388] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:54:23UTC ARP_SYNC[10388] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:54:23UTC ARP_SYNC[10388] INFO Importing methods for ::Nokia::*
+2020-12-05T21:54:23UTC ARP_SYNC[10388] ERROR device records invalid at row: 3. skipping to next record
+2020-12-05T21:55:43UTC ARP_SYNC[10480] INFO activating syslog. using /bin/logger
+2020-12-05T21:55:43UTC ARP_SYNC[10480] INFO --------------------------------------------------------------------------------
+2020-12-05T21:55:43UTC ARP_SYNC[10480] INFO Starting arp sync activity
+2020-12-05T21:55:43UTC ARP_SYNC[10480] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:55:43UTC ARP_SYNC[10480] INFO --------------------------------------------------------------------------------
+2020-12-05T21:55:43UTC ARP_SYNC[10480] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:55:44UTC ARP_SYNC[10480] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:55:44UTC ARP_SYNC[10480] INFO Importing methods for ::Nokia::*
+2020-12-05T21:55:45UTC ARP_SYNC[10480] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:55:45UTC ARP_SYNC[10480] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Nokia
+2020-12-05T21:55:45UTC ARP_SYNC[10480] INFO Importing methods for ::Nokia::*
+2020-12-05T21:55:45UTC ARP_SYNC[10480] ERROR device records invalid at row: 3. skipping to next record
+2020-12-05T21:59:29UTC ARP_SYNC[10678] INFO activating syslog. using /bin/logger
+2020-12-05T21:59:29UTC ARP_SYNC[10678] INFO --------------------------------------------------------------------------------
+2020-12-05T21:59:29UTC ARP_SYNC[10678] INFO Starting arp sync activity
+2020-12-05T21:59:29UTC ARP_SYNC[10678] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:59:29UTC ARP_SYNC[10678] INFO --------------------------------------------------------------------------------
+2020-12-05T21:59:30UTC ARP_SYNC[10678] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:59:30UTC ARP_SYNC[10678] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:59:30UTC ARP_SYNC[10678] INFO Importing methods for ::Nokia::*
+2020-12-05T21:59:31UTC ARP_SYNC[10678] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:59:31UTC ARP_SYNC[10678] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-05T21:59:31UTC ARP_SYNC[10678] INFO Importing methods for ::Juniper::*
+2020-12-05T21:59:31UTC ARP_SYNC[10678] ERROR device records invalid at row: 3. skipping to next record
+2020-12-05T21:59:45UTC ARP_SYNC[10709] INFO activating syslog. using /bin/logger
+2020-12-05T21:59:45UTC ARP_SYNC[10709] INFO --------------------------------------------------------------------------------
+2020-12-05T21:59:45UTC ARP_SYNC[10709] INFO Starting arp sync activity
+2020-12-05T21:59:45UTC ARP_SYNC[10709] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:59:45UTC ARP_SYNC[10709] INFO --------------------------------------------------------------------------------
+2020-12-05T21:59:45UTC ARP_SYNC[10709] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:59:45UTC ARP_SYNC[10709] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:59:45UTC ARP_SYNC[10709] INFO Importing methods for ::Nokia::*
+2020-12-05T21:59:46UTC ARP_SYNC[10709] INFO Logging into device rancid@100.80.16.139
+2020-12-05T21:59:47UTC ARP_SYNC[10709] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-05T21:59:47UTC ARP_SYNC[10709] INFO Importing methods for ::Juniper::*
+2020-12-05T21:59:47UTC ARP_SYNC[10709] ERROR device records invalid at row: 3. skipping to next record

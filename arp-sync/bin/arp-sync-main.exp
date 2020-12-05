@@ -20,33 +20,58 @@ lputs "Starting arp sync activity" ;
 lputs [script_host_info]
 lputs [banner_line];
 
+# sample codes
 #send_syslog "This is sample log line" "crit" ;
 #error_exit 1 "Error occured" 
 
-set devices_array [get_device_list $devices_list_file]
-
-foreach dev_record $devices_array {
-	dict get $dev_record "name" ;
-## loop through this foreach and do processing. 
-}
-
-set device "100.80.15.102" ;
+# Initialize variables necessary for device interaction.
+init_vars; 
 set user   "rancid" 
 set pass   "level3" 
 
-# Initialize variables necessary for device interaction.
-init_vars; 
 
+set devices_array [get_device_list $devices_list_file]
+
+## loop through this foreach and do processing. 
+set rownum 1;
+set invalid_row 0 ;
+
+foreach dev_record $devices_array {
+	set name  [dict get $dev_record "name"]  ;
+	set device_1 [dict get $dev_record "ear_1_router_hostname"]  ;
+	set device_2 [dict get $dev_record "ear_2_router_hostname"]  ;
+
+	foreach e [list $name $device_1 ]  {
+
+		if { $e=="" } {
+			lputs "device records invalid at row: $rownum. skipping to next record" "ERROR"
+			set invalid_row 1
+			break ;
+		}
+	}
+ # Increment row number for tracking.
+	incr rownum 1
+
+	if { [is_true $invalid_row] } {
+		set invalid_row 0
+		continue ;
+	}
+
+	set device $device_1 ;
+
+	puts $device ;
 # Login to device
-login_to_device $device $user $pass
+	login_to_device $device $user $pass
 
-lputs "Logging into device $user@$device" ;
+	lputs "Logging into device $user@$device" ;
 # detect device vendor using /show version/ command.
-set vendor [detect_device_vendor] ;
+	set vendor [detect_device_vendor] ;
 
-lputs "Detected vendor of device: $device as VENDOR: $vendor" ;
+	lputs "Detected vendor of device: $device as VENDOR: $vendor" ;
 
-load_methods_for $vendor ;
+	load_methods_for $vendor ;
 #
-get_arp_entries ;
+	get_arp_entries ;
+}
+
 
