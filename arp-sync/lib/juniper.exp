@@ -5,6 +5,14 @@
 
 namespace eval Juniper {
 
+	namespace export \
+		device_login \
+		get_arp_entries \
+		parse_arp_entry \
+		prepare_set_arp_cmd \
+		ping_target \
+		device_logout 
+
 	proc device_login {device user pass} {
 		set _proc_name [lindex [info level 1 ] 0 ]
 
@@ -20,10 +28,7 @@ namespace eval Juniper {
 	}
 
 	proc parse_arp_entry {}  {
-		global warn_msg ;
-
-		set _proc_name [lindex [info level 1 ] 0 ]
-		dputs [format $warn_msg $_proc_name ]
+		puts "This is from Juniper";
 	}
 
 	proc prepare_set_arp_cmd {params} {

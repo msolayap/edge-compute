@@ -21,12 +21,17 @@ lputs [banner_line];
 #send_syslog "This is sample log line" "crit" ;
 #error_exit 1 "Error occured" 
 
-set dtype [lindex $argv 0] 
+set devices_array [get_device_list $devices_list_file]
 
-if { [string equal -nocase $dtype "juniper" ] } {
-	puts "juniper" ;
-} elseif { [string equal -nocase $dtype "nokia" ] } {
-	puts "nokia" ;
-} else {
-	puts "unsupported devicetype: $dtype" ;
+foreach dev_record $devices_array {
+	puts [dict get $dev_record "name"];
 }
+
+device_login 100.180.16.139 "rancid" "level3"
+
+set vendor [detect_device_vendor] ;
+
+load_methods_for $vendor ;
+
+get_arp_entries ;
+

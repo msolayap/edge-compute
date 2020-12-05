@@ -1,5 +1,6 @@
 
 # General configurations
+set envi  "dev" ;
 set DEBUG 1
 set app_tag "ARP_SYNC\[[pid]\]"
 set basedir [file normalize "$argv0/../.."]  
@@ -19,3 +20,7 @@ set logfh ""
 set log_syslog 1;
 # --for app
 set syslog_ready  0;
+
+## core
+# file where device lists are stored as csv
+set devices_list_file "router_pe_data.csv" ;
