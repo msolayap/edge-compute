@@ -167,8 +167,11 @@ proc load_methods_for {vendor} {
 		"Juniper" -
 		"Nokia" {
 			append device_namespace $dtype {::*}
-			dputs "Importing namespace methods $device_namespace" ;
-			namespace import -force  $device_namespace
+			lputs "Importing methods for $device_namespace" ;
+			if { [catch {namespace import -force  $device_namespace} err] } {
+				lputs "loading namespace $device_namespace failed.\nError: $err" ;
+				return -code 1
+			}
 		}
 		default {
 			error_exit 1 "unsupported device type: $dtype" ;

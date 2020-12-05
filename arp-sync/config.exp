@@ -24,3 +24,7 @@ set syslog_ready  0;
 ## core
 # file where device lists are stored as csv
 set devices_list_file "router_pe_data.csv" ;
+
+
+# NOT TO BE EDITED - only for app
+set prompt "(%|#|\\\$|>) *$"

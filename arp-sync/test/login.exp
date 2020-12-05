@@ -1,0 +1,30 @@
+
+source ./util.exp
+
+set spid [spawn ssh msolayap@dc2owooadmpd01.it.savvis.net]
+
+#puts "Spawn ID: $spid" ;
+
+set DEBUG 0;
+set prompt {.*?\]\$*} ;
+set first_prompt 0
+set auth_done 0 
+
+expect {
+	-re "assword:*"  { 
+		if { $auth_done == 0 } {
+			send "vC@nter2\r" 
+			incr auth_done 1
+		}
+	} 
+	eof  { 
+		send_user "password prompt not appeared. exiting" ;
+		exit 1;
+	}
+	timeout  {
+		send_user "password prompt timed out. exiting" ;
+		exit 1 ;
+	}
+}
+
+!# prompt  auth_done 

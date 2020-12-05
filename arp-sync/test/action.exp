@@ -1,0 +1,24 @@
+
+send "\r" ;  # A pseudo enter to make prompt to reappear.
+
+expect {
+
+	-re $prompt  { 
+		if { $first_prompt == 0 } {
+			send "ls\r" 
+			incr first_prompt 1
+		} else {
+			puts $expect_out(buffer) ;
+			send "exit\r" 
+		}
+		exp_continue 
+	}
+	eof { 
+		puts stderr "EOF occured while waiting in expect block" ;
+		exit 1;
+	}
+	timeout { puts stderr "Script timed out" }
+}
+
+
+!# prompt  first_prompt auth_done 

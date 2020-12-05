@@ -1,0 +1,87 @@
+expect version 5.44.1.15
+argv[0] = expect  argv[1] = -d  argv[2] = device-interaction.exp  
+set argc 0
+set argv0 "device-interaction.exp"
+set argv ""
+executing commands from command file device-interaction.exp
+parent: waiting for sync byte
+parent: telling child to go ahead
+parent: now unsynchronized from child
+spawn: returns {6706}
+Gate keeper glob pattern for 'assword:.*$' is 'assword:*'. Activating booster.
+Gate keeper glob pattern for '(%|#|\$|>) *$' is ''. Not usable, disabling the performance booster.
+
+expect: does "" (spawn_id exp4) match regular expression "assword:.*$"? Gate "assword:*"? gate=no
+"(%|#|\$|>) *$"? (No Gate, RE only) gate=yes re=no
+
+expect: does "TiMOS-C-16.0.R14 cpm/hops64 Nokia 7950 XRS Copyright (c) 2000-2020 Nokia.\r\r\nAll rights reserved. All use subject to applicable license agreements.\r\r\nBuilt on Wed Jun 17 11:11:37 PDT 2020 by builder in /builds/c/160B/R14/panos/main\r\r\n\r\n******************************* WARNING *******************************\r\n\r\nThis equipment is the property of Level 3 Communications.\r\n\r\nUnauthorized access is strictly prohibited.  Any unauthorized access\r\nor tampering with this equipment will result in civil and/or criminal\r\nprosecution.\r\n\r\n******************************* WARNING *******************************\r\n\r\r\n" (spawn_id exp4) match regular expression "assword:.*$"? Gate "assword:*"? gate=no
+"(%|#|\$|>) *$"? (No Gate, RE only) gate=yes re=no
+
+expect: does "TiMOS-C-16.0.R14 cpm/hops64 Nokia 7950 XRS Copyright (c) 2000-2020 Nokia.\r\r\nAll rights reserved. All use subject to applicable license agreements.\r\r\nBuilt on Wed Jun 17 11:11:37 PDT 2020 by builder in /builds/c/160B/R14/panos/main\r\r\n\r\n******************************* WARNING *******************************\r\n\r\nThis equipment is the property of Level 3 Communications.\r\n\r\nUnauthorized access is strictly prohibited.  Any unauthorized access\r\nor tampering with this equipment will result in civil and/or criminal\r\nprosecution.\r\n\r\n******************************* WARNING *******************************\r\n\r\r\nrancid@100.80.15.102's password: " (spawn_id exp4) match regular expression "assword:.*$"? Gate "assword:*"? gate=yes re=yes
+expect: set expect_out(0,string) "assword: "
+expect: set expect_out(spawn_id) "exp4"
+expect: set expect_out(buffer) "TiMOS-C-16.0.R14 cpm/hops64 Nokia 7950 XRS Copyright (c) 2000-2020 Nokia.\r\r\nAll rights reserved. All use subject to applicable license agreements.\r\r\nBuilt on Wed Jun 17 11:11:37 PDT 2020 by builder in /builds/c/160B/R14/panos/main\r\r\n\r\n******************************* WARNING *******************************\r\n\r\nThis equipment is the property of Level 3 Communications.\r\n\r\nUnauthorized access is strictly prohibited.  Any unauthorized access\r\nor tampering with this equipment will result in civil and/or criminal\r\nprosecution.\r\n\r\n******************************* WARNING *******************************\r\n\r\r\nrancid@100.80.15.102's password: "
+send: sending "level3\r" to { exp4 }
+expect: continuing expect
+
+expect: does "" (spawn_id exp4) match regular expression "assword:.*$"? Gate "assword:*"? gate=no
+"(%|#|\$|>) *$"? (No Gate, RE only) gate=yes re=no
+
+expect: does "\r\n" (spawn_id exp4) match regular expression "assword:.*$"? Gate "assword:*"? gate=no
+"(%|#|\$|>) *$"? (No Gate, RE only) gate=yes re=no
+
+expect: does "\r\n*A:alu7950-3# " (spawn_id exp4) match regular expression "assword:.*$"? Gate "assword:*"? gate=no
+"(%|#|\$|>) *$"? (No Gate, RE only) gate=yes re=yes
+expect: set expect_out(0,string) "# "
+expect: set expect_out(1,string) "#"
+expect: set expect_out(spawn_id) "exp4"
+expect: set expect_out(buffer) "\r\n*A:alu7950-3# "
+send: sending "\r" to { exp4 }
+Gate keeper glob pattern for '(%|#|\$|>) *$' is ''. Not usable, disabling the performance booster.
+
+expect: does "" (spawn_id exp4) match regular expression "(%|#|\$|>) *$"? (No Gate, RE only) gate=yes re=no
+
+expect: does "\r\n*A:alu7950-3# " (spawn_id exp4) match regular expression "(%|#|\$|>) *$"? (No Gate, RE only) gate=yes re=yes
+expect: set expect_out(0,string) "# "
+expect: set expect_out(1,string) "#"
+expect: set expect_out(spawn_id) "exp4"
+expect: set expect_out(buffer) "\r\n*A:alu7950-3# "
+send: sending "show version\r" to { exp4 }
+Gate keeper glob pattern for '(ptx1000|JUNOS)' is ''. Not usable, disabling the performance booster.
+Gate keeper glob pattern for '(Nokia)' is 'Nokia'. Activating booster.
+Gate keeper glob pattern for '(more)' is 'more'. Activating booster.
+
+expect: does "" (spawn_id exp4) match regular expression "(ptx1000|JUNOS)"? (No Gate, RE only) gate=yes re=no
+"(Nokia)"? Gate "Nokia"? gate=no
+"(more)"? Gate "more"? gate=no
+
+expect: does "show v" (spawn_id exp4) match regular expression "(ptx1000|JUNOS)"? (No Gate, RE only) gate=yes re=no
+"(Nokia)"? Gate "Nokia"? gate=no
+"(more)"? Gate "more"? gate=no
+
+expect: does "show versio" (spawn_id exp4) match regular expression "(ptx1000|JUNOS)"? (No Gate, RE only) gate=yes re=no
+"(Nokia)"? Gate "Nokia"? gate=no
+"(more)"? Gate "more"? gate=no
+
+expect: does "show version" (spawn_id exp4) match regular expression "(ptx1000|JUNOS)"? (No Gate, RE only) gate=yes re=no
+"(Nokia)"? Gate "Nokia"? gate=no
+"(more)"? Gate "more"? gate=no
+
+expect: does "show version \r\n" (spawn_id exp4) match regular expression "(ptx1000|JUNOS)"? (No Gate, RE only) gate=yes re=no
+"(Nokia)"? Gate "Nokia"? gate=no
+"(more)"? Gate "more"? gate=no
+
+expect: does "show version \r\nTiMOS-C-16.0.R14 cpm/hops64 Nokia 7950 XRS Copyright (c) 2000-2020 Nokia.\r\r\nAll rights reserved. All use subject to applicable license agreements.\r\r\nBuilt on Wed Jun 17 11:11:37 PDT 2020 by builder in /builds/c/160B/R14/panos/main\r\r\n*A:alu7950-3# " (spawn_id exp4) match regular expression "(ptx1000|JUNOS)"? (No Gate, RE only) gate=yes re=no
+"(Nokia)"? Gate "Nokia"? gate=yes re=yes
+expect: set expect_out(0,string) "Nokia"
+expect: set expect_out(1,string) "Nokia"
+expect: set expect_out(spawn_id) "exp4"
+expect: set expect_out(buffer) "show version \r\nTiMOS-C-16.0.R14 cpm/hops64 Nokia"
+Gate keeper glob pattern for '(%|#|\$|>) *$' is ''. Not usable, disabling the performance booster.
+
+expect: does " 7950 XRS Copyright (c) 2000-2020 Nokia.\r\r\nAll rights reserved. All use subject to applicable license agreements.\r\r\nBuilt on Wed Jun 17 11:11:37 PDT 2020 by builder in /builds/c/160B/R14/panos/main\r\r\n*A:alu7950-3# " (spawn_id exp4) match regular expression "(%|#|\$|>) *$"? (No Gate, RE only) gate=yes re=yes
+expect: set expect_out(0,string) "# "
+expect: set expect_out(1,string) "#"
+expect: set expect_out(spawn_id) "exp4"
+expect: set expect_out(buffer) " 7950 XRS Copyright (c) 2000-2020 Nokia.\r\r\nAll rights reserved. All use subject to applicable license agreements.\r\r\nBuilt on Wed Jun 17 11:11:37 PDT 2020 by builder in /builds/c/160B/R14/panos/main\r\r\n*A:alu7950-3# "
+nokia

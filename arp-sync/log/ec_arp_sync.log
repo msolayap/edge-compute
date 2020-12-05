@@ -414,3 +414,149 @@ user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
 2020-12-05T20:00:30UTC ARP_SYNC[3093] INFO Starting arp sync activity
 2020-12-05T20:00:30UTC ARP_SYNC[3093] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
 2020-12-05T20:00:30UTC ARP_SYNC[3093] INFO --------------------------------------------------------------------------------
+2020-12-05T20:29:01UTC ARP_SYNC[4863] INFO activating syslog. using /bin/logger
+2020-12-05T20:29:01UTC ARP_SYNC[4863] INFO --------------------------------------------------------------------------------
+2020-12-05T20:29:01UTC ARP_SYNC[4863] INFO Starting arp sync activity
+2020-12-05T20:29:01UTC ARP_SYNC[4863] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:29:01UTC ARP_SYNC[4863] INFO --------------------------------------------------------------------------------
+2020-12-05T20:29:19UTC ARP_SYNC[4873] INFO activating syslog. using /bin/logger
+2020-12-05T20:29:19UTC ARP_SYNC[4873] INFO --------------------------------------------------------------------------------
+2020-12-05T20:29:19UTC ARP_SYNC[4873] INFO Starting arp sync activity
+2020-12-05T20:29:19UTC ARP_SYNC[4873] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:29:19UTC ARP_SYNC[4873] INFO --------------------------------------------------------------------------------
+2020-12-05T20:31:30UTC ARP_SYNC[5004] INFO activating syslog. using /bin/logger
+2020-12-05T20:31:30UTC ARP_SYNC[5004] INFO --------------------------------------------------------------------------------
+2020-12-05T20:31:30UTC ARP_SYNC[5004] INFO Starting arp sync activity
+2020-12-05T20:31:30UTC ARP_SYNC[5004] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:31:30UTC ARP_SYNC[5004] INFO --------------------------------------------------------------------------------
+2020-12-05T20:32:58UTC ARP_SYNC[5108] INFO activating syslog. using /bin/logger
+2020-12-05T20:32:58UTC ARP_SYNC[5108] INFO --------------------------------------------------------------------------------
+2020-12-05T20:32:58UTC ARP_SYNC[5108] INFO Starting arp sync activity
+2020-12-05T20:32:58UTC ARP_SYNC[5108] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:32:58UTC ARP_SYNC[5108] INFO --------------------------------------------------------------------------------
+2020-12-05T20:33:48UTC ARP_SYNC[5147] INFO activating syslog. using /bin/logger
+2020-12-05T20:33:48UTC ARP_SYNC[5147] INFO --------------------------------------------------------------------------------
+2020-12-05T20:33:48UTC ARP_SYNC[5147] INFO Starting arp sync activity
+2020-12-05T20:33:48UTC ARP_SYNC[5147] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:33:48UTC ARP_SYNC[5147] INFO --------------------------------------------------------------------------------
+2020-12-05T20:34:01UTC ARP_SYNC[5174] INFO activating syslog. using /bin/logger
+2020-12-05T20:34:01UTC ARP_SYNC[5174] INFO --------------------------------------------------------------------------------
+2020-12-05T20:34:01UTC ARP_SYNC[5174] INFO Starting arp sync activity
+2020-12-05T20:34:01UTC ARP_SYNC[5174] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:34:01UTC ARP_SYNC[5174] INFO --------------------------------------------------------------------------------
+2020-12-05T20:37:28UTC ARP_SYNC[5349] INFO activating syslog. using /bin/logger
+2020-12-05T20:37:28UTC ARP_SYNC[5349] INFO --------------------------------------------------------------------------------
+2020-12-05T20:37:28UTC ARP_SYNC[5349] INFO Starting arp sync activity
+2020-12-05T20:37:28UTC ARP_SYNC[5349] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:37:28UTC ARP_SYNC[5349] INFO --------------------------------------------------------------------------------
+2020-12-05T20:37:29UTC ARP_SYNC[5349] INFO Logging into device rancid@100.80.16.139
+2020-12-05T20:37:29UTC ARP_SYNC[5349] INFO Detected vendor of device: 100.80.16.139 as VENDOR: unknown
+2020-12-05T20:37:49UTC ARP_SYNC[5383] INFO activating syslog. using /bin/logger
+2020-12-05T20:37:49UTC ARP_SYNC[5383] INFO --------------------------------------------------------------------------------
+2020-12-05T20:37:49UTC ARP_SYNC[5383] INFO Starting arp sync activity
+2020-12-05T20:37:49UTC ARP_SYNC[5383] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:37:49UTC ARP_SYNC[5383] INFO --------------------------------------------------------------------------------
+2020-12-05T20:37:50UTC ARP_SYNC[5383] INFO Logging into device rancid@100.80.16.139
+2020-12-05T20:37:50UTC ARP_SYNC[5383] INFO Detected vendor of device: 100.80.16.139 as VENDOR: unknown
+2020-12-05T20:38:12UTC ARP_SYNC[5405] INFO activating syslog. using /bin/logger
+2020-12-05T20:38:12UTC ARP_SYNC[5405] INFO --------------------------------------------------------------------------------
+2020-12-05T20:38:12UTC ARP_SYNC[5405] INFO Starting arp sync activity
+2020-12-05T20:38:12UTC ARP_SYNC[5405] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:38:12UTC ARP_SYNC[5405] INFO --------------------------------------------------------------------------------
+2020-12-05T20:38:13UTC ARP_SYNC[5405] INFO Logging into device rancid@100.80.16.139
+2020-12-05T20:38:13UTC ARP_SYNC[5405] INFO Detected vendor of device: 100.80.16.139 as VENDOR: unknown
+2020-12-05T20:39:12UTC ARP_SYNC[5455] INFO activating syslog. using /bin/logger
+2020-12-05T20:39:12UTC ARP_SYNC[5455] INFO --------------------------------------------------------------------------------
+2020-12-05T20:39:12UTC ARP_SYNC[5455] INFO Starting arp sync activity
+2020-12-05T20:39:12UTC ARP_SYNC[5455] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:39:12UTC ARP_SYNC[5455] INFO --------------------------------------------------------------------------------
+2020-12-05T20:39:13UTC ARP_SYNC[5455] INFO Logging into device rancid@100.80.16.139
+2020-12-05T20:39:13UTC ARP_SYNC[5455] INFO Detected vendor of device: 100.80.16.139 as VENDOR: juniper
+2020-12-05T20:40:40UTC ARP_SYNC[5552] INFO activating syslog. using /bin/logger
+2020-12-05T20:40:40UTC ARP_SYNC[5552] INFO --------------------------------------------------------------------------------
+2020-12-05T20:40:40UTC ARP_SYNC[5552] INFO Starting arp sync activity
+2020-12-05T20:40:40UTC ARP_SYNC[5552] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:40:40UTC ARP_SYNC[5552] INFO --------------------------------------------------------------------------------
+2020-12-05T20:40:42UTC ARP_SYNC[5552] INFO Logging into device rancid@100.80.16.139
+2020-12-05T20:40:42UTC ARP_SYNC[5552] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-05T20:41:16UTC ARP_SYNC[5595] INFO activating syslog. using /bin/logger
+2020-12-05T20:41:16UTC ARP_SYNC[5595] INFO --------------------------------------------------------------------------------
+2020-12-05T20:41:16UTC ARP_SYNC[5595] INFO Starting arp sync activity
+2020-12-05T20:41:16UTC ARP_SYNC[5595] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:41:16UTC ARP_SYNC[5595] INFO --------------------------------------------------------------------------------
+2020-12-05T20:41:17UTC ARP_SYNC[5595] INFO Logging into device rancid@100.80.16.139
+2020-12-05T20:41:17UTC ARP_SYNC[5595] INFO Detected vendor of device: 100.80.16.139 as VENDOR: unknown
+2020-12-05T20:41:27UTC ARP_SYNC[5601] INFO activating syslog. using /bin/logger
+2020-12-05T20:41:27UTC ARP_SYNC[5601] INFO --------------------------------------------------------------------------------
+2020-12-05T20:41:27UTC ARP_SYNC[5601] INFO Starting arp sync activity
+2020-12-05T20:41:27UTC ARP_SYNC[5601] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:41:27UTC ARP_SYNC[5601] INFO --------------------------------------------------------------------------------
+2020-12-05T20:41:28UTC ARP_SYNC[5601] INFO Logging into device rancid@100.80.16.139
+2020-12-05T20:41:28UTC ARP_SYNC[5601] INFO Detected vendor of device: 100.80.16.139 as VENDOR: unknown
+2020-12-05T20:41:47UTC ARP_SYNC[5639] INFO activating syslog. using /bin/logger
+2020-12-05T20:41:47UTC ARP_SYNC[5639] INFO --------------------------------------------------------------------------------
+2020-12-05T20:41:47UTC ARP_SYNC[5639] INFO Starting arp sync activity
+2020-12-05T20:41:47UTC ARP_SYNC[5639] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:41:47UTC ARP_SYNC[5639] INFO --------------------------------------------------------------------------------
+2020-12-05T20:41:48UTC ARP_SYNC[5639] INFO Logging into device rancid@100.80.16.139
+2020-12-05T20:41:48UTC ARP_SYNC[5639] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-05T20:43:28UTC ARP_SYNC[5720] INFO activating syslog. using /bin/logger
+2020-12-05T20:43:28UTC ARP_SYNC[5720] INFO --------------------------------------------------------------------------------
+2020-12-05T20:43:28UTC ARP_SYNC[5720] INFO Starting arp sync activity
+2020-12-05T20:43:28UTC ARP_SYNC[5720] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:43:28UTC ARP_SYNC[5720] INFO --------------------------------------------------------------------------------
+2020-12-05T20:43:29UTC ARP_SYNC[5720] INFO Logging into device rancid@100.80.16.139
+2020-12-05T20:43:29UTC ARP_SYNC[5720] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-05T20:43:29UTC ARP_SYNC[5720] INFO Importing namespace methods ::Juniper::*
+2020-12-05T20:44:03UTC ARP_SYNC[5768] INFO activating syslog. using /bin/logger
+2020-12-05T20:44:03UTC ARP_SYNC[5768] INFO --------------------------------------------------------------------------------
+2020-12-05T20:44:03UTC ARP_SYNC[5768] INFO Starting arp sync activity
+2020-12-05T20:44:03UTC ARP_SYNC[5768] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:44:03UTC ARP_SYNC[5768] INFO --------------------------------------------------------------------------------
+2020-12-05T20:44:04UTC ARP_SYNC[5768] INFO Logging into device rancid@100.80.16.139
+2020-12-05T20:44:04UTC ARP_SYNC[5768] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-05T20:44:04UTC ARP_SYNC[5768] INFO Importing methods for ::Juniper::*
+2020-12-05T20:44:29UTC ARP_SYNC[5778] INFO activating syslog. using /bin/logger
+2020-12-05T20:44:29UTC ARP_SYNC[5778] INFO --------------------------------------------------------------------------------
+2020-12-05T20:44:29UTC ARP_SYNC[5778] INFO Starting arp sync activity
+2020-12-05T20:44:29UTC ARP_SYNC[5778] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:44:29UTC ARP_SYNC[5778] INFO --------------------------------------------------------------------------------
+2020-12-05T20:44:39UTC ARP_SYNC[5778] INFO Logging into device rancid@100.80.15.102
+2020-12-05T20:44:49UTC ARP_SYNC[5778] INFO Detected vendor of device: 100.80.15.102 as VENDOR: unknown
+2020-12-05T20:44:55UTC ARP_SYNC[5816] INFO activating syslog. using /bin/logger
+2020-12-05T20:44:55UTC ARP_SYNC[5816] INFO --------------------------------------------------------------------------------
+2020-12-05T20:44:55UTC ARP_SYNC[5816] INFO Starting arp sync activity
+2020-12-05T20:44:55UTC ARP_SYNC[5816] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:44:55UTC ARP_SYNC[5816] INFO --------------------------------------------------------------------------------
+2020-12-05T20:45:05UTC ARP_SYNC[5816] INFO Logging into device rancid@100.80.15.102
+2020-12-05T20:45:15UTC ARP_SYNC[5816] INFO Detected vendor of device: 100.80.15.102 as VENDOR: unknown
+2020-12-05T20:46:12UTC ARP_SYNC[5909] INFO activating syslog. using /bin/logger
+2020-12-05T20:46:12UTC ARP_SYNC[5909] INFO --------------------------------------------------------------------------------
+2020-12-05T20:46:12UTC ARP_SYNC[5909] INFO Starting arp sync activity
+2020-12-05T20:46:12UTC ARP_SYNC[5909] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:46:12UTC ARP_SYNC[5909] INFO --------------------------------------------------------------------------------
+2020-12-05T20:46:22UTC ARP_SYNC[5909] INFO Logging into device rancid@100.80.15.102
+2020-12-05T20:46:32UTC ARP_SYNC[5909] INFO Detected vendor of device: 100.80.15.102 as VENDOR: unknown
+2020-12-05T20:48:17UTC ARP_SYNC[6018] INFO activating syslog. using /bin/logger
+2020-12-05T20:48:17UTC ARP_SYNC[6018] INFO --------------------------------------------------------------------------------
+2020-12-05T20:48:17UTC ARP_SYNC[6018] INFO Starting arp sync activity
+2020-12-05T20:48:17UTC ARP_SYNC[6018] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T20:48:17UTC ARP_SYNC[6018] INFO --------------------------------------------------------------------------------
+2020-12-05T20:48:18UTC ARP_SYNC[6018] INFO Logging into device rancid@100.80.15.102
+2020-12-05T20:48:18UTC ARP_SYNC[6018] INFO Detected vendor of device: 100.80.15.102 as VENDOR: unknown
+2020-12-05T21:02:26UTC ARP_SYNC[6927] INFO activating syslog. using /bin/logger
+2020-12-05T21:02:26UTC ARP_SYNC[6927] INFO --------------------------------------------------------------------------------
+2020-12-05T21:02:26UTC ARP_SYNC[6927] INFO Starting arp sync activity
+2020-12-05T21:02:26UTC ARP_SYNC[6927] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:02:26UTC ARP_SYNC[6927] INFO --------------------------------------------------------------------------------
+2020-12-05T21:02:27UTC ARP_SYNC[6927] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:02:27UTC ARP_SYNC[6927] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:02:27UTC ARP_SYNC[6927] INFO Importing methods for ::Nokia::*
+2020-12-05T21:05:24UTC ARP_SYNC[7094] INFO activating syslog. using /bin/logger
+2020-12-05T21:05:24UTC ARP_SYNC[7094] INFO --------------------------------------------------------------------------------
+2020-12-05T21:05:24UTC ARP_SYNC[7094] INFO Starting arp sync activity
+2020-12-05T21:05:24UTC ARP_SYNC[7094] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T21:05:24UTC ARP_SYNC[7094] INFO --------------------------------------------------------------------------------
+2020-12-05T21:05:25UTC ARP_SYNC[7094] INFO Logging into device rancid@100.80.15.102
+2020-12-05T21:05:25UTC ARP_SYNC[7094] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-05T21:05:25UTC ARP_SYNC[7094] INFO Importing methods for ::Nokia::*

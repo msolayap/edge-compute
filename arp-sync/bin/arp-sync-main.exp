@@ -1,5 +1,7 @@
 #!/usr/bin/expect
 
+log_user 1
+
 source ../config.exp
 
 source ../lib/util.exp
@@ -24,14 +26,27 @@ lputs [banner_line];
 set devices_array [get_device_list $devices_list_file]
 
 foreach dev_record $devices_array {
-	puts [dict get $dev_record "name"];
+	dict get $dev_record "name" ;
+## loop through this foreach and do processing. 
 }
 
-device_login 100.180.16.139 "rancid" "level3"
+set device "100.80.15.102" ;
+set user   "rancid" 
+set pass   "level3" 
 
+# Initialize variables necessary for device interaction.
+init_vars; 
+
+# Login to device
+login_to_device $device $user $pass
+
+lputs "Logging into device $user@$device" ;
+# detect device vendor using /show version/ command.
 set vendor [detect_device_vendor] ;
 
-load_methods_for $vendor ;
+lputs "Detected vendor of device: $device as VENDOR: $vendor" ;
 
+load_methods_for $vendor ;
+#
 get_arp_entries ;
 
