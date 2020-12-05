@@ -1,0 +1,286 @@
+2020-12-05T13:48:59UTC ARP_SYNC INFO This is sampel log line
+
+2020-12-05T14:14:36UTC ARP_SYNC[15306] INFO This is sample log line
+
+2020-12-05T14:15:06UTC ARP_SYNC[15355] INFO This is sample log line
+
+2020-12-05T14:15:08UTC ARP_SYNC[15366] INFO This is sample log line
+
+2020-12-05T14:16:03UTC ARP_SYNC[15426] INFO This is sample log line
+2020-12-05T14:16:13UTC ARP_SYNC[15428] INFO This is sample log line
+2020-12-05T14:16:15UTC ARP_SYNC[15430] INFO This is sample log line
+2020-12-05T14:16:18UTC ARP_SYNC[15439] INFO This is sample log line
+2020-12-05T14:16:20UTC ARP_SYNC[15441] INFO This is sample log line
+2020-12-05T14:18:51UTC ARP_SYNC[15563] INFO This is sample log line
+2020-12-05T14:19:07UTC ARP_SYNC[15577] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:19:07UTC ARP_SYNC[15577] INFO This is sample log line
+2020-12-05T14:35:58UTC ARP_SYNC[16535] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:35:58UTC ARP_SYNC[16535] INFO This is sample log line
+2020-12-05T14:36:45UTC ARP_SYNC[16561] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:36:45UTC ARP_SYNC[16561] INFO This is sample log line
+2020-12-05T14:38:04UTC ARP_SYNC[16631] INFO activating syslog. using /bin/logger
+2020-12-05T14:38:04UTC ARP_SYNC[16631] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:38:04UTC ARP_SYNC[16631] INFO This is sample log line
+2020-12-05T14:38:27UTC ARP_SYNC[16690] INFO activating syslog. using /bin/logger
+2020-12-05T14:38:27UTC ARP_SYNC[16690] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:38:27UTC ARP_SYNC[16690] INFO This is sample log line
+2020-12-05T14:38:34UTC ARP_SYNC[16712] INFO activating syslog. using /bin/logger
+2020-12-05T14:38:34UTC ARP_SYNC[16712] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:38:34UTC ARP_SYNC[16712] INFO This is sample log line
+2020-12-05T14:43:08UTC ARP_SYNC[16955] INFO activating syslog. using /bin/logger
+2020-12-05T14:43:08UTC ARP_SYNC[16955] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:43:08UTC ARP_SYNC[16955] INFO This is sample log line
+2020-12-05T14:43:45UTC ARP_SYNC[16998] INFO activating syslog. using /bin/logger
+2020-12-05T14:43:46UTC ARP_SYNC[16998] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:43:46UTC ARP_SYNC[16998] INFO This is sample log line
+2020-12-05T14:44:04UTC ARP_SYNC[17018] INFO activating syslog. using /bin/logger
+2020-12-05T14:44:04UTC ARP_SYNC[17018] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:44:04UTC ARP_SYNC[17018] INFO This is sample log line
+2020-12-05T14:44:14UTC ARP_SYNC[17023] INFO activating syslog. using /bin/logger
+2020-12-05T14:44:14UTC ARP_SYNC[17023] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:44:14UTC ARP_SYNC[17023] INFO This is sample log line
+2020-12-05T14:47:25UTC ARP_SYNC[17241] INFO activating syslog. using /bin/logger
+2020-12-05T14:47:25UTC ARP_SYNC[17241] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:47:25UTC ARP_SYNC[17241] INFO This is sample log line
+2020-12-05T14:55:06UTC ARP_SYNC[17836] INFO activating syslog. using /bin/logger
+2020-12-05T14:55:06UTC ARP_SYNC[17836] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:55:06UTC ARP_SYNC[17836] INFO This is sample log line
+2020-12-05T14:58:32UTC ARP_SYNC[18008] INFO activating syslog. using /bin/logger
+2020-12-05T14:58:32UTC ARP_SYNC[18008] INFO --------------------------------------------------------------------------------
+2020-12-05T14:58:32UTC ARP_SYNC[18008] INFO Starting arp sync activity
+2020-12-05T14:58:32UTC ARP_SYNC[18008] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T14:58:32UTC ARP_SYNC[18008] INFO --------------------------------------------------------------------------------
+2020-12-05T14:58:32UTC ARP_SYNC[18008] INFO This is sample log line
+2020-12-05T15:02:28UTC ARP_SYNC[18267] INFO activating syslog. using /bin/logger
+2020-12-05T15:02:28UTC ARP_SYNC[18267] INFO --------------------------------------------------------------------------------
+2020-12-05T15:02:28UTC ARP_SYNC[18267] INFO Starting arp sync activity
+2020-12-05T15:02:28UTC ARP_SYNC[18267] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64
+user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+
+2020-12-05T15:02:28UTC ARP_SYNC[18267] INFO --------------------------------------------------------------------------------
+2020-12-05T15:02:28UTC ARP_SYNC[18267] INFO This is sample log line
+2020-12-05T15:02:28UTC ARP_SYNC[18267] INFO activating syslog. using /bin/logger
+2020-12-05T15:03:41UTC ARP_SYNC[18340] INFO activating syslog. using /bin/logger
+2020-12-05T15:03:41UTC ARP_SYNC[18340] INFO --------------------------------------------------------------------------------
+2020-12-05T15:03:41UTC ARP_SYNC[18340] INFO Starting arp sync activity
+2020-12-05T15:03:41UTC ARP_SYNC[18340] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+2020-12-05T15:03:41UTC ARP_SYNC[18340] INFO --------------------------------------------------------------------------------
+2020-12-05T15:03:41UTC ARP_SYNC[18340] INFO This is sample log line
+2020-12-05T15:03:40UTC ARP_SYNC[18340] INFO activating syslog. using /bin/logger
+2020-12-05T15:05:38UTC ARP_SYNC[18467] INFO activating syslog. using /bin/logger
+2020-12-05T15:05:38UTC ARP_SYNC[18467] INFO --------------------------------------------------------------------------------
+2020-12-05T15:05:38UTC ARP_SYNC[18467] INFO Starting arp sync activity
+2020-12-05T15:05:38UTC ARP_SYNC[18467] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+2020-12-05T15:05:38UTC ARP_SYNC[18467] INFO --------------------------------------------------------------------------------
+2020-12-05T15:05:38UTC ARP_SYNC[18467] INFO This is sample log line
+2020-12-05T15:05:38UTC ARP_SYNC[18467] INFO activating syslog. using /bin/logger
+2020-12-05T15:06:58UTC ARP_SYNC[18540] INFO activating syslog. using /bin/logger
+2020-12-05T15:07:01UTC ARP_SYNC[18542] INFO activating syslog. using /bin/logger
+2020-12-05T15:09:03UTC ARP_SYNC[18645] INFO activating syslog. using /bin/logger
+2020-12-05T15:09:12UTC ARP_SYNC[18648] INFO activating syslog. using /bin/logger
+2020-12-05T15:09:12UTC ARP_SYNC[18648] INFO --------------------------------------------------------------------------------
+2020-12-05T15:09:12UTC ARP_SYNC[18648] INFO Starting arp sync activity
+2020-12-05T15:09:12UTC ARP_SYNC[18648] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+2020-12-05T15:09:12UTC ARP_SYNC[18648] INFO --------------------------------------------------------------------------------
+2020-12-05T15:09:12UTC ARP_SYNC[18648] INFO This is sample log line
+2020-12-05T15:09:12UTC ARP_SYNC[18648] INFO activating syslog. using /bin/logger
+2020-12-05T15:10:32UTC ARP_SYNC[18732] INFO activating syslog. using /bin/logger
+2020-12-05T15:10:42UTC ARP_SYNC[18756] INFO activating syslog. using /bin/logger
+2020-12-05T15:10:42UTC ARP_SYNC[18756] INFO --------------------------------------------------------------------------------
+2020-12-05T15:10:42UTC ARP_SYNC[18756] INFO Starting arp sync activity
+2020-12-05T15:10:42UTC ARP_SYNC[18756] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+2020-12-05T15:10:42UTC ARP_SYNC[18756] INFO --------------------------------------------------------------------------------
+2020-12-05T15:10:42UTC ARP_SYNC[18756] INFO This is sample log line
+2020-12-05T15:10:42UTC ARP_SYNC[18756] INFO activating syslog. using /bin/logger
+2020-12-05T15:11:36UTC ARP_SYNC[18841] INFO activating syslog. using /bin/logger
+2020-12-05T15:11:36UTC ARP_SYNC[18841] INFO --------------------------------------------------------------------------------
+2020-12-05T15:11:36UTC ARP_SYNC[18841] INFO Starting arp sync activity
+2020-12-05T15:11:36UTC ARP_SYNC[18841] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+2020-12-05T15:11:36UTC ARP_SYNC[18841] INFO --------------------------------------------------------------------------------
+2020-12-05T15:11:36UTC ARP_SYNC[18841] INFO This is sample log line
+2020-12-05T15:11:36UTC ARP_SYNC[18841] INFO activating syslog. using /bin/logger
+2020-12-05T15:11:47UTC ARP_SYNC[18848] INFO activating syslog. using /bin/logger
+2020-12-05T15:11:47UTC ARP_SYNC[18848] INFO --------------------------------------------------------------------------------
+2020-12-05T15:11:47UTC ARP_SYNC[18848] INFO Starting arp sync activity
+2020-12-05T15:11:47UTC ARP_SYNC[18848] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+2020-12-05T15:11:47UTC ARP_SYNC[18848] INFO --------------------------------------------------------------------------------
+2020-12-05T15:11:47UTC ARP_SYNC[18848] INFO This is sample log line
+2020-12-05T15:11:47UTC ARP_SYNC[18848] INFO activating syslog. using /bin/logger
+2020-12-05T15:13:53UTC ARP_SYNC[18977] INFO activating syslog. using /bin/logger
+2020-12-05T15:13:53UTC ARP_SYNC[18977] INFO --------------------------------------------------------------------------------
+2020-12-05T15:13:53UTC ARP_SYNC[18977] INFO Starting arp sync activity
+2020-12-05T15:13:53UTC ARP_SYNC[18977] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+2020-12-05T15:13:53UTC ARP_SYNC[18977] INFO --------------------------------------------------------------------------------
+2020-12-05T15:13:53UTC ARP_SYNC[18977] INFO This is sample log line
+2020-12-05T15:24:51UTC ARP_SYNC[19547] INFO activating syslog. using /bin/logger
+2020-12-05T15:24:51UTC ARP_SYNC[19547] INFO --------------------------------------------------------------------------------
+2020-12-05T15:24:51UTC ARP_SYNC[19547] INFO Starting arp sync activity
+2020-12-05T15:24:51UTC ARP_SYNC[19547] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+2020-12-05T15:24:51UTC ARP_SYNC[19547] INFO --------------------------------------------------------------------------------
+2020-12-05T15:24:51UTC ARP_SYNC[19547] INFO This is sample log line
+2020-12-05T16:59:15UTC ARP_SYNC[24726] INFO activating syslog. using /bin/logger
+2020-12-05T16:59:15UTC ARP_SYNC[24726] INFO --------------------------------------------------------------------------------
+2020-12-05T16:59:15UTC ARP_SYNC[24726] INFO Starting arp sync activity
+2020-12-05T16:59:15UTC ARP_SYNC[24726] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync
+2020-12-05T16:59:15UTC ARP_SYNC[24726] INFO --------------------------------------------------------------------------------
+2020-12-05T17:08:37UTC ARP_SYNC[25342] INFO activating syslog. using /bin/logger
+2020-12-05T17:08:37UTC ARP_SYNC[25342] INFO --------------------------------------------------------------------------------
+2020-12-05T17:08:37UTC ARP_SYNC[25342] INFO Starting arp sync activity
+2020-12-05T17:08:37UTC ARP_SYNC[25342] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:08:37UTC ARP_SYNC[25342] INFO --------------------------------------------------------------------------------
+2020-12-05T17:08:46UTC ARP_SYNC[25355] INFO activating syslog. using /bin/logger
+2020-12-05T17:08:46UTC ARP_SYNC[25355] INFO --------------------------------------------------------------------------------
+2020-12-05T17:08:46UTC ARP_SYNC[25355] INFO Starting arp sync activity
+2020-12-05T17:08:46UTC ARP_SYNC[25355] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:08:46UTC ARP_SYNC[25355] INFO --------------------------------------------------------------------------------
+2020-12-05T17:08:50UTC ARP_SYNC[25362] INFO activating syslog. using /bin/logger
+2020-12-05T17:08:50UTC ARP_SYNC[25362] INFO --------------------------------------------------------------------------------
+2020-12-05T17:08:50UTC ARP_SYNC[25362] INFO Starting arp sync activity
+2020-12-05T17:08:50UTC ARP_SYNC[25362] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:08:50UTC ARP_SYNC[25362] INFO --------------------------------------------------------------------------------
+2020-12-05T17:09:08UTC ARP_SYNC[25380] INFO activating syslog. using /bin/logger
+2020-12-05T17:09:08UTC ARP_SYNC[25380] INFO --------------------------------------------------------------------------------
+2020-12-05T17:09:08UTC ARP_SYNC[25380] INFO Starting arp sync activity
+2020-12-05T17:09:08UTC ARP_SYNC[25380] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:09:08UTC ARP_SYNC[25380] INFO --------------------------------------------------------------------------------
+2020-12-05T17:09:10UTC ARP_SYNC[25384] INFO activating syslog. using /bin/logger
+2020-12-05T17:09:10UTC ARP_SYNC[25384] INFO --------------------------------------------------------------------------------
+2020-12-05T17:09:10UTC ARP_SYNC[25384] INFO Starting arp sync activity
+2020-12-05T17:09:10UTC ARP_SYNC[25384] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:09:10UTC ARP_SYNC[25384] INFO --------------------------------------------------------------------------------
+2020-12-05T17:11:50UTC ARP_SYNC[25596] INFO activating syslog. using /bin/logger
+2020-12-05T17:11:50UTC ARP_SYNC[25596] INFO --------------------------------------------------------------------------------
+2020-12-05T17:11:50UTC ARP_SYNC[25596] INFO Starting arp sync activity
+2020-12-05T17:11:50UTC ARP_SYNC[25596] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:11:50UTC ARP_SYNC[25596] INFO --------------------------------------------------------------------------------
+2020-12-05T17:12:30UTC ARP_SYNC[25631] INFO activating syslog. using /bin/logger
+2020-12-05T17:12:30UTC ARP_SYNC[25631] INFO --------------------------------------------------------------------------------
+2020-12-05T17:12:30UTC ARP_SYNC[25631] INFO Starting arp sync activity
+2020-12-05T17:12:30UTC ARP_SYNC[25631] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:12:30UTC ARP_SYNC[25631] INFO --------------------------------------------------------------------------------
+2020-12-05T17:13:35UTC ARP_SYNC[25700] INFO activating syslog. using /bin/logger
+2020-12-05T17:13:35UTC ARP_SYNC[25700] INFO --------------------------------------------------------------------------------
+2020-12-05T17:13:35UTC ARP_SYNC[25700] INFO Starting arp sync activity
+2020-12-05T17:13:35UTC ARP_SYNC[25700] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:13:35UTC ARP_SYNC[25700] INFO --------------------------------------------------------------------------------
+2020-12-05T17:13:39UTC ARP_SYNC[25709] INFO activating syslog. using /bin/logger
+2020-12-05T17:13:39UTC ARP_SYNC[25709] INFO --------------------------------------------------------------------------------
+2020-12-05T17:13:39UTC ARP_SYNC[25709] INFO Starting arp sync activity
+2020-12-05T17:13:39UTC ARP_SYNC[25709] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:13:39UTC ARP_SYNC[25709] INFO --------------------------------------------------------------------------------
+2020-12-05T17:13:47UTC ARP_SYNC[25714] INFO activating syslog. using /bin/logger
+2020-12-05T17:13:47UTC ARP_SYNC[25714] INFO --------------------------------------------------------------------------------
+2020-12-05T17:13:47UTC ARP_SYNC[25714] INFO Starting arp sync activity
+2020-12-05T17:13:47UTC ARP_SYNC[25714] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:13:47UTC ARP_SYNC[25714] INFO --------------------------------------------------------------------------------
+2020-12-05T17:14:14UTC ARP_SYNC[25742] INFO activating syslog. using /bin/logger
+2020-12-05T17:14:14UTC ARP_SYNC[25742] INFO --------------------------------------------------------------------------------
+2020-12-05T17:14:14UTC ARP_SYNC[25742] INFO Starting arp sync activity
+2020-12-05T17:14:14UTC ARP_SYNC[25742] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:14:14UTC ARP_SYNC[25742] INFO --------------------------------------------------------------------------------
+2020-12-05T17:21:33UTC ARP_SYNC[26156] INFO activating syslog. using /bin/logger
+2020-12-05T17:21:33UTC ARP_SYNC[26156] INFO --------------------------------------------------------------------------------
+2020-12-05T17:21:33UTC ARP_SYNC[26156] INFO Starting arp sync activity
+2020-12-05T17:21:33UTC ARP_SYNC[26156] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:21:33UTC ARP_SYNC[26156] INFO --------------------------------------------------------------------------------
+2020-12-05T17:21:47UTC ARP_SYNC[26175] INFO activating syslog. using /bin/logger
+2020-12-05T17:21:47UTC ARP_SYNC[26175] INFO --------------------------------------------------------------------------------
+2020-12-05T17:21:47UTC ARP_SYNC[26175] INFO Starting arp sync activity
+2020-12-05T17:21:47UTC ARP_SYNC[26175] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:21:47UTC ARP_SYNC[26175] INFO --------------------------------------------------------------------------------
+2020-12-05T17:21:47UTC ARP_SYNC[26179] INFO activating syslog. using /bin/logger
+2020-12-05T17:21:47UTC ARP_SYNC[26179] INFO --------------------------------------------------------------------------------
+2020-12-05T17:21:47UTC ARP_SYNC[26179] INFO Starting arp sync activity
+2020-12-05T17:21:47UTC ARP_SYNC[26179] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:21:47UTC ARP_SYNC[26179] INFO --------------------------------------------------------------------------------
+2020-12-05T17:21:49UTC ARP_SYNC[26190] INFO activating syslog. using /bin/logger
+2020-12-05T17:21:49UTC ARP_SYNC[26190] INFO --------------------------------------------------------------------------------
+2020-12-05T17:21:49UTC ARP_SYNC[26190] INFO Starting arp sync activity
+2020-12-05T17:21:49UTC ARP_SYNC[26190] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:21:49UTC ARP_SYNC[26190] INFO --------------------------------------------------------------------------------
+2020-12-05T17:22:04UTC ARP_SYNC[26212] INFO activating syslog. using /bin/logger
+2020-12-05T17:22:04UTC ARP_SYNC[26212] INFO --------------------------------------------------------------------------------
+2020-12-05T17:22:04UTC ARP_SYNC[26212] INFO Starting arp sync activity
+2020-12-05T17:22:04UTC ARP_SYNC[26212] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:22:04UTC ARP_SYNC[26212] INFO --------------------------------------------------------------------------------
+2020-12-05T17:22:04UTC ARP_SYNC[26216] INFO activating syslog. using /bin/logger
+2020-12-05T17:22:04UTC ARP_SYNC[26216] INFO --------------------------------------------------------------------------------
+2020-12-05T17:22:04UTC ARP_SYNC[26216] INFO Starting arp sync activity
+2020-12-05T17:22:04UTC ARP_SYNC[26216] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:22:04UTC ARP_SYNC[26216] INFO --------------------------------------------------------------------------------
+2020-12-05T17:22:04UTC ARP_SYNC[26220] INFO activating syslog. using /bin/logger
+2020-12-05T17:22:04UTC ARP_SYNC[26220] INFO --------------------------------------------------------------------------------
+2020-12-05T17:22:04UTC ARP_SYNC[26220] INFO Starting arp sync activity
+2020-12-05T17:22:04UTC ARP_SYNC[26220] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:22:04UTC ARP_SYNC[26220] INFO --------------------------------------------------------------------------------
+2020-12-05T17:42:03UTC ARP_SYNC[27506] INFO activating syslog. using /bin/logger
+2020-12-05T17:42:03UTC ARP_SYNC[27506] INFO --------------------------------------------------------------------------------
+2020-12-05T17:42:03UTC ARP_SYNC[27506] INFO Starting arp sync activity
+2020-12-05T17:42:03UTC ARP_SYNC[27506] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:42:03UTC ARP_SYNC[27506] INFO --------------------------------------------------------------------------------
+2020-12-05T17:42:05UTC ARP_SYNC[27515] INFO activating syslog. using /bin/logger
+2020-12-05T17:42:05UTC ARP_SYNC[27515] INFO --------------------------------------------------------------------------------
+2020-12-05T17:42:05UTC ARP_SYNC[27515] INFO Starting arp sync activity
+2020-12-05T17:42:05UTC ARP_SYNC[27515] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:42:05UTC ARP_SYNC[27515] INFO --------------------------------------------------------------------------------
+2020-12-05T17:42:10UTC ARP_SYNC[27519] INFO activating syslog. using /bin/logger
+2020-12-05T17:42:10UTC ARP_SYNC[27519] INFO --------------------------------------------------------------------------------
+2020-12-05T17:42:10UTC ARP_SYNC[27519] INFO Starting arp sync activity
+2020-12-05T17:42:10UTC ARP_SYNC[27519] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:42:10UTC ARP_SYNC[27519] INFO --------------------------------------------------------------------------------
+2020-12-05T17:42:11UTC ARP_SYNC[27523] INFO activating syslog. using /bin/logger
+2020-12-05T17:42:11UTC ARP_SYNC[27523] INFO --------------------------------------------------------------------------------
+2020-12-05T17:42:11UTC ARP_SYNC[27523] INFO Starting arp sync activity
+2020-12-05T17:42:11UTC ARP_SYNC[27523] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:42:11UTC ARP_SYNC[27523] INFO --------------------------------------------------------------------------------
+2020-12-05T17:43:47UTC ARP_SYNC[27612] INFO activating syslog. using /bin/logger
+2020-12-05T17:43:47UTC ARP_SYNC[27612] INFO --------------------------------------------------------------------------------
+2020-12-05T17:43:47UTC ARP_SYNC[27612] INFO Starting arp sync activity
+2020-12-05T17:43:47UTC ARP_SYNC[27612] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:43:47UTC ARP_SYNC[27612] INFO --------------------------------------------------------------------------------
+2020-12-05T17:43:48UTC ARP_SYNC[27616] INFO activating syslog. using /bin/logger
+2020-12-05T17:43:48UTC ARP_SYNC[27616] INFO --------------------------------------------------------------------------------
+2020-12-05T17:43:48UTC ARP_SYNC[27616] INFO Starting arp sync activity
+2020-12-05T17:43:48UTC ARP_SYNC[27616] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:43:48UTC ARP_SYNC[27616] INFO --------------------------------------------------------------------------------
+2020-12-05T17:43:48UTC ARP_SYNC[27620] INFO activating syslog. using /bin/logger
+2020-12-05T17:43:48UTC ARP_SYNC[27620] INFO --------------------------------------------------------------------------------
+2020-12-05T17:43:48UTC ARP_SYNC[27620] INFO Starting arp sync activity
+2020-12-05T17:43:48UTC ARP_SYNC[27620] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:43:48UTC ARP_SYNC[27620] INFO --------------------------------------------------------------------------------
+2020-12-05T17:43:58UTC ARP_SYNC[27640] INFO activating syslog. using /bin/logger
+2020-12-05T17:43:58UTC ARP_SYNC[27640] INFO --------------------------------------------------------------------------------
+2020-12-05T17:43:58UTC ARP_SYNC[27640] INFO Starting arp sync activity
+2020-12-05T17:43:58UTC ARP_SYNC[27640] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:43:58UTC ARP_SYNC[27640] INFO --------------------------------------------------------------------------------
+2020-12-05T17:44:14UTC ARP_SYNC[27653] INFO activating syslog. using /bin/logger
+2020-12-05T17:44:14UTC ARP_SYNC[27653] INFO --------------------------------------------------------------------------------
+2020-12-05T17:44:14UTC ARP_SYNC[27653] INFO Starting arp sync activity
+2020-12-05T17:44:14UTC ARP_SYNC[27653] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-05T17:44:14UTC ARP_SYNC[27653] INFO --------------------------------------------------------------------------------

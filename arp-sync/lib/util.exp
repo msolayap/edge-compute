@@ -1,0 +1,122 @@
+
+
+# File to hold utility procedures
+
+# proc to provide basic info about current execution environment
+
+proc script_host_info {}  {
+	global tcl_platform 
+	set msg {} ;
+	append msg "hostname: [exec hostname] ; OS: $tcl_platform(os)-$tcl_platform(machine) ; user: $tcl_platform(user) ; cwd: [pwd]" ;
+
+	return $msg
+}
+# Returns a banner line
+proc banner_line {} {
+	return [string repeat "-" 80] 
+}
+
+# Debug print function. Prints only when DEBUG is set.
+proc dputs { line } {
+	global DEBUG ;
+
+	if {[is_true $DEBUG]} {
+		puts stderr $line ;
+	}
+}
+# proc to log msg at given level
+proc get_date {} {
+	global log_datefmt date_locale
+
+	set ctime [clock format [clock seconds] -format $log_datefmt -locale $date_locale]
+
+	return $ctime
+}
+
+proc is_true {var} {
+	if { [string is true $var] } { return 1 }  else { return 0 } ;
+}
+
+proc is_false {var} {
+	if { [string is false $var] } { return 1 }  else { return 0 } ;
+}
+
+proc open_logfile {} {
+
+	global logfile_ready logfile logfh basedir
+
+	set logdir "$basedir/log" ;
+
+	if { 0==[file isdirectory $logdir] } {
+		set res [catch [file mkdir "$logdir"] err]
+	}
+
+	if { [ catch {set logfh [open "$logdir/$logfile" "a"]} err ] } {
+		dputs "Cannot open logfile $logfile. Error: $err" ;
+		set logfile_ready 0 ;
+		return 1;
+	} else {
+		set logfile_ready 1 ;
+		return 0 ;
+	}
+}
+
+proc lputs {msg {level {INFO}} } {
+	global app_tag logfh logfile_ready logging ;
+
+	set log_line "" ;
+	set log_fmt "%s %s %s %s" ;
+	set log_line  [format $log_fmt [get_date] $app_tag $level $msg] ;
+
+	dputs $log_line ;
+
+	if { [is_true $logging] &&  [is_true $logfile_ready] } {
+		puts $logfh $log_line ;
+	}
+}
+
+proc send_syslog {msg {level {info}} } {
+	global app_tag log_syslog syslog_ready logger_util 
+
+	if { [is_true $log_syslog] && [is_true $syslog_ready] } {
+		set ret [exec $logger_util -p user.$level -t $app_tag $msg]
+	}
+}
+# proc to check logger utility's precense in the system and enable syslog.
+proc enable_syslog {} {
+	global log_syslog syslog_ready logger_util ;
+
+	if { [is_false $syslog_ready] } {
+
+		if { 0==[catch {exec which logger} err]  } {
+			lputs "activating syslog. using $err" ;
+			set logger_util $err
+			set syslog_ready 1
+		} else {
+			lputs "cannot send messages to syslog: error: $err" ;
+			set syslog_ready 0 ;
+		}
+	}
+}
+
+
+# proc to enable DEBUG
+proc debug_on {} {
+	uplevel {
+		set DEBUG 1
+	}
+}
+
+# proc to disable DEBUG
+proc debug_off {} {
+	uplevel {
+		set DEBUG 0
+	}
+}
+
+# proc to print the given message and terminate the program
+proc error_exit {code msg}  {
+	dputs $msg ;
+	exit $code ;
+}
+

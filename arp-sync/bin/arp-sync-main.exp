@@ -1,0 +1,32 @@
+#!/usr/bin/expect
+
+source ../config.exp
+
+source ../lib/util.exp
+source ../lib/base.exp
+source ../lib/juniper.exp
+source ../lib/nokia.exp
+
+# code to initialize logging and syslog
+open_logfile ;
+enable_syslog ;
+
+debug_on ;
+
+lputs [banner_line];
+lputs "Starting arp sync activity" ;
+lputs [script_host_info]
+lputs [banner_line];
+
+#send_syslog "This is sample log line" "crit" ;
+#error_exit 1 "Error occured" 
+
+set dtype [lindex $argv 0] 
+
+if { [string equal -nocase $dtype "juniper" ] } {
+	puts "juniper" ;
+} elseif { [string equal -nocase $dtype "nokia" ] } {
+	puts "nokia" ;
+} else {
+	puts "unsupported devicetype: $dtype" ;
+}

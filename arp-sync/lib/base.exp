@@ -1,0 +1,47 @@
+
+set warn_msg "WARN: This is just stub for %s. override this in respective device class."
+
+proc device_login {device user pass} {
+	global warn_msg ;
+
+	set _proc_name [lindex [info level 1 ] 0 ]
+	dputs [format $warn_msg $_proc_name ]
+}
+
+proc get_arp_entries { {arp_filter ""} } {
+	global warn_msg ;
+
+	set _proc_name [lindex [info level 1 ] 0 ]
+	dputs [format $warn_msg $_proc_name ]
+
+}
+
+proc parse_arp_entry {}  {
+	global warn_msg ;
+
+	set _proc_name [lindex [info level 1 ] 0 ]
+	dputs [format $warn_msg $_proc_name ]
+}
+
+proc prepare_set_arp_cmd {params} {
+	global warn_msg ;
+
+	set _proc_name [lindex [info level 1 ] 0 ]
+	dputs [format $warn_msg $_proc_name ]
+
+}
+
+proc ping_target {target params} {
+
+	global warn_msg ;
+
+	set _proc_name [lindex [info level 1 ] 0 ]
+	dputs [format $warn_msg $_proc_name ]
+}
+
+proc device_logout {} { 
+	global warn_msg ;
+
+	set _proc_name [lindex [info level 1 ] 0 ]
+	dputs [format $warn_msg $_proc_name ]
+}
