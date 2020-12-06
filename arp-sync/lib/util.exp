@@ -64,6 +64,8 @@ proc open_logfile {} {
 proc lputs {msg {level {INFO}} } {
 	global app_tag logfh logfile_ready logging ;
 
+	set msg [string trimright $msg] ;
+
 	set log_line "" ;
 	set log_fmt "%s %s %s %s" ;
 	set log_line  [format $log_fmt [get_date] $app_tag $level $msg] ;
@@ -138,7 +140,11 @@ proc get_device_list {device_list_file} {
 
 		set header_line 1;
 		foreach record [split $content "$LS"] {
-#skip first line.
+#skip empty lines
+			if { [regexp "^$"  $record] } {  continue ; }
+#for safer side skip any space/newline chars at end.
+			set record [string trimright $record] ;
+#take column names from the first line of the content.
 			if { $header_line }  { 
 				set colnames [split $record "$FS"] ;
 				set header_line 0 ;  

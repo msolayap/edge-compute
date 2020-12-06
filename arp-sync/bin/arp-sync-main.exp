@@ -52,6 +52,7 @@ foreach dev_record $devices_array {
 	set res [lsearch -regexp $mandatory_fields "^$"]  ;
 	if { $res!=-1  } {
 		lputs "device records invalid at row: $rownum. skipping to next record" "ERROR"
+		lputs $dev_record
 		set invalid_row 1
 	}
  # Increment row number for tracking.
@@ -82,14 +83,18 @@ foreach dev_record $devices_array {
 #
 	set all_arp_dict [get_arp_entries]
 
-#	foreach arp $all_arp_dict {
-#		dict for {k v} $arp { 
-#			dputs "$k -> $v" 
-#		}
-#		dputs [banner_line] ;
-#	}
+	set non_static_arp_dict {};
 
-	set set_arp_cmd_list [prepare_set_arp_cmd $all_arp_dict]
+	foreach entry $all_arp_dict {
+		if { [regexp -nocase "permanent" [dict get $entry flags] ] } {
+			continue ;
+		} else {
+			lappend non_static_arp_dict $entry 
+		}
+
+	}
+
+	set set_arp_cmd_list [prepare_set_arp_cmd $non_static_arp_dict]
 
 	lputs "Prepared List of SET ARP Commands" ;
 

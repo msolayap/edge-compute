@@ -11,6 +11,7 @@ namespace eval Juniper {
 		init_terminal \
 		get_arp_entries \
 		prepare_set_arp_cmd \
+		parse_arp_entries \
 		ping_target \
 		device_logout 
 
@@ -88,15 +89,23 @@ namespace eval Juniper {
 			   } 
 			}
 		}
+# convert all arp lines to dictionary structure for easy processing.
+		set all_arp_dict [parse_arp_entries [split $arp_output "\n"]] ;
+
+		return $all_arp_dict ;
+	}
+
+	proc parse_arp_entries {arp_entries_list}  {
+
+		set arp_entries_dict {}
+
 #normalize arp output to a list, so each line 
-		foreach line [split $arp_output "\n"] {
+		foreach line $arp_entries_list {
 
 			set line [string trimright $line];
 			set line [string trimleft $line];
 
 			if { [regexp  "^$"  $line] } {
-				#dputs ">$line<" ;
-				#dputs "invalid arp line. skipping" ;
 				continue ;
 			}
 			set arp_entry "" ;
@@ -114,11 +123,13 @@ namespace eval Juniper {
 				set arp_entry [dict set arp_entry family "inet" ] ;
 
 # Append the ARP entry dict to a master list.
-				lappend all_arp_dict $arp_entry 
+				lappend arp_entries_dict $arp_entry 
 			}
 
 		}
-		return $all_arp_dict ;
+
+		return $arp_entries_dict ;
+
 	}
 
 	proc prepare_set_arp_cmd {arp_entries_list } {
