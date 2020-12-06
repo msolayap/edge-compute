@@ -5,13 +5,11 @@
 
 namespace eval Juniper {
 
+
 	namespace export \
-		login_to_device \
 		init_vars \
 		init_terminal \
-		detect_vendor \
 		get_arp_entries \
-		parse_arp_entry \
 		prepare_set_arp_cmd \
 		ping_target \
 		device_logout 
@@ -24,91 +22,135 @@ namespace eval Juniper {
 			# specific to this piece
 			set vendor_detected 0
 			set device_vendor "unknown"
-			log_user 0 
+			set timeout 30 
+			log_user 1 ;
 		}
-	}
-
-	proc login_to_device {hostname user password} {
-
-		global login_success prompt
-
-		if {[catch {spawn ssh $user@$hostname} err ]} {
-			puts stderr "ERROR: Failed to login to device\nError: $err" 
-			return 1;
-		} 
-# We will leave the session open for further functions to interact
-		uplevel set spawn_id $spawn_id 
-		set login_success 1
-
-		expect {
-			-re "assword:\s*$" {
-				send "$password\r" ;
-				exp_continue ;
-			}
-			-re $prompt {}
-		}
-		return 0;
 	}
 
 	proc init_terminal {} {
 		global prompt
+
+		set scrlen "set cli screen-length 0" ;
+
+		lputs "Initializing Terminal" ;
 		send -h "\r" ;
 		expect {
 			-re $prompt {
-				send "set cli screen-length 0\r" ;
+				lputs "sending command /$scrlen/" ;
+				send "$scrlen\r" ;
 			}
 		}
 		return 0;
 	}
 
-	proc detect_vendor {} {
+# proc to get all arp entries from the current device
+	proc get_arp_entries { {arp_filter ""} } {
 
-		global vendor_detected device_vendor prompt device_vendor
+		set _proc_name [lindex [info level 1 ] 0 ]
+
+		global prompt current_device;
+
+		lputs "fetching arp entries from [dict get $current_device device]"
+
+		set arp_read_completed 0
+		set all_arp_dict {} ;
+		set all_arp_list {} ;
+		set total_arp_found  0
+		set arp_output "" ;
+		set arp_get_cmd "show arp" ;
 
 		send -s  "\r" ;
 		expect {
 			-re $prompt {
-				if {$vendor_detected == 0} {
-					send "show version\r" ;
+				if {$arp_read_completed == 0} {
+					send "$arp_get_cmd\r" ;
+					lputs "sent command: /$arp_get_cmd/" ;
 					expect {
-						-re $prompt {}
-						-re "(ptx1000|JUNOS)" {
-							set device_vendor "Juniper"
-						}
-						-re "(Nokia)" {
-							set device_vendor "Nokia"
-						}
-						-re "\(more\)" {
-							send -s  "\r" ;
+						-re "\r?\n?..:..:..:\[^\r]+\r\n" {
+							append arp_output $expect_out(0,string) ;
+							lputs "Found arp line: $expect_out(0,string)" ;
 							exp_continue ;
+						}
+						#-re "Total\[^\r]+\r?\n$" { }
+						-re $prompt {
+							lputs "ARP read complete";
+						}
+						default  { 
+						}
+						timeout {
+							dputs "Show arp ending timedout" 
+						}
+						eof {
+							dputs "EOF occured in $_proc_name" ;
 						}
 
 					}
-					incr vendor_detected 1 
-				}
+			   } 
 			}
 		}
-		return $device_vendor 
+#normalize arp output to a list, so each line 
+		foreach line [split $arp_output "\n"] {
+
+			set line [string trimright $line];
+			set line [string trimleft $line];
+
+			if { [regexp  "^$"  $line] } {
+				#dputs ">$line<" ;
+				#dputs "invalid arp line. skipping" ;
+				continue ;
+			}
+			set arp_entry "" ;
+
+			if { [ regexp "^(.*?)\[ ]+(.*?)\[ ]+(.*?)\[ ]+(.*?)\[ ]+(.*?)$" $line dummy mac address name iface flags] } { 
+# Create a temporary dictionary with field values scanned by regexp
+				set arp_entry [dict create mac $mac address $address name $name iface $iface flags $flags]
+
+				if { [regexp "^(.*?)\\.(.*?)$" [dict get $arp_entry iface] dummy iface vlan] } {
+					set arp_entry [dict set arp_entry iface_only $iface] ;
+					set arp_entry [dict set arp_entry vlan $vlan ];
+					set arp_entry [dict set arp_entry unit $vlan ];
+				}
+
+				set arp_entry [dict set arp_entry family "inet" ] ;
+
+# Append the ARP entry dict to a master list.
+				lappend all_arp_dict $arp_entry 
+			}
+
+		}
+		return $all_arp_dict ;
 	}
 
-	proc get_arp_entries { {arp_filter ""} } {
-		global warn_msg ;
-
+	proc prepare_set_arp_cmd {arp_entries_list } {
 		set _proc_name [lindex [info level 1 ] 0 ]
-		dputs [format $warn_msg $_proc_name ]
 
-	}
+		global current_device ;
 
-	proc parse_arp_entry {}  {
-		puts "This is from Juniper";
-	}
 
-	proc prepare_set_arp_cmd {params} {
-		global warn_msg ;
+		set result_list ""
+		set set_arp_cmd ""
 
-		set _proc_name [lindex [info level 1 ] 0 ]
-		dputs [format $warn_msg $_proc_name ]
+		set set_arp_fmt  "set interfaces %s unit %s family %s  address %s arp %s  mac %s"
 
+		lputs "preparing set arp commands for device : [dict get $current_device device] " ;
+
+		set ac 0 
+		foreach arp_entry $arp_entries_list  {
+			dict with arp_entry {
+				set set_arp_cmd [format $set_arp_fmt  $iface_only $unit $family $address $address $mac] ;
+			}
+			unset -nocomplain iface_only unit family address mac
+#			dputs ">$set_arp_cmd<" ;
+
+			lappend result_list  $set_arp_cmd ;
+			incr ac 1
+
+			set set_arp_cmd ""
+		}
+
+		lputs [format "%d set arp commands prepared" $ac]
+
+		return $result_list ;
 	}
 
 	proc ping_target {target params} {

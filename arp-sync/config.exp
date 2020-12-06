@@ -1,7 +1,7 @@
 
 # General configurations
 set envi  "dev" ;
-set DEBUG 0;
+set DEBUG 1;
 set app_tag "ARP_SYNC\[[pid]\]"
 set basedir [file normalize "$argv0/../.."]  
 

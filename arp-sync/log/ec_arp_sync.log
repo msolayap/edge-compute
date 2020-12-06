@@ -901,3 +901,894 @@ Error: unknown namespace in import pattern "::Nokia::*"
 2020-12-05T21:59:47UTC ARP_SYNC[10709] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
 2020-12-05T21:59:47UTC ARP_SYNC[10709] INFO Importing methods for ::Juniper::*
 2020-12-05T21:59:47UTC ARP_SYNC[10709] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T05:14:45UTC ARP_SYNC[6090] INFO activating syslog. using /bin/logger
+2020-12-06T05:14:45UTC ARP_SYNC[6090] INFO --------------------------------------------------------------------------------
+2020-12-06T05:14:45UTC ARP_SYNC[6090] INFO Starting arp sync activity
+2020-12-06T05:14:45UTC ARP_SYNC[6090] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T05:14:45UTC ARP_SYNC[6090] INFO --------------------------------------------------------------------------------
+2020-12-06T05:14:46UTC ARP_SYNC[6090] INFO Logging into device rancid@100.80.15.102
+2020-12-06T05:14:46UTC ARP_SYNC[6090] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-06T05:14:46UTC ARP_SYNC[6090] INFO Importing methods for ::Nokia::*
+2020-12-06T05:14:47UTC ARP_SYNC[6090] INFO Logging into device rancid@100.80.16.139
+2020-12-06T05:14:47UTC ARP_SYNC[6090] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T05:14:47UTC ARP_SYNC[6090] INFO Importing methods for ::Juniper::*
+2020-12-06T05:14:47UTC ARP_SYNC[6090] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T05:16:43UTC ARP_SYNC[6223] INFO --------------------------------------------------------------------------------
+2020-12-06T05:16:43UTC ARP_SYNC[6223] INFO activating syslog. using /bin/logger
+2020-12-06T05:16:43UTC ARP_SYNC[6223] INFO Starting arp sync activity
+2020-12-06T05:16:43UTC ARP_SYNC[6223] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T05:16:43UTC ARP_SYNC[6223] INFO --------------------------------------------------------------------------------
+2020-12-06T05:16:44UTC ARP_SYNC[6223] INFO Logging into device rancid@100.80.15.102
+2020-12-06T05:16:44UTC ARP_SYNC[6223] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-06T05:16:44UTC ARP_SYNC[6223] INFO Importing methods for ::Nokia::*
+2020-12-06T05:16:45UTC ARP_SYNC[6223] INFO Logging into device rancid@100.80.16.139
+2020-12-06T05:16:45UTC ARP_SYNC[6223] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T05:16:45UTC ARP_SYNC[6223] INFO Importing methods for ::Juniper::*
+2020-12-06T05:16:45UTC ARP_SYNC[6223] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T05:17:12UTC ARP_SYNC[6260] INFO --------------------------------------------------------------------------------
+2020-12-06T05:17:12UTC ARP_SYNC[6260] INFO Starting arp sync activity
+2020-12-06T05:17:12UTC ARP_SYNC[6260] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T05:17:12UTC ARP_SYNC[6260] INFO activating syslog. using /bin/logger
+2020-12-06T05:17:12UTC ARP_SYNC[6260] INFO --------------------------------------------------------------------------------
+2020-12-06T05:17:12UTC ARP_SYNC[6260] INFO Logging into device rancid@100.80.15.102
+2020-12-06T05:17:12UTC ARP_SYNC[6260] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-06T05:17:12UTC ARP_SYNC[6260] INFO Importing methods for ::Nokia::*
+2020-12-06T05:17:13UTC ARP_SYNC[6260] INFO Logging into device rancid@100.80.16.139
+2020-12-06T05:17:14UTC ARP_SYNC[6260] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T05:17:14UTC ARP_SYNC[6260] INFO Importing methods for ::Juniper::*
+2020-12-06T05:17:14UTC ARP_SYNC[6260] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T05:21:25UTC ARP_SYNC[6505] INFO --------------------------------------------------------------------------------
+2020-12-06T05:21:25UTC ARP_SYNC[6505] INFO Starting arp sync activity
+2020-12-06T05:21:25UTC ARP_SYNC[6505] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T05:21:25UTC ARP_SYNC[6505] INFO activating syslog. using /bin/logger
+2020-12-06T05:21:25UTC ARP_SYNC[6505] INFO --------------------------------------------------------------------------------
+2020-12-06T05:21:26UTC ARP_SYNC[6505] INFO Login into device rancid@100.80.15.102
+2020-12-06T05:21:26UTC ARP_SYNC[6505] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-06T05:21:26UTC ARP_SYNC[6505] INFO Importing methods for ::Nokia::*
+2020-12-06T05:21:27UTC ARP_SYNC[6505] INFO Login into device rancid@100.80.16.139
+2020-12-06T05:21:28UTC ARP_SYNC[6505] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T05:21:28UTC ARP_SYNC[6505] INFO Importing methods for ::Juniper::*
+2020-12-06T05:21:28UTC ARP_SYNC[6505] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T05:31:46UTC ARP_SYNC[7065] INFO --------------------------------------------------------------------------------
+2020-12-06T05:31:46UTC ARP_SYNC[7065] INFO Starting arp sync activity
+2020-12-06T05:31:46UTC ARP_SYNC[7065] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T05:31:46UTC ARP_SYNC[7065] INFO activating syslog. using /bin/logger
+2020-12-06T05:31:46UTC ARP_SYNC[7065] INFO --------------------------------------------------------------------------------
+2020-12-06T05:32:20UTC ARP_SYNC[7107] INFO --------------------------------------------------------------------------------
+2020-12-06T05:32:20UTC ARP_SYNC[7107] INFO Starting arp sync activity
+2020-12-06T05:32:20UTC ARP_SYNC[7107] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T05:32:20UTC ARP_SYNC[7107] INFO activating syslog. using /bin/logger
+2020-12-06T05:32:20UTC ARP_SYNC[7107] INFO --------------------------------------------------------------------------------
+2020-12-06T05:33:34UTC ARP_SYNC[7160] INFO --------------------------------------------------------------------------------
+2020-12-06T05:33:34UTC ARP_SYNC[7160] INFO Starting arp sync activity
+2020-12-06T05:33:34UTC ARP_SYNC[7160] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T05:33:34UTC ARP_SYNC[7160] INFO activating syslog. using /bin/logger
+2020-12-06T05:33:34UTC ARP_SYNC[7160] INFO --------------------------------------------------------------------------------
+2020-12-06T05:34:11UTC ARP_SYNC[7198] INFO --------------------------------------------------------------------------------
+2020-12-06T05:34:11UTC ARP_SYNC[7198] INFO Starting arp sync activity
+2020-12-06T05:34:11UTC ARP_SYNC[7198] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T05:34:11UTC ARP_SYNC[7198] INFO activating syslog. using /bin/logger
+2020-12-06T05:34:11UTC ARP_SYNC[7198] INFO --------------------------------------------------------------------------------
+2020-12-06T05:34:59UTC ARP_SYNC[7250] INFO --------------------------------------------------------------------------------
+2020-12-06T05:34:59UTC ARP_SYNC[7250] INFO Starting arp sync activity
+2020-12-06T05:34:59UTC ARP_SYNC[7250] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T05:34:59UTC ARP_SYNC[7250] INFO activating syslog. using /bin/logger
+2020-12-06T05:34:59UTC ARP_SYNC[7250] INFO --------------------------------------------------------------------------------
+2020-12-06T05:35:57UTC ARP_SYNC[7329] INFO --------------------------------------------------------------------------------
+2020-12-06T05:35:57UTC ARP_SYNC[7329] INFO Starting arp sync activity
+2020-12-06T05:35:57UTC ARP_SYNC[7329] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T05:35:57UTC ARP_SYNC[7329] INFO activating syslog. using /bin/logger
+2020-12-06T05:35:57UTC ARP_SYNC[7329] INFO --------------------------------------------------------------------------------
+2020-12-06T06:25:10UTC ARP_SYNC[10160] INFO --------------------------------------------------------------------------------
+2020-12-06T06:25:10UTC ARP_SYNC[10160] INFO Starting arp sync activity
+2020-12-06T06:25:10UTC ARP_SYNC[10160] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:25:10UTC ARP_SYNC[10160] INFO activating syslog. using /bin/logger
+2020-12-06T06:25:10UTC ARP_SYNC[10160] INFO --------------------------------------------------------------------------------
+2020-12-06T06:25:10UTC ARP_SYNC[10160] ERROR device records invalid at row: 1. skipping to next record
+2020-12-06T06:25:10UTC ARP_SYNC[10160] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T06:25:10UTC ARP_SYNC[10160] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T06:28:39UTC ARP_SYNC[10346] INFO --------------------------------------------------------------------------------
+2020-12-06T06:28:39UTC ARP_SYNC[10346] INFO Starting arp sync activity
+2020-12-06T06:28:39UTC ARP_SYNC[10346] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:28:39UTC ARP_SYNC[10346] INFO activating syslog. using /bin/logger
+2020-12-06T06:28:39UTC ARP_SYNC[10346] INFO --------------------------------------------------------------------------------
+2020-12-06T06:28:39UTC ARP_SYNC[10346] ERROR device records invalid at row: 1. skipping to next record
+2020-12-06T06:28:39UTC ARP_SYNC[10346] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T06:28:39UTC ARP_SYNC[10346] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T06:29:20UTC ARP_SYNC[10404] INFO --------------------------------------------------------------------------------
+2020-12-06T06:29:20UTC ARP_SYNC[10404] INFO Starting arp sync activity
+2020-12-06T06:29:20UTC ARP_SYNC[10404] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:29:20UTC ARP_SYNC[10404] INFO activating syslog. using /bin/logger
+2020-12-06T06:29:20UTC ARP_SYNC[10404] INFO --------------------------------------------------------------------------------
+2020-12-06T06:29:20UTC ARP_SYNC[10404] ERROR device records invalid at row: 1. skipping to next record
+2020-12-06T06:29:20UTC ARP_SYNC[10404] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T06:29:20UTC ARP_SYNC[10404] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T06:31:03UTC ARP_SYNC[10536] INFO --------------------------------------------------------------------------------
+2020-12-06T06:31:04UTC ARP_SYNC[10536] INFO Starting arp sync activity
+2020-12-06T06:31:04UTC ARP_SYNC[10536] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:31:04UTC ARP_SYNC[10536] INFO activating syslog. using /bin/logger
+2020-12-06T06:31:04UTC ARP_SYNC[10536] INFO --------------------------------------------------------------------------------
+2020-12-06T06:31:04UTC ARP_SYNC[10536] ERROR device records invalid at row: 1. skipping to next record
+2020-12-06T06:31:04UTC ARP_SYNC[10536] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T06:31:04UTC ARP_SYNC[10536] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T06:31:43UTC ARP_SYNC[10553] INFO --------------------------------------------------------------------------------
+2020-12-06T06:31:43UTC ARP_SYNC[10553] INFO Starting arp sync activity
+2020-12-06T06:31:43UTC ARP_SYNC[10553] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:31:43UTC ARP_SYNC[10553] INFO activating syslog. using /bin/logger
+2020-12-06T06:31:43UTC ARP_SYNC[10553] INFO --------------------------------------------------------------------------------
+2020-12-06T06:31:43UTC ARP_SYNC[10553] ERROR device records invalid at row: 1. skipping to next record
+2020-12-06T06:31:43UTC ARP_SYNC[10553] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T06:31:43UTC ARP_SYNC[10553] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T06:32:13UTC ARP_SYNC[10582] INFO --------------------------------------------------------------------------------
+2020-12-06T06:32:13UTC ARP_SYNC[10582] INFO Starting arp sync activity
+2020-12-06T06:32:13UTC ARP_SYNC[10582] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:32:13UTC ARP_SYNC[10582] INFO activating syslog. using /bin/logger
+2020-12-06T06:32:13UTC ARP_SYNC[10582] INFO --------------------------------------------------------------------------------
+2020-12-06T06:32:13UTC ARP_SYNC[10582] ERROR device records invalid at row: 1. skipping to next record
+2020-12-06T06:32:13UTC ARP_SYNC[10582] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T06:32:13UTC ARP_SYNC[10582] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T06:33:30UTC ARP_SYNC[10633] INFO --------------------------------------------------------------------------------
+2020-12-06T06:33:30UTC ARP_SYNC[10633] INFO Starting arp sync activity
+2020-12-06T06:33:30UTC ARP_SYNC[10633] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:33:30UTC ARP_SYNC[10633] INFO activating syslog. using /bin/logger
+2020-12-06T06:33:30UTC ARP_SYNC[10633] INFO --------------------------------------------------------------------------------
+2020-12-06T06:33:45UTC ARP_SYNC[10653] INFO --------------------------------------------------------------------------------
+2020-12-06T06:33:45UTC ARP_SYNC[10653] INFO Starting arp sync activity
+2020-12-06T06:33:45UTC ARP_SYNC[10653] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:33:45UTC ARP_SYNC[10653] INFO activating syslog. using /bin/logger
+2020-12-06T06:33:45UTC ARP_SYNC[10653] INFO --------------------------------------------------------------------------------
+2020-12-06T06:33:45UTC ARP_SYNC[10653] ERROR device records invalid at row: 1. skipping to next record
+2020-12-06T06:33:45UTC ARP_SYNC[10653] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T06:33:45UTC ARP_SYNC[10653] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T06:34:48UTC ARP_SYNC[10703] INFO --------------------------------------------------------------------------------
+2020-12-06T06:34:48UTC ARP_SYNC[10703] INFO Starting arp sync activity
+2020-12-06T06:34:48UTC ARP_SYNC[10703] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:34:48UTC ARP_SYNC[10703] INFO activating syslog. using /bin/logger
+2020-12-06T06:34:48UTC ARP_SYNC[10703] INFO --------------------------------------------------------------------------------
+2020-12-06T06:34:57UTC ARP_SYNC[10735] INFO --------------------------------------------------------------------------------
+2020-12-06T06:34:57UTC ARP_SYNC[10735] INFO Starting arp sync activity
+2020-12-06T06:34:57UTC ARP_SYNC[10735] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:34:57UTC ARP_SYNC[10735] INFO activating syslog. using /bin/logger
+2020-12-06T06:34:57UTC ARP_SYNC[10735] INFO --------------------------------------------------------------------------------
+2020-12-06T06:34:57UTC ARP_SYNC[10735] ERROR device records invalid at row: 1. skipping to next record
+2020-12-06T06:34:57UTC ARP_SYNC[10735] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T06:34:57UTC ARP_SYNC[10735] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T06:35:15UTC ARP_SYNC[10756] INFO --------------------------------------------------------------------------------
+2020-12-06T06:35:15UTC ARP_SYNC[10756] INFO Starting arp sync activity
+2020-12-06T06:35:15UTC ARP_SYNC[10756] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:35:15UTC ARP_SYNC[10756] INFO activating syslog. using /bin/logger
+2020-12-06T06:35:15UTC ARP_SYNC[10756] INFO --------------------------------------------------------------------------------
+2020-12-06T06:35:15UTC ARP_SYNC[10756] ERROR device records invalid at row: 1. skipping to next record
+2020-12-06T06:35:15UTC ARP_SYNC[10756] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T06:35:15UTC ARP_SYNC[10756] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T06:35:24UTC ARP_SYNC[10759] INFO --------------------------------------------------------------------------------
+2020-12-06T06:35:24UTC ARP_SYNC[10759] INFO Starting arp sync activity
+2020-12-06T06:35:24UTC ARP_SYNC[10759] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:35:24UTC ARP_SYNC[10759] INFO activating syslog. using /bin/logger
+2020-12-06T06:35:24UTC ARP_SYNC[10759] INFO --------------------------------------------------------------------------------
+2020-12-06T06:35:24UTC ARP_SYNC[10759] ERROR device records invalid at row: 1. skipping to next record
+2020-12-06T06:35:24UTC ARP_SYNC[10759] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T06:35:24UTC ARP_SYNC[10759] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T06:36:08UTC ARP_SYNC[10826] INFO --------------------------------------------------------------------------------
+2020-12-06T06:36:08UTC ARP_SYNC[10826] INFO Starting arp sync activity
+2020-12-06T06:36:08UTC ARP_SYNC[10826] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:36:08UTC ARP_SYNC[10826] INFO activating syslog. using /bin/logger
+2020-12-06T06:36:08UTC ARP_SYNC[10826] INFO --------------------------------------------------------------------------------
+2020-12-06T06:36:08UTC ARP_SYNC[10826] INFO Login into device rancid@100.80.15.102
+2020-12-06T06:36:09UTC ARP_SYNC[10826] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-06T06:36:09UTC ARP_SYNC[10826] INFO Importing methods for ::Nokia::*
+2020-12-06T06:36:10UTC ARP_SYNC[10826] INFO Login into device rancid@100.80.16.139
+2020-12-06T06:36:10UTC ARP_SYNC[10826] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T06:36:10UTC ARP_SYNC[10826] INFO Importing methods for ::Juniper::*
+2020-12-06T06:36:10UTC ARP_SYNC[10826] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T06:37:17UTC ARP_SYNC[10885] INFO --------------------------------------------------------------------------------
+2020-12-06T06:37:17UTC ARP_SYNC[10885] INFO Starting arp sync activity
+2020-12-06T06:37:17UTC ARP_SYNC[10885] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T06:37:17UTC ARP_SYNC[10885] INFO activating syslog. using /bin/logger
+2020-12-06T06:37:17UTC ARP_SYNC[10885] INFO --------------------------------------------------------------------------------
+2020-12-06T06:37:17UTC ARP_SYNC[10885] INFO Login into device rancid@100.80.15.102
+2020-12-06T06:37:18UTC ARP_SYNC[10885] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-06T06:37:18UTC ARP_SYNC[10885] INFO Importing methods for ::Nokia::*
+2020-12-06T06:37:19UTC ARP_SYNC[10885] INFO Login into device rancid@100.80.16.139
+2020-12-06T06:37:19UTC ARP_SYNC[10885] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T06:37:19UTC ARP_SYNC[10885] INFO Importing methods for ::Juniper::*
+2020-12-06T06:37:19UTC ARP_SYNC[10885] ERROR device records invalid at row: 3. skipping to next record
+2020-12-06T07:14:09UTC ARP_SYNC[12979] INFO --------------------------------------------------------------------------------
+2020-12-06T07:14:09UTC ARP_SYNC[12979] INFO Starting arp sync activity
+2020-12-06T07:14:09UTC ARP_SYNC[12979] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:14:09UTC ARP_SYNC[12979] INFO activating syslog. using /bin/logger
+2020-12-06T07:14:09UTC ARP_SYNC[12979] INFO --------------------------------------------------------------------------------
+2020-12-06T07:14:27UTC ARP_SYNC[12986] INFO --------------------------------------------------------------------------------
+2020-12-06T07:14:27UTC ARP_SYNC[12986] INFO Starting arp sync activity
+2020-12-06T07:14:27UTC ARP_SYNC[12986] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:14:27UTC ARP_SYNC[12986] INFO activating syslog. using /bin/logger
+2020-12-06T07:14:27UTC ARP_SYNC[12986] INFO --------------------------------------------------------------------------------
+2020-12-06T07:14:28UTC ARP_SYNC[12986] INFO Login into device rancid@100.80.15.102
+2020-12-06T07:14:28UTC ARP_SYNC[12986] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-06T07:14:28UTC ARP_SYNC[12986] INFO Importing methods for ::Nokia::*
+2020-12-06T07:14:29UTC ARP_SYNC[12986] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:14:29UTC ARP_SYNC[12986] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T07:14:29UTC ARP_SYNC[12986] INFO Importing methods for ::Juniper::*
+2020-12-06T07:14:36UTC ARP_SYNC[13011] INFO --------------------------------------------------------------------------------
+2020-12-06T07:14:36UTC ARP_SYNC[13011] INFO Starting arp sync activity
+2020-12-06T07:14:36UTC ARP_SYNC[13011] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:14:36UTC ARP_SYNC[13011] INFO activating syslog. using /bin/logger
+2020-12-06T07:14:36UTC ARP_SYNC[13011] INFO --------------------------------------------------------------------------------
+2020-12-06T07:14:36UTC ARP_SYNC[13011] INFO Login into device rancid@100.80.15.102
+2020-12-06T07:14:36UTC ARP_SYNC[13011] INFO Detected vendor of device: 100.80.15.102 as VENDOR: Nokia
+2020-12-06T07:14:36UTC ARP_SYNC[13011] INFO Importing methods for ::Nokia::*
+2020-12-06T07:14:37UTC ARP_SYNC[13011] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:14:38UTC ARP_SYNC[13011] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T07:14:38UTC ARP_SYNC[13011] INFO Importing methods for ::Juniper::*
+2020-12-06T07:15:00UTC ARP_SYNC[13050] INFO --------------------------------------------------------------------------------
+2020-12-06T07:15:00UTC ARP_SYNC[13050] INFO Starting arp sync activity
+2020-12-06T07:15:00UTC ARP_SYNC[13050] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:15:00UTC ARP_SYNC[13050] INFO activating syslog. using /bin/logger
+2020-12-06T07:15:00UTC ARP_SYNC[13050] INFO --------------------------------------------------------------------------------
+2020-12-06T07:15:01UTC ARP_SYNC[13050] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:15:12UTC ARP_SYNC[13050] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T07:15:12UTC ARP_SYNC[13050] INFO Importing methods for ::Juniper::*
+2020-12-06T07:17:45UTC ARP_SYNC[13213] INFO --------------------------------------------------------------------------------
+2020-12-06T07:17:45UTC ARP_SYNC[13213] INFO Starting arp sync activity
+2020-12-06T07:17:45UTC ARP_SYNC[13213] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:17:45UTC ARP_SYNC[13213] INFO activating syslog. using /bin/logger
+2020-12-06T07:17:45UTC ARP_SYNC[13213] INFO --------------------------------------------------------------------------------
+2020-12-06T07:17:46UTC ARP_SYNC[13213] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:17:56UTC ARP_SYNC[13213] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T07:17:56UTC ARP_SYNC[13213] INFO Importing methods for ::Juniper::*
+2020-12-06T07:18:06UTC ARP_SYNC[13213] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T07:19:08UTC ARP_SYNC[13298] INFO --------------------------------------------------------------------------------
+2020-12-06T07:19:08UTC ARP_SYNC[13298] INFO Starting arp sync activity
+2020-12-06T07:19:08UTC ARP_SYNC[13298] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:19:08UTC ARP_SYNC[13298] INFO activating syslog. using /bin/logger
+2020-12-06T07:19:08UTC ARP_SYNC[13298] INFO --------------------------------------------------------------------------------
+2020-12-06T07:19:09UTC ARP_SYNC[13298] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:19:19UTC ARP_SYNC[13298] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T07:19:19UTC ARP_SYNC[13298] INFO Importing methods for ::Juniper::*
+2020-12-06T07:19:29UTC ARP_SYNC[13298] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T07:22:35UTC ARP_SYNC[13494] INFO --------------------------------------------------------------------------------
+2020-12-06T07:22:35UTC ARP_SYNC[13494] INFO Starting arp sync activity
+2020-12-06T07:22:35UTC ARP_SYNC[13494] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:22:35UTC ARP_SYNC[13494] INFO activating syslog. using /bin/logger
+2020-12-06T07:22:35UTC ARP_SYNC[13494] INFO --------------------------------------------------------------------------------
+2020-12-06T07:22:36UTC ARP_SYNC[13494] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:22:46UTC ARP_SYNC[13494] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T07:22:46UTC ARP_SYNC[13494] INFO Importing methods for ::Juniper::*
+2020-12-06T07:22:56UTC ARP_SYNC[13494] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T07:25:39UTC ARP_SYNC[13691] INFO --------------------------------------------------------------------------------
+2020-12-06T07:25:39UTC ARP_SYNC[13691] INFO Starting arp sync activity
+2020-12-06T07:25:39UTC ARP_SYNC[13691] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:25:39UTC ARP_SYNC[13691] INFO activating syslog. using /bin/logger
+2020-12-06T07:25:39UTC ARP_SYNC[13691] INFO --------------------------------------------------------------------------------
+2020-12-06T07:25:40UTC ARP_SYNC[13691] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:25:50UTC ARP_SYNC[13691] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T07:25:50UTC ARP_SYNC[13691] INFO Importing methods for ::Juniper::*
+2020-12-06T07:26:00UTC ARP_SYNC[13691] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T07:31:46UTC ARP_SYNC[14034] INFO --------------------------------------------------------------------------------
+2020-12-06T07:31:46UTC ARP_SYNC[14034] INFO Starting arp sync activity
+2020-12-06T07:31:46UTC ARP_SYNC[14034] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:31:46UTC ARP_SYNC[14034] INFO activating syslog. using /bin/logger
+2020-12-06T07:31:46UTC ARP_SYNC[14034] INFO --------------------------------------------------------------------------------
+2020-12-06T07:31:47UTC ARP_SYNC[14034] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:31:57UTC ARP_SYNC[14034] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T07:31:57UTC ARP_SYNC[14034] INFO Importing methods for ::Juniper::*
+2020-12-06T07:32:07UTC ARP_SYNC[14034] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T07:36:04UTC ARP_SYNC[14284] INFO --------------------------------------------------------------------------------
+2020-12-06T07:36:04UTC ARP_SYNC[14284] INFO Starting arp sync activity
+2020-12-06T07:36:05UTC ARP_SYNC[14284] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:36:05UTC ARP_SYNC[14284] INFO activating syslog. using /bin/logger
+2020-12-06T07:36:05UTC ARP_SYNC[14284] INFO --------------------------------------------------------------------------------
+2020-12-06T07:36:06UTC ARP_SYNC[14284] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:36:49UTC ARP_SYNC[14319] INFO --------------------------------------------------------------------------------
+2020-12-06T07:36:49UTC ARP_SYNC[14319] INFO Starting arp sync activity
+2020-12-06T07:36:49UTC ARP_SYNC[14319] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:36:49UTC ARP_SYNC[14319] INFO activating syslog. using /bin/logger
+2020-12-06T07:36:49UTC ARP_SYNC[14319] INFO --------------------------------------------------------------------------------
+2020-12-06T07:36:50UTC ARP_SYNC[14319] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:36:51UTC ARP_SYNC[14319] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T07:36:51UTC ARP_SYNC[14319] INFO Importing methods for ::Juniper::*
+2020-12-06T07:37:01UTC ARP_SYNC[14319] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T07:38:53UTC ARP_SYNC[14445] INFO --------------------------------------------------------------------------------
+2020-12-06T07:38:53UTC ARP_SYNC[14445] INFO Starting arp sync activity
+2020-12-06T07:38:53UTC ARP_SYNC[14445] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:38:53UTC ARP_SYNC[14445] INFO activating syslog. using /bin/logger
+2020-12-06T07:38:53UTC ARP_SYNC[14445] INFO --------------------------------------------------------------------------------
+2020-12-06T07:38:54UTC ARP_SYNC[14445] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:38:54UTC ARP_SYNC[14445] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T07:38:54UTC ARP_SYNC[14445] INFO Importing methods for ::Juniper::*
+2020-12-06T07:56:41UTC ARP_SYNC[15395] INFO --------------------------------------------------------------------------------
+2020-12-06T07:56:41UTC ARP_SYNC[15395] INFO Starting arp sync activity
+2020-12-06T07:56:41UTC ARP_SYNC[15395] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:56:41UTC ARP_SYNC[15395] INFO activating syslog. using /bin/logger
+2020-12-06T07:56:41UTC ARP_SYNC[15395] INFO --------------------------------------------------------------------------------
+2020-12-06T07:56:43UTC ARP_SYNC[15395] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:56:44UTC ARP_SYNC[15395] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T07:56:44UTC ARP_SYNC[15395] INFO Importing methods for ::Juniper::*
+2020-12-06T07:56:54UTC ARP_SYNC[15395] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T07:59:27UTC ARP_SYNC[15523] INFO --------------------------------------------------------------------------------
+2020-12-06T07:59:27UTC ARP_SYNC[15523] INFO Starting arp sync activity
+2020-12-06T07:59:27UTC ARP_SYNC[15523] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T07:59:27UTC ARP_SYNC[15523] INFO activating syslog. using /bin/logger
+2020-12-06T07:59:27UTC ARP_SYNC[15523] INFO --------------------------------------------------------------------------------
+2020-12-06T07:59:29UTC ARP_SYNC[15523] INFO Login into device rancid@100.80.16.139
+2020-12-06T07:59:29UTC ARP_SYNC[15523] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T07:59:29UTC ARP_SYNC[15523] INFO Importing methods for ::Juniper::*
+2020-12-06T07:59:39UTC ARP_SYNC[15523] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T08:02:14UTC ARP_SYNC[15717] INFO --------------------------------------------------------------------------------
+2020-12-06T08:02:14UTC ARP_SYNC[15717] INFO Starting arp sync activity
+2020-12-06T08:02:14UTC ARP_SYNC[15717] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:02:14UTC ARP_SYNC[15717] INFO activating syslog. using /bin/logger
+2020-12-06T08:02:14UTC ARP_SYNC[15717] INFO --------------------------------------------------------------------------------
+2020-12-06T08:02:16UTC ARP_SYNC[15717] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:02:17UTC ARP_SYNC[15717] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:02:17UTC ARP_SYNC[15717] INFO Importing methods for ::Juniper::*
+2020-12-06T08:02:27UTC ARP_SYNC[15717] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T08:06:09UTC ARP_SYNC[15945] INFO --------------------------------------------------------------------------------
+2020-12-06T08:06:09UTC ARP_SYNC[15945] INFO Starting arp sync activity
+2020-12-06T08:06:09UTC ARP_SYNC[15945] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:06:09UTC ARP_SYNC[15945] INFO activating syslog. using /bin/logger
+2020-12-06T08:06:09UTC ARP_SYNC[15945] INFO --------------------------------------------------------------------------------
+2020-12-06T08:06:11UTC ARP_SYNC[15945] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:06:11UTC ARP_SYNC[15945] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:06:11UTC ARP_SYNC[15945] INFO Importing methods for ::Juniper::*
+2020-12-06T08:07:15UTC ARP_SYNC[15990] INFO --------------------------------------------------------------------------------
+2020-12-06T08:07:15UTC ARP_SYNC[15990] INFO Starting arp sync activity
+2020-12-06T08:07:15UTC ARP_SYNC[15990] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:07:15UTC ARP_SYNC[15990] INFO activating syslog. using /bin/logger
+2020-12-06T08:07:15UTC ARP_SYNC[15990] INFO --------------------------------------------------------------------------------
+2020-12-06T08:07:17UTC ARP_SYNC[15990] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:07:18UTC ARP_SYNC[15990] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:07:18UTC ARP_SYNC[15990] INFO Importing methods for ::Juniper::*
+2020-12-06T08:07:18UTC ARP_SYNC[15990] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T08:07:40UTC ARP_SYNC[16010] INFO --------------------------------------------------------------------------------
+2020-12-06T08:07:40UTC ARP_SYNC[16010] INFO Starting arp sync activity
+2020-12-06T08:07:40UTC ARP_SYNC[16010] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:07:40UTC ARP_SYNC[16010] INFO activating syslog. using /bin/logger
+2020-12-06T08:07:40UTC ARP_SYNC[16010] INFO --------------------------------------------------------------------------------
+2020-12-06T08:07:42UTC ARP_SYNC[16010] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:07:43UTC ARP_SYNC[16010] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:07:43UTC ARP_SYNC[16010] INFO Importing methods for ::Juniper::*
+2020-12-06T08:07:43UTC ARP_SYNC[16010] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T08:10:09UTC ARP_SYNC[16168] INFO --------------------------------------------------------------------------------
+2020-12-06T08:10:09UTC ARP_SYNC[16168] INFO Starting arp sync activity
+2020-12-06T08:10:09UTC ARP_SYNC[16168] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:10:09UTC ARP_SYNC[16168] INFO activating syslog. using /bin/logger
+2020-12-06T08:10:09UTC ARP_SYNC[16168] INFO --------------------------------------------------------------------------------
+2020-12-06T08:10:11UTC ARP_SYNC[16168] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:10:12UTC ARP_SYNC[16168] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:10:12UTC ARP_SYNC[16168] INFO Importing methods for ::Juniper::*
+2020-12-06T08:12:16UTC ARP_SYNC[16335] INFO --------------------------------------------------------------------------------
+2020-12-06T08:12:16UTC ARP_SYNC[16335] INFO Starting arp sync activity
+2020-12-06T08:12:16UTC ARP_SYNC[16335] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:12:16UTC ARP_SYNC[16335] INFO activating syslog. using /bin/logger
+2020-12-06T08:12:16UTC ARP_SYNC[16335] INFO --------------------------------------------------------------------------------
+2020-12-06T08:12:18UTC ARP_SYNC[16335] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:12:19UTC ARP_SYNC[16335] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:12:19UTC ARP_SYNC[16335] INFO Importing methods for ::Juniper::*
+2020-12-06T08:14:10UTC ARP_SYNC[16447] INFO --------------------------------------------------------------------------------
+2020-12-06T08:14:10UTC ARP_SYNC[16447] INFO Starting arp sync activity
+2020-12-06T08:14:10UTC ARP_SYNC[16447] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:14:10UTC ARP_SYNC[16447] INFO activating syslog. using /bin/logger
+2020-12-06T08:14:10UTC ARP_SYNC[16447] INFO --------------------------------------------------------------------------------
+2020-12-06T08:14:12UTC ARP_SYNC[16447] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:14:12UTC ARP_SYNC[16447] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:14:12UTC ARP_SYNC[16447] INFO Importing methods for ::Juniper::*
+2020-12-06T08:15:24UTC ARP_SYNC[16517] INFO --------------------------------------------------------------------------------
+2020-12-06T08:15:24UTC ARP_SYNC[16517] INFO Starting arp sync activity
+2020-12-06T08:15:24UTC ARP_SYNC[16517] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:15:24UTC ARP_SYNC[16517] INFO activating syslog. using /bin/logger
+2020-12-06T08:15:24UTC ARP_SYNC[16517] INFO --------------------------------------------------------------------------------
+2020-12-06T08:15:26UTC ARP_SYNC[16517] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:15:26UTC ARP_SYNC[16517] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:15:26UTC ARP_SYNC[16517] INFO Importing methods for ::Juniper::*
+2020-12-06T08:15:26UTC ARP_SYNC[16517] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T08:16:45UTC ARP_SYNC[16612] INFO --------------------------------------------------------------------------------
+2020-12-06T08:16:45UTC ARP_SYNC[16612] INFO Starting arp sync activity
+2020-12-06T08:16:45UTC ARP_SYNC[16612] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:16:45UTC ARP_SYNC[16612] INFO activating syslog. using /bin/logger
+2020-12-06T08:16:45UTC ARP_SYNC[16612] INFO --------------------------------------------------------------------------------
+2020-12-06T08:16:46UTC ARP_SYNC[16612] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:16:47UTC ARP_SYNC[16612] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:16:47UTC ARP_SYNC[16612] INFO Importing methods for ::Juniper::*
+2020-12-06T08:17:18UTC ARP_SYNC[16637] INFO --------------------------------------------------------------------------------
+2020-12-06T08:17:18UTC ARP_SYNC[16637] INFO Starting arp sync activity
+2020-12-06T08:17:18UTC ARP_SYNC[16637] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:17:18UTC ARP_SYNC[16637] INFO activating syslog. using /bin/logger
+2020-12-06T08:17:18UTC ARP_SYNC[16637] INFO --------------------------------------------------------------------------------
+2020-12-06T08:17:19UTC ARP_SYNC[16637] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:17:20UTC ARP_SYNC[16637] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:17:20UTC ARP_SYNC[16637] INFO Importing methods for ::Juniper::*
+2020-12-06T08:17:20UTC ARP_SYNC[16637] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T08:21:40UTC ARP_SYNC[16885] INFO --------------------------------------------------------------------------------
+2020-12-06T08:21:40UTC ARP_SYNC[16885] INFO Starting arp sync activity
+2020-12-06T08:21:40UTC ARP_SYNC[16885] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:21:40UTC ARP_SYNC[16885] INFO activating syslog. using /bin/logger
+2020-12-06T08:21:40UTC ARP_SYNC[16885] INFO --------------------------------------------------------------------------------
+2020-12-06T08:21:42UTC ARP_SYNC[16885] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:21:42UTC ARP_SYNC[16885] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:21:42UTC ARP_SYNC[16885] INFO Importing methods for ::Juniper::*
+2020-12-06T08:21:42UTC ARP_SYNC[16885] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T08:48:34UTC ARP_SYNC[18315] INFO --------------------------------------------------------------------------------
+2020-12-06T08:48:34UTC ARP_SYNC[18315] INFO Starting arp sync activity
+2020-12-06T08:48:34UTC ARP_SYNC[18315] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:48:34UTC ARP_SYNC[18315] INFO activating syslog. using /bin/logger
+2020-12-06T08:48:34UTC ARP_SYNC[18315] INFO --------------------------------------------------------------------------------
+2020-12-06T08:48:35UTC ARP_SYNC[18315] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:48:35UTC ARP_SYNC[18315] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:48:35UTC ARP_SYNC[18315] INFO Importing methods for ::Juniper::*
+2020-12-06T08:48:57UTC ARP_SYNC[18339] INFO --------------------------------------------------------------------------------
+2020-12-06T08:48:57UTC ARP_SYNC[18339] INFO Starting arp sync activity
+2020-12-06T08:48:57UTC ARP_SYNC[18339] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:48:57UTC ARP_SYNC[18339] INFO activating syslog. using /bin/logger
+2020-12-06T08:48:57UTC ARP_SYNC[18339] INFO --------------------------------------------------------------------------------
+2020-12-06T08:48:58UTC ARP_SYNC[18339] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:48:58UTC ARP_SYNC[18339] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:48:58UTC ARP_SYNC[18339] INFO Importing methods for ::Juniper::*
+2020-12-06T08:48:58UTC ARP_SYNC[18339] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T08:48:59UTC ARP_SYNC[18347] INFO --------------------------------------------------------------------------------
+2020-12-06T08:48:59UTC ARP_SYNC[18347] INFO Starting arp sync activity
+2020-12-06T08:48:59UTC ARP_SYNC[18347] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:48:59UTC ARP_SYNC[18347] INFO activating syslog. using /bin/logger
+2020-12-06T08:48:59UTC ARP_SYNC[18347] INFO --------------------------------------------------------------------------------
+2020-12-06T08:49:00UTC ARP_SYNC[18347] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:49:01UTC ARP_SYNC[18347] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:49:01UTC ARP_SYNC[18347] INFO Importing methods for ::Juniper::*
+2020-12-06T08:50:30UTC ARP_SYNC[18435] INFO --------------------------------------------------------------------------------
+2020-12-06T08:50:30UTC ARP_SYNC[18435] INFO Starting arp sync activity
+2020-12-06T08:50:30UTC ARP_SYNC[18435] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:50:30UTC ARP_SYNC[18435] INFO activating syslog. using /bin/logger
+2020-12-06T08:50:30UTC ARP_SYNC[18435] INFO --------------------------------------------------------------------------------
+2020-12-06T08:50:31UTC ARP_SYNC[18435] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:50:32UTC ARP_SYNC[18435] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:50:32UTC ARP_SYNC[18435] INFO Importing methods for ::Juniper::*
+2020-12-06T08:50:47UTC ARP_SYNC[18474] INFO --------------------------------------------------------------------------------
+2020-12-06T08:50:47UTC ARP_SYNC[18474] INFO Starting arp sync activity
+2020-12-06T08:50:47UTC ARP_SYNC[18474] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:50:47UTC ARP_SYNC[18474] INFO activating syslog. using /bin/logger
+2020-12-06T08:50:47UTC ARP_SYNC[18474] INFO --------------------------------------------------------------------------------
+2020-12-06T08:50:48UTC ARP_SYNC[18474] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:50:49UTC ARP_SYNC[18474] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:50:49UTC ARP_SYNC[18474] INFO Importing methods for ::Juniper::*
+2020-12-06T08:53:00UTC ARP_SYNC[18596] INFO --------------------------------------------------------------------------------
+2020-12-06T08:53:00UTC ARP_SYNC[18596] INFO Starting arp sync activity
+2020-12-06T08:53:00UTC ARP_SYNC[18596] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:53:00UTC ARP_SYNC[18596] INFO activating syslog. using /bin/logger
+2020-12-06T08:53:00UTC ARP_SYNC[18596] INFO --------------------------------------------------------------------------------
+2020-12-06T08:53:02UTC ARP_SYNC[18596] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:53:02UTC ARP_SYNC[18596] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:53:02UTC ARP_SYNC[18596] INFO Importing methods for ::Juniper::*
+2020-12-06T08:53:30UTC ARP_SYNC[18620] INFO --------------------------------------------------------------------------------
+2020-12-06T08:53:30UTC ARP_SYNC[18620] INFO Starting arp sync activity
+2020-12-06T08:53:30UTC ARP_SYNC[18620] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:53:30UTC ARP_SYNC[18620] INFO activating syslog. using /bin/logger
+2020-12-06T08:53:30UTC ARP_SYNC[18620] INFO --------------------------------------------------------------------------------
+2020-12-06T08:53:31UTC ARP_SYNC[18620] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:53:32UTC ARP_SYNC[18620] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:53:32UTC ARP_SYNC[18620] INFO Importing methods for ::Juniper::*
+2020-12-06T08:53:32UTC ARP_SYNC[18620] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T08:55:01UTC ARP_SYNC[18723] INFO --------------------------------------------------------------------------------
+2020-12-06T08:55:01UTC ARP_SYNC[18723] INFO Starting arp sync activity
+2020-12-06T08:55:01UTC ARP_SYNC[18723] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:55:01UTC ARP_SYNC[18723] INFO activating syslog. using /bin/logger
+2020-12-06T08:55:01UTC ARP_SYNC[18723] INFO --------------------------------------------------------------------------------
+2020-12-06T08:55:02UTC ARP_SYNC[18723] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:55:03UTC ARP_SYNC[18723] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:55:03UTC ARP_SYNC[18723] INFO Importing methods for ::Juniper::*
+2020-12-06T08:55:03UTC ARP_SYNC[18723] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T08:55:04UTC ARP_SYNC[18736] INFO --------------------------------------------------------------------------------
+2020-12-06T08:55:04UTC ARP_SYNC[18736] INFO Starting arp sync activity
+2020-12-06T08:55:04UTC ARP_SYNC[18736] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:55:04UTC ARP_SYNC[18736] INFO activating syslog. using /bin/logger
+2020-12-06T08:55:04UTC ARP_SYNC[18736] INFO --------------------------------------------------------------------------------
+2020-12-06T08:55:05UTC ARP_SYNC[18736] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:55:05UTC ARP_SYNC[18736] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:55:05UTC ARP_SYNC[18736] INFO Importing methods for ::Juniper::*
+2020-12-06T08:55:05UTC ARP_SYNC[18736] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T08:55:07UTC ARP_SYNC[18744] INFO --------------------------------------------------------------------------------
+2020-12-06T08:55:07UTC ARP_SYNC[18744] INFO Starting arp sync activity
+2020-12-06T08:55:07UTC ARP_SYNC[18744] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:55:07UTC ARP_SYNC[18744] INFO activating syslog. using /bin/logger
+2020-12-06T08:55:07UTC ARP_SYNC[18744] INFO --------------------------------------------------------------------------------
+2020-12-06T08:55:08UTC ARP_SYNC[18744] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:55:08UTC ARP_SYNC[18744] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:55:08UTC ARP_SYNC[18744] INFO Importing methods for ::Juniper::*
+2020-12-06T08:55:08UTC ARP_SYNC[18744] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T08:55:12UTC ARP_SYNC[18753] INFO --------------------------------------------------------------------------------
+2020-12-06T08:55:12UTC ARP_SYNC[18753] INFO Starting arp sync activity
+2020-12-06T08:55:12UTC ARP_SYNC[18753] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T08:55:12UTC ARP_SYNC[18753] INFO activating syslog. using /bin/logger
+2020-12-06T08:55:12UTC ARP_SYNC[18753] INFO --------------------------------------------------------------------------------
+2020-12-06T08:55:13UTC ARP_SYNC[18753] INFO Login into device rancid@100.80.16.139
+2020-12-06T08:55:15UTC ARP_SYNC[18753] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T08:55:15UTC ARP_SYNC[18753] INFO Importing methods for ::Juniper::*
+2020-12-06T08:55:15UTC ARP_SYNC[18753] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T09:08:02UTC ARP_SYNC[19456] INFO --------------------------------------------------------------------------------
+2020-12-06T09:08:02UTC ARP_SYNC[19456] INFO Starting arp sync activity
+2020-12-06T09:08:02UTC ARP_SYNC[19456] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T09:08:02UTC ARP_SYNC[19456] INFO activating syslog. using /bin/logger
+2020-12-06T09:08:02UTC ARP_SYNC[19456] INFO --------------------------------------------------------------------------------
+2020-12-06T09:08:03UTC ARP_SYNC[19456] INFO Login into device rancid@100.80.16.139
+2020-12-06T09:08:03UTC ARP_SYNC[19456] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T09:08:03UTC ARP_SYNC[19456] INFO Importing methods for ::Juniper::*
+2020-12-06T09:08:03UTC ARP_SYNC[19456] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T09:09:15UTC ARP_SYNC[19532] INFO --------------------------------------------------------------------------------
+2020-12-06T09:09:15UTC ARP_SYNC[19532] INFO Starting arp sync activity
+2020-12-06T09:09:15UTC ARP_SYNC[19532] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T09:09:15UTC ARP_SYNC[19532] INFO activating syslog. using /bin/logger
+2020-12-06T09:09:15UTC ARP_SYNC[19532] INFO --------------------------------------------------------------------------------
+2020-12-06T09:09:16UTC ARP_SYNC[19532] INFO Login into device rancid@100.80.16.139
+2020-12-06T09:09:16UTC ARP_SYNC[19532] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T09:09:16UTC ARP_SYNC[19532] INFO Importing methods for ::Juniper::*
+2020-12-06T09:09:16UTC ARP_SYNC[19532] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T09:09:33UTC ARP_SYNC[19546] INFO --------------------------------------------------------------------------------
+2020-12-06T09:09:33UTC ARP_SYNC[19546] INFO Starting arp sync activity
+2020-12-06T09:09:33UTC ARP_SYNC[19546] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T09:09:33UTC ARP_SYNC[19546] INFO activating syslog. using /bin/logger
+2020-12-06T09:09:33UTC ARP_SYNC[19546] INFO --------------------------------------------------------------------------------
+2020-12-06T09:09:34UTC ARP_SYNC[19546] INFO Login into device rancid@100.80.16.139
+2020-12-06T09:09:35UTC ARP_SYNC[19546] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T09:09:35UTC ARP_SYNC[19546] INFO Importing methods for ::Juniper::*
+2020-12-06T09:09:35UTC ARP_SYNC[19546] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T09:18:47UTC ARP_SYNC[20082] INFO --------------------------------------------------------------------------------
+2020-12-06T09:18:47UTC ARP_SYNC[20082] INFO Starting arp sync activity
+2020-12-06T09:18:47UTC ARP_SYNC[20082] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T09:18:47UTC ARP_SYNC[20082] INFO activating syslog. using /bin/logger
+2020-12-06T09:18:47UTC ARP_SYNC[20082] INFO --------------------------------------------------------------------------------
+2020-12-06T09:18:48UTC ARP_SYNC[20082] INFO Login into device rancid@100.80.16.139
+2020-12-06T09:18:48UTC ARP_SYNC[20082] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T09:18:48UTC ARP_SYNC[20082] INFO Importing methods for ::Juniper::*
+2020-12-06T09:18:48UTC ARP_SYNC[20082] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T09:20:04UTC ARP_SYNC[20173] INFO --------------------------------------------------------------------------------
+2020-12-06T09:20:04UTC ARP_SYNC[20173] INFO Starting arp sync activity
+2020-12-06T09:20:04UTC ARP_SYNC[20173] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T09:20:04UTC ARP_SYNC[20173] INFO activating syslog. using /bin/logger
+2020-12-06T09:20:04UTC ARP_SYNC[20173] INFO --------------------------------------------------------------------------------
+2020-12-06T09:20:05UTC ARP_SYNC[20173] INFO Login into device rancid@100.80.16.139
+2020-12-06T09:20:06UTC ARP_SYNC[20173] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T09:20:06UTC ARP_SYNC[20173] INFO Importing methods for ::Juniper::*
+2020-12-06T09:20:06UTC ARP_SYNC[20173] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T09:24:34UTC ARP_SYNC[20401] INFO --------------------------------------------------------------------------------
+2020-12-06T09:24:34UTC ARP_SYNC[20401] INFO Starting arp sync activity
+2020-12-06T09:24:34UTC ARP_SYNC[20401] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T09:24:34UTC ARP_SYNC[20401] INFO activating syslog. using /bin/logger
+2020-12-06T09:24:34UTC ARP_SYNC[20401] INFO --------------------------------------------------------------------------------
+2020-12-06T09:24:35UTC ARP_SYNC[20401] INFO Login into device rancid@100.80.16.139
+2020-12-06T09:24:36UTC ARP_SYNC[20401] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T09:24:36UTC ARP_SYNC[20401] INFO Importing methods for ::Juniper::*
+2020-12-06T09:27:42UTC ARP_SYNC[20579] INFO --------------------------------------------------------------------------------
+2020-12-06T09:27:42UTC ARP_SYNC[20579] INFO Starting arp sync activity
+2020-12-06T09:27:42UTC ARP_SYNC[20579] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T09:27:42UTC ARP_SYNC[20579] INFO activating syslog. using /bin/logger
+2020-12-06T09:27:42UTC ARP_SYNC[20579] INFO --------------------------------------------------------------------------------
+2020-12-06T09:27:43UTC ARP_SYNC[20579] INFO Login into device rancid@100.80.16.139
+2020-12-06T09:27:43UTC ARP_SYNC[20579] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T09:27:43UTC ARP_SYNC[20579] INFO Importing methods for ::Juniper::*
+2020-12-06T09:31:15UTC ARP_SYNC[20797] INFO --------------------------------------------------------------------------------
+2020-12-06T09:31:15UTC ARP_SYNC[20797] INFO Starting arp sync activity
+2020-12-06T09:31:15UTC ARP_SYNC[20797] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T09:31:15UTC ARP_SYNC[20797] INFO activating syslog. using /bin/logger
+2020-12-06T09:31:15UTC ARP_SYNC[20797] INFO --------------------------------------------------------------------------------
+2020-12-06T09:31:16UTC ARP_SYNC[20797] INFO Login into device rancid@100.80.16.139
+2020-12-06T09:31:16UTC ARP_SYNC[20797] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T09:31:16UTC ARP_SYNC[20797] INFO Importing methods for ::Juniper::*
+2020-12-06T09:54:53UTC ARP_SYNC[22083] INFO --------------------------------------------------------------------------------
+2020-12-06T09:54:53UTC ARP_SYNC[22083] INFO Starting arp sync activity
+2020-12-06T09:54:53UTC ARP_SYNC[22083] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T09:54:53UTC ARP_SYNC[22083] INFO activating syslog. using /bin/logger
+2020-12-06T09:54:53UTC ARP_SYNC[22083] INFO --------------------------------------------------------------------------------
+2020-12-06T09:54:54UTC ARP_SYNC[22083] INFO Login into device rancid@100.80.16.139
+2020-12-06T09:54:54UTC ARP_SYNC[22083] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T09:54:54UTC ARP_SYNC[22083] INFO Importing methods for ::Juniper::*
+2020-12-06T10:03:08UTC ARP_SYNC[22546] INFO --------------------------------------------------------------------------------
+2020-12-06T10:03:08UTC ARP_SYNC[22546] INFO Starting arp sync activity
+2020-12-06T10:03:08UTC ARP_SYNC[22546] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:03:08UTC ARP_SYNC[22546] INFO activating syslog. using /bin/logger
+2020-12-06T10:03:08UTC ARP_SYNC[22546] INFO --------------------------------------------------------------------------------
+2020-12-06T10:03:09UTC ARP_SYNC[22546] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:03:10UTC ARP_SYNC[22546] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:03:10UTC ARP_SYNC[22546] INFO Importing methods for ::Juniper::*
+2020-12-06T10:03:41UTC ARP_SYNC[22581] INFO --------------------------------------------------------------------------------
+2020-12-06T10:03:41UTC ARP_SYNC[22581] INFO Starting arp sync activity
+2020-12-06T10:03:41UTC ARP_SYNC[22581] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:03:41UTC ARP_SYNC[22581] INFO activating syslog. using /bin/logger
+2020-12-06T10:03:41UTC ARP_SYNC[22581] INFO --------------------------------------------------------------------------------
+2020-12-06T10:03:42UTC ARP_SYNC[22581] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:03:42UTC ARP_SYNC[22581] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:03:42UTC ARP_SYNC[22581] INFO Importing methods for ::Juniper::*
+2020-12-06T10:05:10UTC ARP_SYNC[22667] INFO --------------------------------------------------------------------------------
+2020-12-06T10:05:10UTC ARP_SYNC[22667] INFO Starting arp sync activity
+2020-12-06T10:05:10UTC ARP_SYNC[22667] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:05:10UTC ARP_SYNC[22667] INFO activating syslog. using /bin/logger
+2020-12-06T10:05:10UTC ARP_SYNC[22667] INFO --------------------------------------------------------------------------------
+2020-12-06T10:05:11UTC ARP_SYNC[22667] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:05:12UTC ARP_SYNC[22667] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:05:12UTC ARP_SYNC[22667] INFO Importing methods for ::Juniper::*
+2020-12-06T10:08:24UTC ARP_SYNC[22840] INFO --------------------------------------------------------------------------------
+2020-12-06T10:08:24UTC ARP_SYNC[22840] INFO Starting arp sync activity
+2020-12-06T10:08:24UTC ARP_SYNC[22840] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:08:24UTC ARP_SYNC[22840] INFO activating syslog. using /bin/logger
+2020-12-06T10:08:24UTC ARP_SYNC[22840] INFO --------------------------------------------------------------------------------
+2020-12-06T10:08:25UTC ARP_SYNC[22840] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:08:25UTC ARP_SYNC[22840] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:08:25UTC ARP_SYNC[22840] INFO Importing methods for ::Juniper::*
+2020-12-06T10:09:45UTC ARP_SYNC[22918] INFO --------------------------------------------------------------------------------
+2020-12-06T10:09:45UTC ARP_SYNC[22918] INFO Starting arp sync activity
+2020-12-06T10:09:45UTC ARP_SYNC[22918] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:09:45UTC ARP_SYNC[22918] INFO activating syslog. using /bin/logger
+2020-12-06T10:09:45UTC ARP_SYNC[22918] INFO --------------------------------------------------------------------------------
+2020-12-06T10:09:46UTC ARP_SYNC[22918] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:09:47UTC ARP_SYNC[22918] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:09:47UTC ARP_SYNC[22918] INFO Importing methods for ::Juniper::*
+2020-12-06T10:10:06UTC ARP_SYNC[22964] INFO --------------------------------------------------------------------------------
+2020-12-06T10:10:06UTC ARP_SYNC[22964] INFO Starting arp sync activity
+2020-12-06T10:10:06UTC ARP_SYNC[22964] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:10:06UTC ARP_SYNC[22964] INFO activating syslog. using /bin/logger
+2020-12-06T10:10:06UTC ARP_SYNC[22964] INFO --------------------------------------------------------------------------------
+2020-12-06T10:10:08UTC ARP_SYNC[22964] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:10:08UTC ARP_SYNC[22964] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:10:08UTC ARP_SYNC[22964] INFO Importing methods for ::Juniper::*
+2020-12-06T10:13:53UTC ARP_SYNC[23220] INFO --------------------------------------------------------------------------------
+2020-12-06T10:13:53UTC ARP_SYNC[23220] INFO Starting arp sync activity
+2020-12-06T10:13:53UTC ARP_SYNC[23220] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:13:53UTC ARP_SYNC[23220] INFO activating syslog. using /bin/logger
+2020-12-06T10:13:53UTC ARP_SYNC[23220] INFO --------------------------------------------------------------------------------
+2020-12-06T10:13:55UTC ARP_SYNC[23220] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:13:55UTC ARP_SYNC[23220] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:13:55UTC ARP_SYNC[23220] INFO Importing methods for ::Juniper::*
+2020-12-06T10:13:55UTC ARP_SYNC[23220] INFO fetching arp entries from 100.80.16.139
+2020-12-06T10:13:55UTC ARP_SYNC[23220] INFO sent command: /show arp/
+2020-12-06T10:13:55UTC ARP_SYNC[23220] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T10:17:16UTC ARP_SYNC[23397] INFO --------------------------------------------------------------------------------
+2020-12-06T10:17:16UTC ARP_SYNC[23397] INFO Starting arp sync activity
+2020-12-06T10:17:16UTC ARP_SYNC[23397] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:17:16UTC ARP_SYNC[23397] INFO activating syslog. using /bin/logger
+2020-12-06T10:17:16UTC ARP_SYNC[23397] INFO --------------------------------------------------------------------------------
+2020-12-06T10:17:17UTC ARP_SYNC[23397] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:17:18UTC ARP_SYNC[23397] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:17:18UTC ARP_SYNC[23397] INFO Importing methods for ::Juniper::*
+2020-12-06T10:17:18UTC ARP_SYNC[23397] INFO fetching arp entries from 100.80.16.139
+2020-12-06T10:17:18UTC ARP_SYNC[23397] INFO sent command: /show arp/
+2020-12-06T10:17:18UTC ARP_SYNC[23397] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T10:21:45UTC ARP_SYNC[23656] INFO --------------------------------------------------------------------------------
+2020-12-06T10:21:45UTC ARP_SYNC[23656] INFO Starting arp sync activity
+2020-12-06T10:21:45UTC ARP_SYNC[23656] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:21:45UTC ARP_SYNC[23656] INFO activating syslog. using /bin/logger
+2020-12-06T10:21:45UTC ARP_SYNC[23656] INFO --------------------------------------------------------------------------------
+2020-12-06T10:21:46UTC ARP_SYNC[23656] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:21:46UTC ARP_SYNC[23656] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:21:46UTC ARP_SYNC[23656] INFO Importing methods for ::Juniper::*
+2020-12-06T10:21:46UTC ARP_SYNC[23656] INFO fetching arp entries from 100.80.16.139
+2020-12-06T10:21:46UTC ARP_SYNC[23656] INFO sent command: /show arp/
+2020-12-06T10:21:46UTC ARP_SYNC[23656] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T10:22:47UTC ARP_SYNC[23755] INFO --------------------------------------------------------------------------------
+2020-12-06T10:22:47UTC ARP_SYNC[23755] INFO Starting arp sync activity
+2020-12-06T10:22:47UTC ARP_SYNC[23755] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:22:47UTC ARP_SYNC[23755] INFO activating syslog. using /bin/logger
+2020-12-06T10:22:47UTC ARP_SYNC[23755] INFO --------------------------------------------------------------------------------
+2020-12-06T10:22:49UTC ARP_SYNC[23755] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:22:49UTC ARP_SYNC[23755] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:22:49UTC ARP_SYNC[23755] INFO Importing methods for ::Juniper::*
+2020-12-06T10:22:49UTC ARP_SYNC[23755] INFO fetching arp entries from 100.80.16.139
+2020-12-06T10:22:49UTC ARP_SYNC[23755] INFO sent command: /show arp/
+2020-12-06T10:22:49UTC ARP_SYNC[23755] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T10:54:32UTC ARP_SYNC[25504] INFO --------------------------------------------------------------------------------
+2020-12-06T10:54:32UTC ARP_SYNC[25504] INFO Starting arp sync activity
+2020-12-06T10:54:32UTC ARP_SYNC[25504] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:54:32UTC ARP_SYNC[25504] INFO activating syslog. using /bin/logger
+2020-12-06T10:54:32UTC ARP_SYNC[25504] INFO --------------------------------------------------------------------------------
+2020-12-06T10:54:33UTC ARP_SYNC[25504] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:54:33UTC ARP_SYNC[25504] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:54:33UTC ARP_SYNC[25504] INFO Importing methods for ::Juniper::*
+2020-12-06T10:54:33UTC ARP_SYNC[25504] INFO fetching arp entries from 100.80.16.139
+2020-12-06T10:54:33UTC ARP_SYNC[25504] INFO sent command: /show arp/
+2020-12-06T10:54:34UTC ARP_SYNC[25504] INFO preparing set arp commands for device : 100.80.16.139 
+2020-12-06T10:54:34UTC ARP_SYNC[25504] INFO 17 arp entries prepared
+2020-12-06T10:54:34UTC ARP_SYNC[25504] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T10:57:59UTC ARP_SYNC[25731] INFO --------------------------------------------------------------------------------
+2020-12-06T10:57:59UTC ARP_SYNC[25731] INFO Starting arp sync activity
+2020-12-06T10:57:59UTC ARP_SYNC[25731] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:57:59UTC ARP_SYNC[25731] INFO activating syslog. using /bin/logger
+2020-12-06T10:57:59UTC ARP_SYNC[25731] INFO --------------------------------------------------------------------------------
+2020-12-06T10:58:00UTC ARP_SYNC[25731] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:58:01UTC ARP_SYNC[25731] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:58:01UTC ARP_SYNC[25731] INFO Importing methods for ::Juniper::*
+2020-12-06T10:58:01UTC ARP_SYNC[25731] INFO fetching arp entries from 100.80.16.139
+2020-12-06T10:58:01UTC ARP_SYNC[25731] INFO sent command: /show arp/
+2020-12-06T10:58:01UTC ARP_SYNC[25731] INFO preparing set arp commands for device : 100.80.16.139 
+2020-12-06T10:58:01UTC ARP_SYNC[25731] INFO 17 set arp commands prepared
+2020-12-06T10:58:01UTC ARP_SYNC[25731] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T10:59:30UTC ARP_SYNC[25790] INFO --------------------------------------------------------------------------------
+2020-12-06T10:59:30UTC ARP_SYNC[25790] INFO Starting arp sync activity
+2020-12-06T10:59:30UTC ARP_SYNC[25790] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T10:59:30UTC ARP_SYNC[25790] INFO activating syslog. using /bin/logger
+2020-12-06T10:59:30UTC ARP_SYNC[25790] INFO --------------------------------------------------------------------------------
+2020-12-06T10:59:31UTC ARP_SYNC[25790] INFO Login into device rancid@100.80.16.139
+2020-12-06T10:59:31UTC ARP_SYNC[25790] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T10:59:31UTC ARP_SYNC[25790] INFO Importing methods for ::Juniper::*
+2020-12-06T10:59:31UTC ARP_SYNC[25790] INFO fetching arp entries from 100.80.16.139
+2020-12-06T10:59:32UTC ARP_SYNC[25790] INFO sent command: /show arp/
+2020-12-06T10:59:32UTC ARP_SYNC[25790] INFO preparing set arp commands for device : 100.80.16.139 
+2020-12-06T10:59:32UTC ARP_SYNC[25790] INFO 17 set arp commands prepared
+2020-12-06T10:59:32UTC ARP_SYNC[25790] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T11:00:10UTC ARP_SYNC[25857] INFO --------------------------------------------------------------------------------
+2020-12-06T11:00:10UTC ARP_SYNC[25857] INFO Starting arp sync activity
+2020-12-06T11:00:10UTC ARP_SYNC[25857] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T11:00:10UTC ARP_SYNC[25857] INFO activating syslog. using /bin/logger
+2020-12-06T11:00:10UTC ARP_SYNC[25857] INFO --------------------------------------------------------------------------------
+2020-12-06T11:00:11UTC ARP_SYNC[25857] INFO Login into device rancid@100.80.16.139
+2020-12-06T11:00:12UTC ARP_SYNC[25857] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T11:00:12UTC ARP_SYNC[25857] INFO Importing methods for ::Juniper::*
+2020-12-06T11:00:12UTC ARP_SYNC[25857] INFO fetching arp entries from 100.80.16.139
+2020-12-06T11:00:12UTC ARP_SYNC[25857] INFO sent command: /show arp/
+2020-12-06T11:00:12UTC ARP_SYNC[25857] INFO preparing set arp commands for device : 100.80.16.139 
+2020-12-06T11:00:12UTC ARP_SYNC[25857] INFO 17 set arp commands prepared
+2020-12-06T11:00:12UTC ARP_SYNC[25857] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T11:01:11UTC ARP_SYNC[25931] INFO --------------------------------------------------------------------------------
+2020-12-06T11:01:11UTC ARP_SYNC[25931] INFO Starting arp sync activity
+2020-12-06T11:01:11UTC ARP_SYNC[25931] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T11:01:11UTC ARP_SYNC[25931] INFO activating syslog. using /bin/logger
+2020-12-06T11:01:11UTC ARP_SYNC[25931] INFO --------------------------------------------------------------------------------
+2020-12-06T11:01:12UTC ARP_SYNC[25931] INFO Login into device rancid@100.80.16.139
+2020-12-06T11:01:12UTC ARP_SYNC[25931] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T11:01:12UTC ARP_SYNC[25931] INFO Importing methods for ::Juniper::*
+2020-12-06T11:01:12UTC ARP_SYNC[25931] INFO fetching arp entries from 100.80.16.139
+2020-12-06T11:01:12UTC ARP_SYNC[25931] INFO sent command: /show arp/
+2020-12-06T11:01:13UTC ARP_SYNC[25931] INFO preparing set arp commands for device : 100.80.16.139 
+2020-12-06T11:04:03UTC ARP_SYNC[26074] INFO --------------------------------------------------------------------------------
+2020-12-06T11:04:03UTC ARP_SYNC[26074] INFO Starting arp sync activity
+2020-12-06T11:04:03UTC ARP_SYNC[26074] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T11:04:03UTC ARP_SYNC[26074] INFO activating syslog. using /bin/logger
+2020-12-06T11:04:03UTC ARP_SYNC[26074] INFO --------------------------------------------------------------------------------
+2020-12-06T11:04:04UTC ARP_SYNC[26074] INFO Login into device rancid@100.80.16.139
+2020-12-06T11:04:04UTC ARP_SYNC[26074] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T11:04:04UTC ARP_SYNC[26074] INFO Importing methods for ::Juniper::*
+2020-12-06T11:04:04UTC ARP_SYNC[26074] INFO fetching arp entries from 100.80.16.139
+2020-12-06T11:04:04UTC ARP_SYNC[26074] INFO sent command: /show arp/
+2020-12-06T11:04:04UTC ARP_SYNC[26074] INFO preparing set arp commands for device : 100.80.16.139 
+2020-12-06T11:04:04UTC ARP_SYNC[26074] INFO 17 set arp commands prepared
+2020-12-06T11:04:04UTC ARP_SYNC[26074] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T11:04:43UTC ARP_SYNC[26112] INFO --------------------------------------------------------------------------------
+2020-12-06T11:04:43UTC ARP_SYNC[26112] INFO Starting arp sync activity
+2020-12-06T11:04:43UTC ARP_SYNC[26112] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T11:04:43UTC ARP_SYNC[26112] INFO activating syslog. using /bin/logger
+2020-12-06T11:04:43UTC ARP_SYNC[26112] INFO --------------------------------------------------------------------------------
+2020-12-06T11:04:45UTC ARP_SYNC[26112] INFO Login into device rancid@100.80.16.139
+2020-12-06T11:04:45UTC ARP_SYNC[26112] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T11:04:45UTC ARP_SYNC[26112] INFO Importing methods for ::Juniper::*
+2020-12-06T11:04:45UTC ARP_SYNC[26112] INFO fetching arp entries from 100.80.16.139
+2020-12-06T11:04:45UTC ARP_SYNC[26112] INFO sent command: /show arp/
+2020-12-06T11:04:45UTC ARP_SYNC[26112] INFO preparing set arp commands for device : 100.80.16.139 
+2020-12-06T11:04:45UTC ARP_SYNC[26112] INFO 17 set arp commands prepared
+2020-12-06T11:04:45UTC ARP_SYNC[26112] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T11:06:12UTC ARP_SYNC[26220] INFO --------------------------------------------------------------------------------
+2020-12-06T11:06:12UTC ARP_SYNC[26220] INFO Starting arp sync activity
+2020-12-06T11:06:12UTC ARP_SYNC[26220] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T11:06:12UTC ARP_SYNC[26220] INFO activating syslog. using /bin/logger
+2020-12-06T11:06:12UTC ARP_SYNC[26220] INFO --------------------------------------------------------------------------------
+2020-12-06T11:06:13UTC ARP_SYNC[26220] INFO Login into device rancid@100.80.16.139
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Importing methods for ::Juniper::*
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO fetching arp entries from 100.80.16.139
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO sent command: /show arp/
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 
+a0:f3:e4:2f:e2:0c 4.68.56.33      4.68.56.33                et-0/0/0:0.4000         permanent
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 0c:a4:02:a6:a1:44 10.69.172.1     10.69.172.1               ae3.3501                none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 20:d8:0b:76:a7:46 11.31.31.22     11.31.31.22               ae2.52                  none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 00:1f:29:54:09:2a 100.80.16.2     kyle.iplab.level3.net     em0.0                   none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 00:e0:81:32:c2:28 100.80.16.3     kenny.iplab.level3.net    em0.0                   none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 00:0b:cd:42:4a:ed 100.80.16.5     rancid.iplab.level3.net   em0.0                   none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 00:e0:81:33:39:46 100.80.16.24    crapgame.iplab.level3.net em0.0                   none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 00:1c:c4:94:a5:10 100.80.16.32    jimbo.iplab.level3.net    em0.0                   none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 1c:9c:8c:da:95:00 100.80.16.37    acx5448-1.iplab.level3.ne em0.0                   none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 1c:9c:8c:da:9d:00 100.80.16.38    acx5448-2.iplab.level3.ne em0.0                   none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 56:68:29:7a:97:dc 100.80.16.100   jvrr-1.iplab.level3.net   em0.0                   none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 00:a0:a5:80:fc:43 100.80.16.128   jmx240-2.iplab.level3.net em0.0                   none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 00:30:48:8e:95:3f 100.80.16.247   100.80.16.247             em0.0                   none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 00:00:5e:00:01:01 100.80.16.254   100.80.16.254             em0.0                   none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: fe:54:00:1c:95:51 128.0.0.16      fpc0                      bme0.0                  none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: a4:7b:2c:03:71:a5 172.18.11.1     172.18.11.1               ae100.11                permanent
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO Found arp line: 52:54:00:c2:12:11 192.168.1.1     192.168.1.1               em1.32768               none
+
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO preparing set arp commands for device : 100.80.16.139 
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO 17 set arp commands prepared
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces et-0/0/0:0 unit 4000 family inet  address 4.68.56.33 arp 4.68.56.33  mac a0:f3:e4:2f:e2:0c
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces ae3 unit 3501 family inet  address 10.69.172.1 arp 10.69.172.1  mac 0c:a4:02:a6:a1:44
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces ae2 unit 52 family inet  address 11.31.31.22 arp 11.31.31.22  mac 20:d8:0b:76:a7:46
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces em0 unit 0 family inet  address 100.80.16.2 arp 100.80.16.2  mac 00:1f:29:54:09:2a
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces em0 unit 0 family inet  address 100.80.16.3 arp 100.80.16.3  mac 00:e0:81:32:c2:28
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces em0 unit 0 family inet  address 100.80.16.5 arp 100.80.16.5  mac 00:0b:cd:42:4a:ed
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces em0 unit 0 family inet  address 100.80.16.24 arp 100.80.16.24  mac 00:e0:81:33:39:46
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces em0 unit 0 family inet  address 100.80.16.32 arp 100.80.16.32  mac 00:1c:c4:94:a5:10
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces em0 unit 0 family inet  address 100.80.16.37 arp 100.80.16.37  mac 1c:9c:8c:da:95:00
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces em0 unit 0 family inet  address 100.80.16.38 arp 100.80.16.38  mac 1c:9c:8c:da:9d:00
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces em0 unit 0 family inet  address 100.80.16.100 arp 100.80.16.100  mac 56:68:29:7a:97:dc
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces em0 unit 0 family inet  address 100.80.16.128 arp 100.80.16.128  mac 00:a0:a5:80:fc:43
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces em0 unit 0 family inet  address 100.80.16.247 arp 100.80.16.247  mac 00:30:48:8e:95:3f
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces em0 unit 0 family inet  address 100.80.16.254 arp 100.80.16.254  mac 00:00:5e:00:01:01
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces bme0 unit 0 family inet  address 128.0.0.16 arp 128.0.0.16  mac fe:54:00:1c:95:51
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces ae100 unit 11 family inet  address 172.18.11.1 arp 172.18.11.1  mac a4:7b:2c:03:71:a5
+2020-12-06T11:06:14UTC ARP_SYNC[26220] INFO set interfaces em1 unit 32768 family inet  address 192.168.1.1 arp 192.168.1.1  mac 52:54:00:c2:12:11
+2020-12-06T11:06:14UTC ARP_SYNC[26220] ERROR device records invalid at row: 2. skipping to next record
+2020-12-06T11:09:17UTC ARP_SYNC[26364] INFO --------------------------------------------------------------------------------
+2020-12-06T11:09:17UTC ARP_SYNC[26364] INFO Starting arp sync activity
+2020-12-06T11:09:17UTC ARP_SYNC[26364] INFO hostname: dc2owooadmpd01.it.savvis.net ; OS: Linux-x86_64 ; user: msolayap ; cwd: /data02/home/msolayap/gitzone/edge-compute/arp-sync/bin
+2020-12-06T11:09:17UTC ARP_SYNC[26364] INFO activating syslog. using /bin/logger
+2020-12-06T11:09:17UTC ARP_SYNC[26364] INFO --------------------------------------------------------------------------------
+2020-12-06T11:09:18UTC ARP_SYNC[26364] INFO Login into device rancid@100.80.16.139
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Detected vendor of device: 100.80.16.139 as VENDOR: Juniper
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Importing methods for ::Juniper::*
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO fetching arp entries from 100.80.16.139
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO sent command: /show arp/
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 
+a0:f3:e4:2f:e2:0c 4.68.56.33      4.68.56.33                et-0/0/0:0.4000         permanent
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 0c:a4:02:a6:a1:44 10.69.172.1     10.69.172.1               ae3.3501                none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 20:d8:0b:76:a7:46 11.31.31.22     11.31.31.22               ae2.52                  none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 00:1f:29:54:09:2a 100.80.16.2     kyle.iplab.level3.net     em0.0                   none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 00:e0:81:32:c2:28 100.80.16.3     kenny.iplab.level3.net    em0.0                   none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 00:0b:cd:42:4a:ed 100.80.16.5     rancid.iplab.level3.net   em0.0                   none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 00:e0:81:33:39:46 100.80.16.24    crapgame.iplab.level3.net em0.0                   none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 00:1c:c4:94:a5:10 100.80.16.32    jimbo.iplab.level3.net    em0.0                   none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 1c:9c:8c:da:95:00 100.80.16.37    acx5448-1.iplab.level3.ne em0.0                   none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 1c:9c:8c:da:9d:00 100.80.16.38    acx5448-2.iplab.level3.ne em0.0                   none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 56:68:29:7a:97:dc 100.80.16.100   jvrr-1.iplab.level3.net   em0.0                   none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 00:a0:a5:80:fc:43 100.80.16.128   jmx240-2.iplab.level3.net em0.0                   none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 00:30:48:8e:95:3f 100.80.16.247   100.80.16.247             em0.0                   none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 00:00:5e:00:01:01 100.80.16.254   100.80.16.254             em0.0                   none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: fe:54:00:1c:95:51 128.0.0.16      fpc0                      bme0.0                  none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: a4:7b:2c:03:71:a5 172.18.11.1     172.18.11.1               ae100.11                permanent
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Found arp line: 52:54:00:c2:12:11 192.168.1.1     192.168.1.1               em1.32768               none
+
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO ARP read complete
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO preparing set arp commands for device : 100.80.16.139 
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO 17 set arp commands prepared
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO Prepared List of SET ARP Commands
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces et-0/0/0:0 unit 4000 family inet  address 4.68.56.33 arp 4.68.56.33  mac a0:f3:e4:2f:e2:0c
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces ae3 unit 3501 family inet  address 10.69.172.1 arp 10.69.172.1  mac 0c:a4:02:a6:a1:44
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces ae2 unit 52 family inet  address 11.31.31.22 arp 11.31.31.22  mac 20:d8:0b:76:a7:46
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces em0 unit 0 family inet  address 100.80.16.2 arp 100.80.16.2  mac 00:1f:29:54:09:2a
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces em0 unit 0 family inet  address 100.80.16.3 arp 100.80.16.3  mac 00:e0:81:32:c2:28
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces em0 unit 0 family inet  address 100.80.16.5 arp 100.80.16.5  mac 00:0b:cd:42:4a:ed
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces em0 unit 0 family inet  address 100.80.16.24 arp 100.80.16.24  mac 00:e0:81:33:39:46
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces em0 unit 0 family inet  address 100.80.16.32 arp 100.80.16.32  mac 00:1c:c4:94:a5:10
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces em0 unit 0 family inet  address 100.80.16.37 arp 100.80.16.37  mac 1c:9c:8c:da:95:00
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces em0 unit 0 family inet  address 100.80.16.38 arp 100.80.16.38  mac 1c:9c:8c:da:9d:00
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces em0 unit 0 family inet  address 100.80.16.100 arp 100.80.16.100  mac 56:68:29:7a:97:dc
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces em0 unit 0 family inet  address 100.80.16.128 arp 100.80.16.128  mac 00:a0:a5:80:fc:43
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces em0 unit 0 family inet  address 100.80.16.247 arp 100.80.16.247  mac 00:30:48:8e:95:3f
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces em0 unit 0 family inet  address 100.80.16.254 arp 100.80.16.254  mac 00:00:5e:00:01:01
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces bme0 unit 0 family inet  address 128.0.0.16 arp 128.0.0.16  mac fe:54:00:1c:95:51
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces ae100 unit 11 family inet  address 172.18.11.1 arp 172.18.11.1  mac a4:7b:2c:03:71:a5
+2020-12-06T11:09:19UTC ARP_SYNC[26364] INFO set interfaces em1 unit 32768 family inet  address 192.168.1.1 arp 192.168.1.1  mac 52:54:00:c2:12:11
+2020-12-06T11:09:19UTC ARP_SYNC[26364] ERROR device records invalid at row: 2. skipping to next record

@@ -11,13 +11,11 @@ source ../lib/nokia.exp
 
 # code to initialize logging and syslog
 open_logfile ;
-enable_syslog ;
-
-debug_on ;
 
 lputs [banner_line];
 lputs "Starting arp sync activity" ;
 lputs [script_host_info]
+enable_syslog ;
 lputs [banner_line];
 
 # sample codes
@@ -29,6 +27,11 @@ init_vars;
 set user   "rancid" 
 set pass   "level3" 
 
+global current_device ;
+
+set current_device {} ;
+
+#### Start of arp_sync code ############
 
 set devices_array [get_device_list $devices_list_file]
 
@@ -41,13 +44,15 @@ foreach dev_record $devices_array {
 	set device_1 [dict get $dev_record "ear_1_router_hostname"]  ;
 	set device_2 [dict get $dev_record "ear_2_router_hostname"]  ;
 
-	foreach e [list $name $device_1 ]  {
+# if SITENAME, device1 or device2 is empty there is no point in proceeding further. lets skip it.
+# TODO: There is one use case - just to convert arp entries to static in one device.
 
-		if { $e=="" } {
-			lputs "device records invalid at row: $rownum. skipping to next record" "ERROR"
-			set invalid_row 1
-			break ;
-		}
+	set mandatory_fields [list $name $device_1 $device_2]
+
+	set res [lsearch -regexp $mandatory_fields "^$"]  ;
+	if { $res!=-1  } {
+		lputs "device records invalid at row: $rownum. skipping to next record" "ERROR"
+		set invalid_row 1
 	}
  # Increment row number for tracking.
 	incr rownum 1
@@ -59,11 +64,15 @@ foreach dev_record $devices_array {
 
 	set device $device_1 ;
 
-	puts $device ;
 # Login to device
 	login_to_device $device $user $pass
 
-	lputs "Logging into device $user@$device" ;
+	lputs "Login into device $user@$device" ;
+
+# To avoid page number
+
+	init_terminal ;
+
 # detect device vendor using /show version/ command.
 	set vendor [detect_device_vendor] ;
 
@@ -71,7 +80,24 @@ foreach dev_record $devices_array {
 
 	load_methods_for $vendor ;
 #
-	get_arp_entries ;
+	set all_arp_dict [get_arp_entries]
+
+#	foreach arp $all_arp_dict {
+#		dict for {k v} $arp { 
+#			dputs "$k -> $v" 
+#		}
+#		dputs [banner_line] ;
+#	}
+
+	set set_arp_cmd_list [prepare_set_arp_cmd $all_arp_dict]
+
+	lputs "Prepared List of SET ARP Commands" ;
+
+	foreach cmd $set_arp_cmd_list {
+		lputs $cmd ;
+	}
+
+
 }
 
 

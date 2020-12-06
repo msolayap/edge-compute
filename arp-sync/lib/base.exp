@@ -16,7 +16,7 @@ proc init_vars {} {
 
 proc login_to_device {hostname user password} {
 
-	global login_success prompt
+	global login_success prompt current_device ;
 
 	if {[catch {spawn ssh $user@$hostname} err ]} {
 		puts stderr "ERROR: Failed to login to device\nError: $err" 
@@ -25,6 +25,8 @@ proc login_to_device {hostname user password} {
 # We will leave the session open for further functions to interact
 	uplevel set spawn_id $spawn_id 
 	set login_success 1
+
+	dict set current_device device $hostname
 
 	expect {
 		-re "assword: *$" {
@@ -41,7 +43,7 @@ proc init_terminal {} {
 	send -h "\r" ;
 	expect {
 		-re $prompt {
-			send "\r" ;
+			send "set cli screen-length 0\r" ;
 		}
 	}
 	return 0;
@@ -49,7 +51,7 @@ proc init_terminal {} {
 
 proc detect_device_vendor {} {
 
-	global vendor_detected prompt ;
+	global vendor_detected prompt current_device ;
 
 	set d_vendor "unknown" ;
 	set vendor_detected 0 ;
@@ -78,6 +80,7 @@ proc detect_device_vendor {} {
 			}
 		}
 	}
+	dict set $current_device vendor $d_vendor ;
 	return $d_vendor ;
 }
 
