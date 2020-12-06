@@ -1,0 +1,15 @@
+set interfaces ae3 unit 3501 family inet  address 10.69.172.1 arp 10.69.172.1  mac 0c:a4:02:a6:a1:44
+set interfaces ae2 unit 52 family inet  address 11.31.31.22 arp 11.31.31.22  mac 20:d8:0b:76:a7:46
+set interfaces em0 unit 0 family inet  address 100.80.16.2 arp 100.80.16.2  mac 00:1f:29:54:09:2a
+set interfaces em0 unit 0 family inet  address 100.80.16.3 arp 100.80.16.3  mac 00:e0:81:32:c2:28
+set interfaces em0 unit 0 family inet  address 100.80.16.5 arp 100.80.16.5  mac 00:0b:cd:42:4a:ed
+set interfaces em0 unit 0 family inet  address 100.80.16.24 arp 100.80.16.24  mac 00:e0:81:33:39:46
+set interfaces em0 unit 0 family inet  address 100.80.16.32 arp 100.80.16.32  mac 00:1c:c4:94:a5:10
+set interfaces em0 unit 0 family inet  address 100.80.16.37 arp 100.80.16.37  mac 1c:9c:8c:da:95:00
+set interfaces em0 unit 0 family inet  address 100.80.16.38 arp 100.80.16.38  mac 1c:9c:8c:da:9d:00
+set interfaces em0 unit 0 family inet  address 100.80.16.100 arp 100.80.16.100  mac 56:68:29:7a:97:dc
+set interfaces em0 unit 0 family inet  address 100.80.16.128 arp 100.80.16.128  mac 00:a0:a5:80:fc:43
+set interfaces em0 unit 0 family inet  address 100.80.16.247 arp 100.80.16.247  mac 00:30:48:8e:95:3f
+set interfaces em0 unit 0 family inet  address 100.80.16.254 arp 100.80.16.254  mac 00:00:5e:00:01:01
+set interfaces bme0 unit 0 family inet  address 128.0.0.16 arp 128.0.0.16  mac fe:54:00:1c:95:51
+set interfaces em1 unit 32768 family inet  address 192.168.1.1 arp 192.168.1.1  mac 52:54:00:c2:12:11

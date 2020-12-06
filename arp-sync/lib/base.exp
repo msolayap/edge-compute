@@ -18,8 +18,10 @@ proc login_to_device {hostname user password} {
 
 	global login_success prompt current_device ;
 
+	lputs "Login to device $user@$hostname" ;
+
 	if {[catch {spawn ssh $user@$hostname} err ]} {
-		puts stderr "ERROR: Failed to login to device\nError: $err" 
+		lputs "ERROR: Failed to login to device\nError: $err" 
 		return 1;
 	} 
 # We will leave the session open for further functions to interact
@@ -35,17 +37,25 @@ proc login_to_device {hostname user password} {
 		}
 		-re $prompt {}
 	}
+	lputs "** Login Successful **" ;
 	return 0;
 }
 
+# Terminal initializations before detecting the device vendor. This is to avoid any errors during vendor detection.
+# Respective device class will have its own overriden function with same signature.
 proc init_terminal {} {
 	global prompt
 	send -h "\r" ;
-	expect {
-		-re $prompt {
-			send "set cli screen-length 0\r" ;
-		}
-	}
+
+#	expect {
+#		-re $prompt {
+### For Juniper
+#			send "set cli screen-length 0\r" ;
+#			sleep 1;
+### For Nokia
+#			send "environment no more\r" ;
+#		}
+#	}
 	return 0;
 }
 
@@ -64,15 +74,13 @@ proc detect_device_vendor {} {
 				expect {
 					-re "(ptx1000|JUNOS)" {
 						set d_vendor "Juniper"
-						expect -re $prompt {}
+# Juniper shows lot of version information. sometimes with pager (more), hence its important to come back to terminal prompt.
+# sending q  will quit the pager.
+						send -h "q" ;
 					}
 					-re "(Nokia)" {
 						set d_vendor "Nokia"
 						expect -re $prompt {}
-					}
-					-re "\(more\)" {
-						send -s  "\r" ;
-						exp_continue ;
 					}
 
 				}
@@ -80,6 +88,8 @@ proc detect_device_vendor {} {
 			}
 		}
 	}
+	lputs "Detected vendor of device: [dict get $current_device device] as VENDOR: $d_vendor" ;
+
 	dict set $current_device vendor $d_vendor ;
 	return $d_vendor ;
 }

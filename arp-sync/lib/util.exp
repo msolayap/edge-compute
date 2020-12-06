@@ -124,6 +124,34 @@ proc error_exit {code msg}  {
 
 ######
 
+proc init_mop {mop_file_name} {
+
+	global mopfh ;
+	set fh -1
+
+	if { [catch {set fh [open $mop_file_name "w"]} err]  }  {
+		lputs "Error opening MOP file for writing. $err "
+	} else {
+		set mopfh  $fh ;
+		lputs "MOP file opened for writing: $mop_file_name"
+	}
+}
+
+proc add_mop {cmd_list} {
+
+	global mopfh 
+
+	foreach line $cmd_list {
+		puts $mopfh "$line" ;
+	}
+}
+
+proc close_mop {} {
+
+	global $mopfh 
+
+	close $mopfh
+}
 
 proc get_device_list {device_list_file} {
 	set LS "\n";

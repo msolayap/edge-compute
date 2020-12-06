@@ -25,6 +25,10 @@ set syslog_ready  0;
 # file where device lists are stored as csv
 set devices_list_file "lab_router_pe_data.csv" ;
 
+# MOP file related configs
+set mop_file  "MOP.txt" ;
+set mopfh "" ;
+
 
 # NOT TO BE EDITED - only for app
 set prompt "(%|#|\\\$|>) *$"

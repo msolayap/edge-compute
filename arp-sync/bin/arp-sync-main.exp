@@ -68,8 +68,6 @@ foreach dev_record $devices_array {
 # Login to device
 	login_to_device $device $user $pass
 
-	lputs "Login into device $user@$device" ;
-
 # To avoid page number
 
 	init_terminal ;
@@ -77,31 +75,19 @@ foreach dev_record $devices_array {
 # detect device vendor using /show version/ command.
 	set vendor [detect_device_vendor] ;
 
-	lputs "Detected vendor of device: $device as VENDOR: $vendor" ;
-
+# Load methods for appropriate device model
 	load_methods_for $vendor ;
-#
-	set all_arp_dict [get_arp_entries]
 
-	set non_static_arp_dict {};
+#Initialize device model specific parameters before interaction	
+	init_terminal ;
 
-	foreach entry $all_arp_dict {
-		if { [regexp -nocase "permanent" [dict get $entry flags] ] } {
-			continue ;
-		} else {
-			lappend non_static_arp_dict $entry 
-		}
+	init_mop [format "MOP_%s.txt" $vendor]  ;
 
-	}
+	set mop_stmt_list [convert_dynamic_arp_to_static]
 
-	set set_arp_cmd_list [prepare_set_arp_cmd $non_static_arp_dict]
+	add_mop $mop_stmt_list
 
-	lputs "Prepared List of SET ARP Commands" ;
-
-	foreach cmd $set_arp_cmd_list {
-		lputs $cmd ;
-	}
-
+	device_logout ;
 
 }
 
