@@ -1,6 +1,0 @@
-/configure service ies <ies> interface ae12.3501 static-arp 4.69.100.41 0c:a4:02:a0:85:4d
-/admin save
-/configure service ies <ies> interface ae13.3601 static-arp 4.69.100.45 0c:a4:02:a6:a1:4e
-/admin save
-/configure service ies 3356 interface xe-1/1/12 static-arp 4.39.0.2 a0:f3:e4:a1:54:f7
-/admin save

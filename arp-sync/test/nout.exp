@@ -1,6 +1,9 @@
 
 
 set arp_out {
+
+
+
 IP Address      MAC Address       Expiry    Type   Interface
 -------------------------------------------------------------------------------
 4.69.159.102    a4:7b:2c:03:70:01 00h00m00s Oth    system
@@ -44,11 +47,40 @@ No. of ARP Entries: 36
 ===============================================================================
 }
 
+proc is_arp_line_valid {arp_line} {
+	set is_valid 1;
 
+	eval set arp_line_fields [list $arp_line ]
+	set field_count [llength $arp_line_fields] ;
 
+# Empty line check
+	if { [regexp "^$" $arp_line] } { 
+		set is_valid 0 ;
+
+	} elseif { $field_count < 5 } {
+
+# is the entry contains all the fields i.e IP MAC EXPIRY Type, Interface
+# sometimes MAC may be missing. This check is for that.
+		set is_valid 0 ;
+	} elseif { ! [regexp  "^(\[0-9]{1,3}\.){3}" [lindex $arp_line_fields 0] ] } {
+
+# is the line starting with valid IP address
+		set is_valid 0;
+	}
+
+	return $is_valid 
+}
 
 foreach line [split $arp_out "\n"] {
-	if { [regexp "" $line] }  {
-		puts "arp_line: $line" ;
+	puts $line ;
+
+	set result [is_arp_line_valid $line] ;
+
+	if { $result } {
+		puts "Line Valid" ;
+	} else {
+		puts "Line Invalid" ;
 	}
+
+
 }

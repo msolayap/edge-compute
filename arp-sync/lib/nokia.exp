@@ -45,15 +45,10 @@ namespace eval Nokia {
 
 		#set all_arp_dict [get_arp_entries {match "lag"} ]
 		set all_arp_dict [get_arp_entries ]
-		
-		set non_static_arp_dict {} ;
-# Filter Dynamic ARP entries by Type field
-		foreach entry $all_arp_dict {
-			if { [regexp -nocase "dyn" [dict get $entry type] ] } {
-				lappend non_static_arp_dict $entry 
-			}
-		}
 
+# Filter Dynamic ARP entries 
+		set non_static_arp_dict [filter_dynamic_arps $all_arp_dict] ;
+		
 		lputs "Found [llength $non_static_arp_dict] Dynamic entries out of Total [llength $all_arp_dict] ARP entries" ;
 
 		set set_arp_cmd_list [prepare_set_arp_cmd $non_static_arp_dict]
@@ -63,6 +58,46 @@ namespace eval Nokia {
 		return $set_arp_cmd_list ;
 
 	}
+
+	proc filter_dynamic_arps {all_arps} {
+
+		set dynamic_arp_dict {} ;
+# Filter Dynamic ARP entries by Type field
+
+		foreach entry $all_arps {
+			if { [regexp -nocase "dyn" [dict get $entry type] ] } {
+				lappend dynamic_arp_dict $entry 
+			}
+		}
+
+		return $dynamic_arp_dict ;
+	}
+
+
+	proc is_arp_line_valid {arp_line} {
+		set is_valid 1;
+
+		eval set arp_line_fields [list $arp_line ]
+		set field_count [llength $arp_line_fields] ;
+
+# Empty line check
+		if { [regexp "^$" $arp_line] } { 
+			set is_valid 0 ;
+
+		} elseif { $field_count < 5 } {
+
+# is the entry contains all the fields i.e IP MAC EXPIRY Type, Interface
+# sometimes MAC may be missing. This check is for that.
+			set is_valid 0 ;
+		} elseif { ! [regexp  "^(\[0-9]{1,3}\.){3}" [lindex $arp_line_fields 0] ] } {
+
+# is the line starting with valid IP address
+			set is_valid 0;
+		}
+
+		return $is_valid 
+	}
+
 
 # proc to get all arp entries from the current device
 	proc get_arp_entries { {arp_filter ""} } {
@@ -134,10 +169,17 @@ namespace eval Nokia {
 
 			dputs "processing $line" ;
 
+			set line_valid  [is_arp_line_valid $line] ;
+
+			if {! $line_valid  } {
+				dputs "not valid arp entry"
+				continue ;
+			}
+
 			set arp_entry "" ;
 
-			if { [ regexp "^(\[0-9]{1,3}\\\.\[^ ]+)\[ ]+(.+?)\[ ]+(.+?)\[ ]+(.+?)\[ ]+(.+?)$" $line dummy address mac expiry type iface] } { 
-				dputs "arp line regexp passed" ;
+			if { [ regexp "^(.+?)\[ ]+(.+?)\[ ]+(.+?)\[ ]+(.+?)\[ ]+(.+?)$" $line dummy address mac expiry type iface] } { 
+				dputs "valid arp entry" ;
 # Create a temporary dictionary with field values scanned by regexp
 				set arp_entry [dict create mac $mac address $address expiry $expiry iface $iface type $type ]
 
@@ -155,7 +197,7 @@ namespace eval Nokia {
 # Append the ARP entry dict to a master list.
 				lappend arp_entries_dict $arp_entry 
 			} else {
-				dputs "regexp not passed" ;
+				dputs "not valid arp entry" ;
 				continue ;
 			}
 
@@ -198,7 +240,7 @@ namespace eval Nokia {
 							set ies_value_found 1
 						}
 						-re $prompt {
-							lputs " xxx IES pattern Not Found xxx" ;
+							lputs " --- IES pattern Not Found ---" - ;
 							set ies_value_found 1
 						}
 						timeout {
@@ -222,10 +264,11 @@ namespace eval Nokia {
 		global current_device ;
 
 
+		set commit_cmd "/admin save" ;
 		set result_list ""
 		set set_arp_cmd ""
 
-		set set_arp_fmt  "/configure service ies %s interface %s static-arp %s %s\n/admin save" ;
+		set set_arp_fmt  "/configure service ies %s interface %s static-arp %s %s" ;
 
 		lputs "preparing set arp commands for device : [dict get $current_device device] " ;
 
@@ -239,6 +282,7 @@ namespace eval Nokia {
 			unset -nocomplain iface address mac
 
 			lappend result_list  $set_arp_cmd ;
+			lappend result_list $commit_cmd ;
 			incr ac 1
 
 			set set_arp_cmd ""

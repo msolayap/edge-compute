@@ -148,7 +148,7 @@ proc add_mop {cmd_list} {
 
 proc close_mop {} {
 
-	global $mopfh 
+	global mopfh 
 
 	close $mopfh
 }

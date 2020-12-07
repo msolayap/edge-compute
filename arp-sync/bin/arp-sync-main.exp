@@ -81,11 +81,13 @@ foreach dev_record $devices_array {
 #Initialize device model specific parameters before interaction	
 	init_terminal ;
 
-	init_mop [format "MOP_%s.txt" $vendor]  ;
+	init_mop [format "%s_MOP.txt" $device]  ;
 
 	set mop_stmt_list [convert_dynamic_arp_to_static]
 
 	add_mop $mop_stmt_list
+
+	close_mop ;
 
 	device_logout ;
 

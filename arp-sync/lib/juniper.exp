@@ -45,22 +45,30 @@ namespace eval Juniper {
 
 		#set all_arp_dict [get_arp_entries {match "lag"} ]
 		set all_arp_dict [get_arp_entries ]
-		
-		set non_static_arp_dict {} ;
-# Filter Dynamic ARP entries by Type field
-		foreach entry $all_arp_dict {
-			if { [regexp -nocase "permanent" [dict get $entry flags] ] } {
-				continue ;
-			} else {
-				lappend non_static_arp_dict $entry 
-			}
-		}
+
+		set non_static_arp_dict [filter_dynamic_arps $all_arp_dict] ;
 
 		lputs "Found [llength $non_static_arp_dict] Dynamic entries out of Total [llength $all_arp_dict] ARP entries" ;
 
 		set set_arp_cmd_list [prepare_set_arp_cmd $non_static_arp_dict]
 
 		return $set_arp_cmd_list ;
+	}
+
+
+	proc filter_dynamic_arps {all_arps} {
+
+		set dynamic_arp_dict {} ;
+# Filter Dynamic ARP entries by Type field
+		foreach entry $all_arps {
+			if { [regexp -nocase "permanent" [dict get $entry flags] ] } {
+				continue ;
+			} else {
+				lappend dynamic_arp_dict $entry 
+			}
+		}
+
+		return $dynamic_arp_dict ;
 	}
 
 # proc to get all arp entries from the current device
@@ -94,7 +102,7 @@ namespace eval Juniper {
 					expect {
 						-re "\r?\n?..:..:..:\[^\r]+\r\n" {
 							append arp_output $expect_out(0,string) ;
-							lputs "Found arp line: $expect_out(0,string)" ;
+							#lputs "Found arp line: $expect_out(0,string)" ;
 							exp_continue ;
 						}
 						#-re "Total\[^\r]+\r?\n$" { }
@@ -120,6 +128,31 @@ namespace eval Juniper {
 		return $all_arp_dict ;
 	}
 
+	proc is_arp_line_valid {arp_line} {
+		set is_valid 1;
+
+		eval set arp_line_fields [list $arp_line ]
+		set field_count [llength $arp_line_fields] ;
+
+# Empty line check
+		if { [regexp "^$" $arp_line] } { 
+			set is_valid 0 ;
+
+		} elseif { $field_count < 5 } {
+
+# is the entry contains all the fields i.e IP MAC EXPIRY Type, Interface
+# sometimes MAC may be missing. This check is for that.
+			set is_valid 0 ;
+		} elseif { ! [regexp  "^(\[0-9A-Za-z]{2}\:){5}" [lindex $arp_line_fields 0] ] } {
+
+# is the line starting with valid IP address
+			set is_valid 0;
+		}
+
+		return $is_valid 
+	}
+
+
 	proc parse_arp_entries {arp_entries_list}  {
 
 		set arp_entries_dict {}
@@ -129,20 +162,33 @@ namespace eval Juniper {
 
 			set line [string trim $line];
 
-			if { [regexp  "^$"  $line] } {
+			dputs "processing $line" ;
+
+			set line_valid  [is_arp_line_valid $line] ;
+
+			if {! $line_valid  } {
+				dputs "not valid arp entry"
 				continue ;
 			}
+
 			set arp_entry "" ;
 
-			if { [ regexp "^(.*?)\[ ]+(.*?)\[ ]+(.*?)\[ ]+(.*?)\[ ]+(.*?)$" $line dummy mac address name iface flags] } { 
+			if { [ regexp "^(.+?)\[ ]+(.+?)\[ ]+(.+?)\[ ]+(.+?)\[ ]+(.+?)$" $line dummy mac address name iface flags] } { 
+				dputs "valid arp entry" ;
 # Create a temporary dictionary with field values scanned by regexp
 				set arp_entry [dict create mac $mac address $address name $name iface $iface flags $flags]
 
 				if { [regexp "^(.*?)\\.(.*?)$" [dict get $arp_entry iface] dummy iface vlan] } {
-					set arp_entry [dict set arp_entry iface_only $iface] ;
-					set arp_entry [dict set arp_entry vlan $vlan ];
-					set arp_entry [dict set arp_entry unit $vlan ];
+					set iface_only $iface
+					set vlan $vlan
+				} else {
+					set iface_only ""
+					set vlan ""
 				}
+
+				set arp_entry [dict set arp_entry iface_only $iface_only] ;
+				set arp_entry [dict set arp_entry vlan $vlan ];
+				set arp_entry [dict set arp_entry unit $vlan ];
 
 				set arp_entry [dict set arp_entry family "inet" ] ;
 
@@ -155,13 +201,13 @@ namespace eval Juniper {
 	}
 
 
-
 	proc prepare_set_arp_cmd {arp_entries_list } {
 		set _proc_name [lindex [info level 1 ] 0 ]
 
 		global current_device ;
 
 
+		set commit_cmd "commit check" ;
 		set result_list ""
 		set set_arp_cmd ""
 
@@ -180,6 +226,10 @@ namespace eval Juniper {
 			incr ac 1
 
 			set set_arp_cmd ""
+		}
+# Add Commit statements here
+		if  { $ac > 0 } {
+			lappend result_list $commit_cmd ;
 		}
 
 		lputs [format "%d set arp commands prepared" $ac]
