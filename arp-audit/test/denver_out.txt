@@ -1,0 +1,264 @@
+DNVT0856	ear3.den1 / CW4 / 19	edge8.den1 / CW4 / 19
+DNVTCO56	ear2.den1 / LR4 / 9	edge8.den1 / LR4 / 17
+
+
+
+roci@edge8.den1> show arp no-resolve | match 216.202 
+5a:c5:c2:88:79:7d 216.202.192.4   ae17.2001                permanent
+ae:b8:98:94:4c:7d 216.202.192.12  ae17.2002                permanent
+fa:c2:c0:2a:63:1c 216.202.192.20  ae17.2003                permanent
+3a:25:5f:c2:03:71 216.202.192.28  ae17.2004                permanent
+de:57:ed:1a:81:da 216.202.195.2   ae17.3                   permanent
+ee:7a:07:66:e9:7a 216.202.195.6   ae17.4                   permanent
+ce:eb:7f:d5:1a:0b 216.202.195.10  ae17.5                   none  <<<< this one needs a static arp
+6e:e6:82:89:db:1f 216.202.197.6   ae19.3                   none
+d6:5c:79:39:51:81 216.202.197.10  ae19.4                   none
+0c:42:a1:ac:5a:86 216.202.197.14  ae19.7                   permanent
+0c:42:a1:ac:5a:7e 216.202.197.18  ae19.9                   permanent
+0c:42:a1:ac:5b:5e 216.202.197.22  ae19.5                   permanent
+0c:42:a1:ac:5a:16 216.202.197.30  ae19.6                   permanent
+
+##Identify IP address of ae17.5
+
+roci@edge8.den1> show configuration interfaces ae17.5 | display set 
+set interfaces ae17 unit 5 description "CO/IRXX/520612/LVLC - morpheus # morpheus [EC - DIA]"
+set interfaces ae17 unit 5 vlan-tags outer 5
+set interfaces ae17 unit 5 family inet mtu 1500
+set interfaces ae17 unit 5 family inet filter input customer-cflow
+set interfaces ae17 unit 5 family inet policer input ratelimit_50M
+set interfaces ae17 unit 5 family inet policer output ratelimit_50M
+set interfaces ae17 unit 5 family inet address 216.202.195.9/30   <<<<<<<<<
+
+roci@edge8.den1> configure private 
+warning: uncommitted changes will be discarded on exit
+Entering configuration mode
+
+{master}[edit]
+roci@edge8.den1# set interfaces ae17 unit 5 family inet address 216.202.195.9/30 arp 216.202.195.10 mac ce:eb:7f:d5:1a:0b 
+
+{master}[edit]
+roci@edge8.den1# show | compare 
+[edit interfaces ae17 unit 5 family inet address 216.202.195.9/30]
++        arp 216.202.195.10 mac ce:eb:7f:d5:1a:0b;
+
+{master}[edit]
+roci@edge8.den1# commit check 
+re0: 
+configuration check succeeds
+re1: 
+configuration check succeeds
+
+roci@edge8.den1# commit and-quit
+
+roci@edge8.den1> ping 216.202.195.10 interface ae17.5 
+PING 216.202.195.10 (216.202.195.10): 56 data bytes
+64 bytes from 216.202.195.10: icmp_seq=0 ttl=64 time=2.264 ms
+64 bytes from 216.202.195.10: icmp_seq=1 ttl=64 time=1.072 ms
+64 bytes from 216.202.195.10: icmp_seq=2 ttl=64 time=0.940 ms
+^C
+--- 216.202.195.10 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 0.940/1.425/2.264/0.595 ms
+
+*A:ear2.den1# show router arp | match 216.202 
+216.202.192.1   00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-9:2001.*
+216.202.192.4   5a:c5:c2:88:79:7d 00h00m00s Dyn[I] lag-9:2001.*
+216.202.192.9   00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-9:2002.*
+216.202.192.12  ae:b8:98:94:4c:7d 00h00m00s Dyn[I] lag-9:2002.*
+216.202.192.17  00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-9:2003.*
+216.202.192.20  fa:c2:c0:2a:63:1c 00h00m00s Dyn[I] lag-9:2003.*
+216.202.192.25  00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-9:2004.*
+216.202.192.28  3a:25:5f:c2:03:71 00h00m00s Dyn[I] lag-9:2004.*
+216.202.195.1   00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-9:3.*
+216.202.195.2   de:57:ed:1a:81:da 00h00m00s Dyn[I] lag-9:3.*
+216.202.195.5   00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-9:4.*
+216.202.195.6   ee:7a:07:66:e9:7a 00h00m00s Dyn[I] lag-9:4.*
+216.202.195.9   00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-9:5.*
+<<<< missing 216.202.195.10 on lag-9:5
+
+1. identify the ies number for lag-9:5
+2. /configure service ies <IES> interface <INTERFACE> static-arp <IP-ADDRESS> <MAC-ADDRESS>
+3. /admin save
+
+A:ear3.den1# show router arp | match 216.202 
+216.202.197.29  00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-19:6.*
+216.202.197.30  0c:42:a1:ac:5a:16 00h00m00s Dyn[I] lag-19:6.*
+216.202.197.9   00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-19:4.*
+216.202.197.10  d6:5c:79:39:51:81 00h00m00s Dyn[I] lag-19:4.*
+216.202.197.21  00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-19:5.*
+216.202.197.22  0c:42:a1:ac:5b:5e 00h00m00s Dyn[I] lag-19:5.*
+216.202.197.13  00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-19:7.*
+216.202.197.14  0c:42:a1:ac:5a:86 00h00m00s Dyn[I] lag-19:7.*
+216.202.197.17  00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-19:9.*
+216.202.197.18  0c:42:a1:ac:5a:7e 00h00m00s Dyn[I] lag-19:9.*
+216.202.197.5   00:1b:c0:e3:df:f0 00h00m00s Oth[I] lag-19:3.*
+216.202.197.6   6e:e6:82:89:db:1f 00h00m00s Dyn[I] lag-19:3.*
+
+
+
+
+A:ear3.den1# admin display-config | match lag-19:  context all   
+#--------------------------------------------------
+    service
+        ies 29546 name "29546" customer 29546 create
+            interface "lag-19:3.*" create
+        ies 29554 name "29554" customer 29554 create
+            interface "lag-19:4.*" create
+        ies 29565 name "29565" customer 29565 create
+            interface "lag-19:5.*" create
+        ies 29566 name "29566" customer 29566 create
+            interface "lag-19:6.*" create
+        ies 29591 name "29591" customer 29591 create
+            interface "lag-19:7.*" create
+        ies 29612 name "29612" customer 29612 create
+            interface "lag-19:9.*" create
+        ies 29546 name "29546" customer 29546 create
+            interface "lag-19:3.*" create
+                description "CO/IRXX/518714/LVLC - morpheus # morpheus [EC - DIA]"
+                enable-ingress-stats
+                address 216.202.197.5/30
+                mac 00:1b:c0:e3:df:f0
+                arp-timeout 0
+                tos-marking-state trusted
+                ip-mtu 1500
+                cflowd-parameters
+                    sampling unicast type interface
+                exit
+                sap lag-19:3.* create
+                    ingress
+                        filter ip 1000
+                    exit
+                exit
+                urpf-check
+                    mode loose
+                exit
+        ies 29554 name "29554" customer 29554 create
+            interface "lag-19:4.*" create
+                description "CO/IRXX/520603/LVLC - morpheus # morpheus [EC - DIA]"
+                enable-ingress-stats
+                address 216.202.197.9/30
+                mac 00:1b:c0:e3:df:f0
+                arp-timeout 0
+                tos-marking-state trusted
+                ip-mtu 1500
+                cflowd-parameters
+                    sampling unicast type interface
+                exit
+                sap lag-19:4.* create
+                    ingress
+                        qos 5
+                        filter ip 1000
+                    exit
+                    egress
+                        agg-rate
+                            rate 50000
+                        exit
+                    exit
+                exit
+                urpf-check            
+                    mode loose
+                exit
+        ies 29565 name "29565" customer 29565 create
+            interface "lag-19:5.*" create
+                description "CO/IRXX/496988/LVLC - morpheus # morpheus [EC - DIA]"
+                enable-ingress-stats
+                address 216.202.197.21/30
+                mac 00:1b:c0:e3:df:f0
+                arp-timeout 0
+                tos-marking-state trusted
+                ip-mtu 1500
+                cflowd-parameters
+                    sampling unicast type interface
+                exit
+                sap lag-19:5.* create
+                    ingress
+                        qos 5
+                        filter ip 1000
+                    exit
+                    egress
+                        agg-rate
+                            rate 50000
+                        exit
+                    exit
+                exit
+                urpf-check
+                    mode loose
+                exit
+        ies 29566 name "29566" customer 29566 create
+            interface "lag-19:6.*" create
+                description "CO/IRXX/497695/LVLC - morpheus # morpheus [EC - DIA]"
+                enable-ingress-stats
+                address 216.202.197.29/30
+                mac 00:1b:c0:e3:df:f0
+                arp-timeout 0
+                tos-marking-state trusted
+                ip-mtu 1500
+                cflowd-parameters
+                    sampling unicast type interface
+                exit
+                sap lag-19:6.* create
+                    ingress
+                        qos 5
+                        filter ip 1000
+                    exit
+                    egress
+                        agg-rate
+                            rate 50000
+                        exit
+                    exit
+                exit
+                urpf-check
+                    mode loose
+                exit
+        ies 29591 name "29591" customer 29591 create
+            interface "lag-19:7.*" create
+                description "CO/IRXX/496883/LVLC - morpheus # morpheus [EC - DIA]"
+                enable-ingress-stats  
+                address 216.202.197.13/30
+                mac 00:1b:c0:e3:df:f0
+                arp-timeout 0
+                tos-marking-state trusted
+                ip-mtu 1500
+                cflowd-parameters
+                    sampling unicast type interface
+                exit
+                sap lag-19:7.* create
+                    ingress
+                        qos 5
+                        filter ip 1000
+                    exit
+                    egress
+                        agg-rate
+                            rate 50000
+                        exit
+                    exit
+                exit
+                urpf-check
+                    mode loose
+                exit
+        ies 29612 name "29612" customer 29612 create
+            interface "lag-19:9.*" create
+                description "CO/IRXX/499555/LVLC - morpheus # morpheus [EC - DIA]"
+                enable-ingress-stats
+                address 216.202.197.17/30
+                mac 00:1b:c0:e3:df:f0
+                arp-timeout 0
+                tos-marking-state trusted
+                ip-mtu 1500
+                cflowd-parameters
+                    sampling unicast type interface
+                exit
+                sap lag-19:9.* create
+                    ingress
+                        qos 5
+                        filter ip 1000
+                    exit
+                    egress
+                        agg-rate
+                            rate 50000
+                        exit
+                    exit
+                exit
+                urpf-check
+                    mode loose
+                exit

@@ -1,0 +1,376 @@
+#!/usr/bin/expect
+
+package require Itcl ;
+
+
+source ../config.exp
+source ../lib/util.exp
+source ../lib/generic_router.itcl
+source ../lib/juniper.itcl
+source ../lib/nokia.itcl
+
+# disable in real run.
+source ../lib/mock_data.exp
+
+log_user 0;
+
+proc get_device_vendor {dev usr pswd} {
+
+	global mock_run mock_data
+
+	if { $mock_run } {
+		set v "generic" 
+		if { [info exists mock_data($dev,vendor)] } {
+			set v  $mock_data($dev,vendor); 
+		} 
+		lputs "returning model of $dev as $v" ;
+		return $v ;
+	}
+
+	itcl::local generic_router grouter $dev
+	grouter login $usr $pswd
+	set v [grouter detect_device_vendor];
+	grouter logout ;
+
+	itcl::delete object grouter
+	return $v ;
+}
+
+proc get_router_object {ven dev} {
+
+	switch -nocase -glob $ven {
+		"juniper" {
+			Juniper router $dev
+		}
+		"nokia" {
+			Nokia router $dev 
+		}
+	}
+	return 0 ;
+}
+
+proc store_result {key val} {
+	upvar #0 master_data md
+	array set md [list "$key" "$val"];
+}
+
+proc convert_arp {devicekey args} {
+
+	global user pass
+
+	set extra [lassign $args sitename dev cag]
+
+	set vendor [get_device_vendor $dev $user $pass] ;
+	get_router_object $vendor $dev ;
+#
+	rename router device_obj
+
+	device_obj login $user $pass
+	device_obj convert_dynamic_arp_to_static $cag
+	device_obj logout
+
+# Fetch result and store it for processing
+	store_result "$sitename,$devicekey,device" $dev
+	store_result "$sitename,$devicekey,cag"    $cag ;
+	store_result "$sitename,$devicekey,vendor" $vendor
+	store_result "$sitename,$devicekey,arp_dict"   [device_obj cget -all_arp_dict] ;
+	store_result "$sitename,$devicekey,dyn2sta"  [device_obj cget -cmd_queue ];
+
+	if { [itcl::is object device_obj]  } {
+		itcl::delete object device_obj 
+	}
+
+	return 0;
+}
+
+proc form_iface {ven cag vlan} {
+	set iface "" ;
+	switch -nocase -glob $ven {
+		"juniper" {
+			set iface [format "ae%s.%s" $cag $vlan] ;
+		}
+		"nokia" {
+			set iface [format "lag-%s:%s" $cag $vlan] ;
+		} 
+	}
+	return $iface;
+}
+
+proc index_arp_dict { arpdict args} {
+
+	lassign $args dv dcag
+	set indexed_keys_list {} ;
+	set akey {}
+
+	foreach arpentry $arpdict {
+		dict with arpentry {
+			set niface [form_iface $dv  $dcag  $vlan] 
+			set akey [string tolower [format "%s,%s,%s" $address $mac $niface ]] ;
+			lappend indexed_keys_list "$akey" ;
+		}
+	}
+
+	return $indexed_keys_list
+}
+
+# Identify symmetric difference between arp output of both the devices.
+proc get_symmetric_difference { arpdict oth_tag oth_keys_list oth_v oth_cag }  {
+
+	set symm_diff_list {} ;
+
+	foreach arpentry $arpdict {
+		dict with arpentry {
+			set search_iface [form_iface $oth_v $oth_cag $vlan]
+			set akey [format "%s,%s,%s" $address $mac $search_iface];
+			if { $akey ni $oth_keys_list } {
+
+				dputs "ITEM: ---- $akey not in list ------ ";
+				dputs [banner_line];
+				foreach i $oth_keys_list {
+					dputs ">     $i" ;
+				}
+				dputs [banner_line];
+
+				lappend symm_diff_list [dict create "iface" $search_iface "address" $address "mac"  $mac]
+
+			} else {
+				dputs  "arp entry exist in $oth_tag" ;
+				dputs ">$akey<" ;
+				dputs [banner_line];
+			}
+		}
+#		puts "waiting ... " ; gets stdin ; 
+	}
+
+	return $symm_diff_list
+}
+
+# proc to identify symmetric difference betwen device1 and device2 arp entries
+# i.e Items missing in device1 (of device2) and vice versa/
+# then use that information to build respective arp set commands
+proc sync_arp {sitename} {
+
+
+	upvar #0 master_data mar
+
+	set d1k "device1"
+	set d2k "device2" ;
+
+# Pickup necessary items from master_array for processing.
+	set d1    $mar($sitename,$d1k,device);
+	set d1v   $mar($sitename,$d1k,vendor) 
+	set d1ad  $mar($sitename,$d1k,arp_dict);
+	set d1cag $mar($sitename,$d1k,cag);
+
+	set d2    $mar($sitename,$d2k,device);
+	set d2v   $mar($sitename,$d2k,vendor);
+	set d2ad  $mar($sitename,$d2k,arp_dict);
+	set d2cag $mar($sitename,$d2k,cag);
+
+#form necessary data stuctures for symmetric search
+	set d1_list  {}
+	set d2_list  {}
+	set to_create_in_d1 {}
+	set to_create_in_d2 {}
+	set mar($sitename,$d1k,arpsync) {}
+	set mar($sitename,$d2k,arpsync) {}
+
+	lputs "Indexing device1 data" ;
+
+	set d1_list [index_arp_dict $d1ad $d1v $d1cag] ;
+
+
+	lputs "Indexing device2 data " ;
+
+	set d2_list [index_arp_dict $d2ad $d2v $d2cag] ;
+
+
+# check whether device1 arps are there in device2
+
+	dputs "Identifying symmetric difference of device1 to device2" ;
+	set to_create_in_d2   [get_symmetric_difference $d1ad  "device 2" $d2_list $d2v $d2cag ]
+
+# check whether device2 arps are there in device1
+	dputs "Identifying symmetric difference of device2 to device1" ;
+	set to_create_in_d1   [get_symmetric_difference $d2ad  "device 1" $d1_list $d1v $d1cag ]
+
+# prepare corresponding commands
+global user pass
+# Commands to fire in Device1
+
+	if { [llength $to_create_in_d1] } {
+		get_router_object $d1v $d1
+		rename router d1obj
+		d1obj login $user $pass
+		d1obj prepare_set_arp_cmd $to_create_in_d1 ;
+		d1obj logout
+# -----------------
+		set mar($sitename,$d1k,arpsync) {} ;
+		foreach elem [d1obj cget -cmd_queue] {
+			lappend mar($sitename,$d1k,arpsync) $elem 
+		}
+		itcl::delete object d1obj ;
+	}
+
+# Commands to fire in Device2
+	if { [llength $to_create_in_d2] } {
+		get_router_object $d2v $d2
+		rename router d2obj 
+		d2obj login $user $pass
+		d2obj prepare_set_arp_cmd $to_create_in_d2 ;
+		d2obj logout
+# -----------------
+		set mar($sitename,$d2k,arpsync) {} ;
+		foreach elem [d2obj cget -cmd_queue] {
+			lappend mar($sitename,$d2k,arpsync) $elem 
+		}
+		itcl::delete object d2obj ;
+	}
+
+	return 0;
+}
+
+proc write_mop { sitename } {
+
+	global master_data basedir
+
+	set datedir $master_data(date);
+	set pid     $master_data(pid);
+	set mopdir  "$basedir/mop/$datedir/$sitename" ;
+
+	lputs "preparing MOP dir" ;
+
+	if { 0==[file isdirectory $mopdir] } {
+		set res [catch [file mkdir "$mopdir"] err]
+	}
+
+	
+	catch {[exec cd $basedir/mop && ln -sf $basedir/mop/recent $datedir]} err
+	if { [catch {exec bash -c "cd $basedir/mop/ ; rm -f recent ; ln -sf $datedir recent" } err ] } {
+		lputs "Linking to recent MOP directory failed" "WARN" ;
+	}
+
+
+
+	foreach dev [list "device1" "device2"] {
+
+
+
+		set ven $master_data($sitename,$dev,vendor);
+		set device $master_data($sitename,$dev,device);
+		set mopfile [format "%s" $device] ;
+		set begin_txn {}
+		set end_txn   {}
+
+		if { [llength $master_data($sitename,$dev,dyn2sta) ] || [llength $master_data($sitename,$dev,arpsync)] } {
+			get_router_object  $ven $device
+			rename router dobj 
+			set begin_txn [dobj cget -init_change_cmds]
+			set end_txn   [dobj cget -commit_change_cmds]
+			itcl::delete object dobj 
+		}
+
+		if { [ catch {set mopfh [open "$mopdir/$mopfile" "a"]} err ] } {
+			dputs "Cannot open MOP file $mopfile for writing. Error: $err" ;
+			continue ;
+		}
+
+ set fileheader [format {
+#############################################################
+#
+#   Auto generated MOP file for
+#     - converting dynamic arp entries to static arp
+#     - to sync arp entries between both edge routers
+#
+#    PID: %s  - PID of the execution generated this file. cross reference this in logfile for analysing the execution details
+# Device: %s  - Name of the device to execute the following commands
+# Vendor: %s  - Vendor of the device
+#   Date: %s  - date and time of this execution
+#
+##############################################################
+
+ } $pid $device $ven $datedir ];
+
+ 		puts $mopfh $fileheader ;
+
+		foreach c  $begin_txn {
+			puts $mopfh $c ;
+		}
+
+
+		if { [info exists master_data($sitename,$dev,dyn2sta)] && [llength $master_data($sitename,$dev,dyn2sta) ] } {
+			lputs "Commands prepared for $dev" ;
+
+
+			dputs "---- dynamic to static ARP conversion --- "
+			puts $mopfh "#  ---- dynamic to static ARP conversion --- "
+
+			foreach cmd  $master_data($sitename,$dev,dyn2sta) {
+				dputs $cmd ;
+				puts $mopfh $cmd ;
+			}
+		} else {
+				dputs "# No entries to convert" ;
+				puts $mopfh "# No entries to convert" ;
+		}
+
+		dputs "------ ARP Sync commands -----" ;
+		puts $mopfh "#------ ARP Sync commands -----" ;
+		if { [info exists master_data($sitename,$dev,arpsync)] && [llength $master_data($sitename,$dev,arpsync)] } {
+			foreach cmd  $master_data($sitename,$dev,arpsync) {
+				dputs $cmd ;
+				puts $mopfh $cmd ;
+			}
+		} else {
+			dputs "No entries to sync" ;
+			puts $mopfh "# No entries to sync"
+		}
+
+		foreach c  $end_txn {
+			puts $mopfh $c ;
+		}
+
+		close $mopfh ;
+
+	}
+}
+
+####### MAIN SCRIPT - STARTS HERE ########
+set user  $default_user
+set pass  $default_pass 
+
+# record the current PID and execution time
+array set master_data [list "pid"  [pid]]
+array set master_data [list "date"  [get_date]]
+
+open_logfile ;
+
+lputs [banner_line];
+lputs "Starting $app_name" ;
+lputs [script_host_info]
+enable_syslog ;
+lputs [banner_line] ;
+
+set device_list [get_device_list] ;
+
+foreach dev_record  $device_list {
+	set sitename      [dict get $dev_record "name"] ;
+	set device_1      [dict get $dev_record "ear_1_router_hostname"]  ;
+	set device_2      [dict get $dev_record "ear_2_router_hostname"]  ;
+	set device_1_cag  [dict get $dev_record "ear_1_connection_aggregate"]  ;
+	set device_2_cag  [dict get $dev_record "ear_2_connection_aggregate"]  ;
+	
+# Process Device 1 or Node A of the pair
+	convert_arp "device1" $sitename  $device_1 $device_1_cag ;
+
+# Process Device 2 or Node B of the pair
+	convert_arp "device2" $sitename $device_2 $device_2_cag ;
+
+# sync arp entries between device1 and device2
+	sync_arp $sitename
+
+	write_mop $sitename ;
+
+}
+
+exit 0;

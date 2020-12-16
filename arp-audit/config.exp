@@ -1,0 +1,42 @@
+
+# General configurations
+set envi  "dev" ;
+set mock_run 1;
+set DEBUG 1;
+set basedir [file normalize "$argv0/../.."]  
+set app_name "ARP audit" 
+
+set R_CMD "$basedir/bin/r"
+
+## Logging related configuration
+# --for user
+set logging 1
+
+set app_tag "ARP_SYNC\[[pid]\]"
+set logfile {ec_arp_sync.log} ;
+set log_datefmt {%Y-%m-%dT%H:%M:%S%Z}
+set date_locale en_US
+# --for app
+set logfile_ready 0
+set logfh ""
+
+## syslog related configuration
+# --for user
+set log_syslog 1;
+# --for app
+set syslog_ready  0;
+
+## core
+# file where device lists are stored as csv
+if { $mock_run } {
+	set devices_list_file "mock_site_devices.csv" ;
+} else {
+	set devices_list_file "site_devices.csv" ;
+}
+set device_auth  0
+set default_user "rancid"
+set default_pass "level3"
+
+
+# NOT TO BE EDITED - only for app
+set prompt "(%|#|\\\$|>) *$"

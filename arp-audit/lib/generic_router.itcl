@@ -1,0 +1,160 @@
+
+package require Itcl ;
+
+set _class_name "generic_router" ;
+
+if { $_class_name in [itcl::find classes] } {
+# class loaded already
+# 	puts "class  |$_class_name| loaded already" ;
+	return 0;
+}
+
+
+itcl::class $_class_name {
+
+	public variable prompt "(%|#|\\\$|>) *$" ;
+
+
+ 	public variable device "none" ;
+	public variable login_success
+	public variable active_spawn_id;
+	public variable vendor "generic" ;
+ 
+	public variable warn_msg {Warning: Base class method "%s" invoked}
+
+	method constructor {dev} {
+		set login_success 0 
+		set active_spawn_id "none" ;
+		set device $dev
+
+		set user "rancid" ;
+		set pass "level3"
+
+# Initialize/Overwrite some context global variable for device interaction.
+		global send_human send_slow ;
+
+		set send_human {.1 .3 1 .05 2}
+		set send_slow {2 .001}
+	}
+
+# Terminal initializations before detecting the device vendor. This is to avoid any errors during vendor detection.
+# Respective device class will have its own overriden function with same signature.
+	method init_terminal {} {
+		set spawn_id $active_spawn_id 
+
+		set myclass [$this info class]
+
+		if { [catch {send -h "\r" } err] } {
+			lputs "$myclass: Initializing terminal failed with error: $err" ;
+			return 1;
+		} 
+
+		return 0;
+	}
+
+	method login {user password} {
+
+		global mock_run
+		if { $mock_run } {
+			set login_success 1;
+			return 0 ;
+		}
+
+		set login_success 0;
+
+		global R_CMD device_auth
+
+		if { $device_auth } {
+			lputs "Login to device as $user@$device" ;
+		
+			if {[catch {spawn ssh $user@$device} err ]} {
+				lputs "ERROR: Failed to login to device\nError: $err" 
+				return 0;
+			} 
+		} else {
+			lputs "Login to device $device" ;
+			if {[catch {spawn $R_CMD $device} err ]} {
+				lputs "ERROR: Failed to login to device\nError: $err" 
+				return 0;
+			} 
+		}
+
+# We will leave the session open for further functions to interact
+		expect {
+	#		-re "assword: *$" {
+	#			send "$password\r" ;
+	#			exp_continue ;
+	#		}
+			-re $prompt {
+				set active_spawn_id  $spawn_id 
+				set login_success 1
+			}
+		}
+		if { $login_success } {
+			lputs "** Generic device Login Successful **" ;
+			return 1;
+		} else {
+			lputs "** Generic device Login Failed **" "ERROR" ;
+			return 0;
+		}
+	}
+
+	method detect_device_vendor {} {
+
+		set d_vendor "unknown" ;
+		set vendor_detected 0 ;
+
+		set spawn_id  $active_spawn_id 
+
+		send -s  "\r" ;
+		expect {
+			-re $prompt {
+				if {$vendor_detected == 0} {
+					send -h "show version\r" ;
+					expect {
+						-re "(ptx1000|JUNOS)" {
+							set d_vendor "Juniper"
+# Juniper shows lot of version information. sometimes with pager (more), hence its important to come back to terminal prompt.
+# sending q  will quit the pager.
+							send -h "q" ;
+							expect -re $prompt {}
+							incr vendor_detected 1 
+						}
+						-re "(Nokia)" {
+							set d_vendor "Nokia"
+							expect -re $prompt {}
+							incr vendor_detected 1 
+						}
+						eof {}
+						timeout {}
+
+					} 
+				}
+			}
+			eof {}
+			timeout {}
+		}
+		lputs "Device $device identified as Model: $d_vendor";
+
+		set vendor $d_vendor ;
+
+		return $d_vendor ;
+	}
+
+	method logout {} { 
+
+		set spawn_id $active_spawn_id 
+		set myclass [$this info class]
+
+		lputs "Exiting device: $device" ;
+
+		if { [catch {send -h "exit\r"} err] } {
+			lputs "$myclass:$device - Initializing terminal failed with error: $err" ;
+			return 0;
+		} 
+
+		return 1;
+	}
+
+}
+

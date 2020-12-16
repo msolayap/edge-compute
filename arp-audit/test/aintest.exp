@@ -1,0 +1,36 @@
+
+
+
+array set kids {
+	murali solayappan
+	kavitha jayaveerapandian
+	mohan maruthapandi
+	saranya selvaraj
+	balaji srinivasan
+}
+
+array set area {
+	murali mtn
+	kavitha god
+	mohan mvl
+	balaji wmp
+	sarva wmp
+	tesha wmp
+}
+
+set nkeys [array names kids];
+set akeys [array names area];
+
+foreach n $nkeys {
+	if { $n ni $akeys } {
+		puts "$n not present in area array" ;
+	} 
+}
+
+puts "---------------------------" ;
+
+foreach a $akeys {
+	if { $a ni $nkeys } {
+		puts "$a not present in kids array" ;
+	}
+}

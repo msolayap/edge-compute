@@ -1,0 +1,53 @@
+
+
+global dq 
+
+namespace eval Murali {
+
+	namespace export add_to_q
+
+	variable myvar
+
+	proc add_to_q {} {
+
+		variable myvar 
+
+		upvar  dq  cq
+		set ip {100.20.30.40}
+
+		foreach n [list 1 2 3 4 5 6 7 8 9] {
+			lappend cq($ip) $n ;
+		}
+
+		set myvar 123
+
+	}
+
+	proc p2 {} {
+
+		variable myvar
+
+		puts $myvar ;
+	}
+}
+
+::Murali::add_to_q 
+
+::Murali::p2 
+
+namespace import ::Murali::*
+add_to_q ;
+
+puts -nonewline "Array dq exis: " ;
+puts [array exists dq]
+
+foreach {name value} [array get dq] {
+
+	foreach e $value {
+		puts $e 
+	}
+
+}
+
+
+

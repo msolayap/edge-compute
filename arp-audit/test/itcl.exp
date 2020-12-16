@@ -1,0 +1,66 @@
+#package require http ;
+
+package require Itcl ;
+
+itcl::class account {
+		public variable balance 0;
+		public variable accounttype "savings" ;
+		public variable firstname "unassigned" ;
+		common bank "ICICI"
+
+		constructor {name} {
+			set firstname $name
+			puts "base constructor called with $name" ;
+		}
+
+		method greet {} {
+				set name $firstname
+				puts [format "Welcome %s to %s Bank" $name $bank] ;
+				puts [format "you have reached this by %s" $this]
+				set accounttype "current" ;
+		}
+}
+
+itcl::class funkyaccount {
+	inherit account
+	option hatstyle "king" ;
+
+	constructor {n}  {
+		chain $n
+	} { 
+		puts [line];
+		puts "creation of funky is not ordinary" ;
+		puts [line] ;
+	} 
+
+
+	proc line {} {
+		return [string repeat "+"  50] ;
+	}
+
+	method greet {} {
+		puts [line] ;
+		puts "Hey ya $firstname" 
+		puts "your Hat style $hatstyle is cool !!!" ;
+		puts [line] ;
+		return [chain] ;
+	}
+}
+
+account user1 "murali" ;
+account user2 "krishnan" ;
+funkyaccount user3 "annu" 
+
+user1 greet 
+user2 greet  
+user3 greet
+
+puts "Your Current Balance: [user1 cget -balance]" ;
+puts [funkyaccount::line]
+
+puts [user3 configure];
+puts [user1 info class]
+puts [user1 info function greet ]
+
+puts "success" ;
+

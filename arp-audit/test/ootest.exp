@@ -1,0 +1,30 @@
+
+
+
+## THIS CODE ONLY WORKS IF executed with tclsh  not with expect.
+
+oo::class create Account ;
+
+oo::define Account {
+	variable fname lname mname ;
+
+	constructor {} {
+		set fname "murali" 
+		set mname "krishnan"
+		set lname "solayappan" ;
+	}
+	
+	method print_fname {} {
+		puts $fname ;
+	}
+
+	method full_name {} {
+		puts [join [list $fname $mname $lname] " " ];
+	}
+	destructor {
+		puts "[self] saving data to database" ;
+	}
+}
+
+set acct [Account new];
+$acct full_name

@@ -1,0 +1,13 @@
+
+
+
+set myarr [ list {mac 00:1b:c0:e3:df:f0 address 216.202.192.1 expiry 00h00m00s iface lag-9:2001.* type {Oth[I]} iface_only lag-9 vlan 2001 vxlan *} {mac 5a:c5:c2:88:79:7d address 216.202.192.4 expiry 00h00m00s iface lag-9:2001.* type {Dyn[I]} iface_only lag-9 vlan 2001 vxlan *} {mac 00:1b:c0:e3:df:f0 address 216.202.192.9 expiry 00h00m00s iface lag-9:2002.* type {Oth[I]} iface_only lag-9 vlan 2002 vxlan *} {mac ae:b8:98:94:4c:7d address 216.202.192.12 expiry 00h00m00s iface lag-9:2002.* type {Dyn[I]} iface_only lag-9 vlan 2002 vxlan *} {mac 00:1b:c0:e3:df:f0 address 216.202.192.17 expiry 00h00m00s iface lag-9:2003.* type {Oth[I]} iface_only lag-9 vlan 2003 vxlan *} {mac fa:c2:c0:2a:63:1c address 216.202.192.20 expiry 00h00m00s iface lag-9:2003.* type {Dyn[I]} iface_only lag-9 vlan 2003 vxlan *} {mac 00:1b:c0:e3:df:f0 address 216.202.192.25 expiry 00h00m00s iface lag-9:2004.* type {Oth[I]} iface_only lag-9 vlan 2004 vxlan *} {mac 3a:25:5f:c2:03:71 address 216.202.192.28 expiry 00h00m00s iface lag-9:2004.* type {Dyn[I]} iface_only lag-9 vlan 2004 vxlan *} {mac 00:1b:c0:e3:df:f0 address 216.202.195.1 expiry 00h00m00s iface lag-9:3.* type {Oth[I]} iface_only lag-9 vlan 3 vxlan *} {mac de:57:ed:1a:81:da address 216.202.195.2 expiry 00h00m00s iface lag-9:3.* type {Dyn[I]} iface_only lag-9 vlan 3 vxlan *} {mac 00:1b:c0:e3:df:f0 address 216.202.195.5 expiry 00h00m00s iface lag-9:4.* type {Oth[I]} iface_only lag-9 vlan 4 vxlan *} {mac ee:7a:07:66:e9:7a address 216.202.195.6 expiry 00h00m00s iface lag-9:4.* type {Dyn[I]} iface_only lag-9 vlan 4 vxlan *} {mac 00:1b:c0:e3:df:f0 address 216.202.195.9 expiry 00h00m00s iface lag-9:5. type {Oth[I]} iface_only lag-9 vlan 5 vxlan {}} ];
+
+
+puts "size is [llength  $myarr]" ;
+
+foreach e $myarr {
+	dict with e {
+		puts $mac ;
+	}
+}

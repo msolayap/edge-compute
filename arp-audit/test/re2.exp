@@ -1,0 +1,18 @@
+#!/usr/bin/expect
+
+
+set mac {0c:a4:02:a6:a1:44 10.69.172.1     10.69.172.1               ae3.3501                none}
+
+puts [regexp {^..:..:..:..:..:.. } $mac matched_mac] ;
+
+puts $matched_mac ;
+
+
+
+set myvar  "" 
+
+if { ! [regexp -nocase "(dyn|oth)" $myvar] } {
+	puts "ok!!!";
+} else {
+	puts "not ok !!" ;
+}

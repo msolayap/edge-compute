@@ -1,0 +1,44 @@
+#!/usr/bin/expect
+
+
+proc get_device_list {device_list_file} {
+	set LS "\n";
+	set FS "," ;
+	set device_list {}
+
+	if { [catch {set dfh [open $device_list_file "r"] } err] } {
+		puts "cannot open file $device_list_file. Error: $err" ;
+		return -code error "cannot open file: $device_list_file"
+	} else {
+# read and close the file 
+		set content [read $dfh];
+		close $dfh ;
+
+		set header_line 1;
+		foreach record [split $content "$LS"] {
+#skip first line.
+			if { $header_line }  { 
+				set colnames [split $record "$FS"] ;
+				set header_line 0 ;  
+				continue ; 
+			}
+
+			set fields [split $record "$FS"] ;
+			set siterecord {}
+# take necessary fields based on index.
+
+			foreach fi {0 7 10 17 20} {
+				dict set siterecord [lindex $colnames $fi] [lindex $fields $fi] ;
+			}
+			lappend device_list $siterecord;
+		}
+	}
+	return $device_list ;
+}
+
+
+#set dl [get_device_list "router_pe_data.csv"];
+#
+#foreach d $dl {
+#	puts [dict get $d "ear_1_router_hostname"];
+#}

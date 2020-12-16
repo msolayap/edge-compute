@@ -1,0 +1,44 @@
+
+package require Itcl ;
+
+source ../config.exp
+source util.exp
+source generic_router.itcl
+source juniper.itcl
+source nokia.itcl
+
+log_user 0;
+
+set device "100.80.15.102" ;
+
+generic_router grouter $device ;
+grouter login "rancid" "level3" 
+grouter detect_device_vendor ;
+grouter convert_dynamic_arp_to_static 34
+grouter logout ;
+
+itcl::delete object grouter;
+
+
+exit 1;
+
+
+set device "100.80.16.139" 
+
+Juniper router $device
+
+router login rancid level3
+router convert_dynamic_arp_to_static 3
+router get_prepared_commands ;
+router logout ;
+
+itcl::delete object router
+
+set device "100.80.15.102" 
+
+Nokia router $device
+
+router login rancid level3
+router convert_dynamic_arp_to_static 34
+router get_prepared_commands ;
+router logout ;

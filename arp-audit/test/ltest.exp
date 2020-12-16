@@ -1,0 +1,15 @@
+
+
+set namelist "murali krishnan solayappan ayyakannu"
+set nlist  {$namelist}
+
+puts $namelist
+puts "Problem:" ;
+puts $nlist ;
+puts "size of list is [llength $nlist]" ;
+
+puts "Solution#" ; 
+set nlist [subst $namelist]
+puts $nlist ;
+puts "size of list is [llength $nlist]" ;
+

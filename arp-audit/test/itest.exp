@@ -1,0 +1,12 @@
+
+
+
+
+set namelist [list m s a a p];
+
+if { "s" in  $namelist }  {
+
+	puts "yes" ; 
+} else {
+	puts "no" ;
+}

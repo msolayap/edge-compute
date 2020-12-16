@@ -1,0 +1,397 @@
+
+
+package require Itcl ;
+
+set _class_name "Nokia" ;
+
+if { $_class_name in [itcl::find classes] } {
+# class loaded already
+# 	puts "class  |$_class_name| loaded already" ;
+	return 0;
+}
+
+
+
+itcl::class $_class_name {
+
+
+
+ 	public variable device "none" ;
+	public variable login_success
+	public variable active_spawn_id;
+
+
+	protected variable cmd_context "none" ;
+	protected variable all_arp_output {}
+
+	public    variable all_arp_dict {}
+	public    variable conn_agg_prefix "lag-" ;
+	public    variable cmd_queue {}
+
+# Device specific commands
+	common vendor "Juniper" ;
+	common prompt "(%|#|\\\$|>) *$" ;
+	common arp_get_cmd "show router arp" ;
+	common init_term_cmds [list "environment no more" ];
+	common device_exit_cmd "logout" ;
+
+	constructor {dev} {
+
+		set login_success 0 
+		set device  $dev;
+
+		lputs "Creating Object for $vendor device: $device" ;
+# Initialize/Overwrite some context global variable for device interaction.
+		global send_human send_slow timeout
+		set send_human {.1 .3 1 .05 2}
+		set send_slow {2 .001}
+		set timeout  30
+	}
+
+	destructor {
+		lputs "Deleting Object for $vendor device: $device" ;
+	}
+
+# Terminal initializations before detecting the device vendor. This is to avoid any errors during vendor detection.
+# Respective device class will have its own overriden function with same signature.
+	method init_terminal {} {
+
+		set myclass [$this info class]
+
+		set spawn_id $active_spawn_id 
+
+		foreach cmd $init_term_cmds {
+			if { [catch {send -h "$cmd\r" } err] } {
+				lputs "$myclass: Initializing terminal failed with error: $err" ;
+				return 1;
+			} 
+		}
+		return 0;
+	}
+
+	method login {user password} {
+
+		set login_success 0;
+		lputs "Login to device $user@$device" ;
+
+		if {[catch {spawn ssh $user@$device} err ]} {
+			lputs "ERROR: Failed to login to device\nError: $err" 
+			return 1;
+		} 
+# We will leave the session open for further functions to interact
+
+		expect {
+			-re "assword: *$" {
+				send "$password\r" ;
+				exp_continue ;
+			}
+			-re $prompt {
+				lputs "login ok";
+				set active_spawn_id  $spawn_id 
+				set login_success 1
+			}
+		}
+		if { $login_success } {
+			lputs "** Login Successful **" ;
+			return 1;
+		} else {
+			lputs "** Login Failed **" "WARN"
+			return 0;
+		}
+	}
+
+	method logout {} { 
+
+		set spawn_id $active_spawn_id 
+		set myclass [$this info class]
+
+		lputs "Exiting device: $device" ;
+
+		if { [catch {send -h "$device_exit_cmd\r"} err] } {
+			lputs "$myclass:$device - Initializing terminal failed with error: $err" ;
+			return 0;
+		} 
+
+		return 1;
+	}
+
+	method get_set_arp_cmd {interface ip mac} {
+
+		set _method_name [lindex [info level 1 ] 0 ]
+
+		set ies_value "<dummy_IES>" ;
+		set set_arp_fmt  "/configure service ies %s interface %s static-arp %s %s" ;
+
+		set ies_value [get_ies_value $interface]
+
+		set set_cmd [format "$set_arp_fmt" $ies_value $interface $ip $mac] ;
+
+		lputs "prepared set cmd: $set_cmd" ;
+
+		return $set_cmd ;
+	}
+
+	method prepare_set_arp_cmd {arp_entries_list } {
+		set _method_name [lindex [info level 1 ] 0 ]
+
+		set cmd_queue {}
+		set set_arp_cmd ""
+		set commit_cmd "/admin save" ;
+
+		lputs "preparing set arp commands for device : $device " ;
+
+		set ac 0 
+		foreach arp_entry $arp_entries_list  {
+
+			set ies_value "<dummy_ies>" 
+			dict with arp_entry {
+				set set_arp_cmd [get_set_arp_cmd $iface $address $mac] ;
+			}
+			unset -nocomplain iface address mac
+
+			lappend cmd_queue $set_arp_cmd ;
+			lappend cmd_queue $commit_cmd ;
+			incr ac 1
+			set set_arp_cmd ""
+		}
+# Add Commit statements here
+		if  { $ac < 1 } {
+			lputs "No commands prepared." ;
+		}
+
+		lputs [format "%d set arp commands prepared" $ac]
+
+		return $ac
+	}
+
+
+	method get_arp_entries { {conn_agg_id ""} } {
+
+		set _method_name [lindex [info level 1 ] 0 ]
+
+		set myclass [$this info class];
+
+		lputs "fetching arp entries from $device"
+
+		set arp_read_completed 0
+		set total_arp_found  0
+		set all_arp_output {} ;
+		set all_arp_dict {}
+		set cmd_queue {} ;
+		set arp_filter {};
+		set showarp $arp_get_cmd
+
+
+		if { [regexp "^.+$" $conn_agg_id] } {
+			set arp_filter [format "\"%s%s:\"" $conn_agg_prefix $conn_agg_id]
+			lputs "applying arp_filter $arp_filter"
+			append showarp " | match $arp_filter" ;
+		}
+
+		set cmd_context "get arp" ;
+		set spawn_id $active_spawn_id 
+		send -s  "\r" ;
+		expect {
+			-re $prompt {
+				if {$arp_read_completed == 0} {
+					send "$showarp\r" ;
+					lputs "sent command: /$showarp/" ;
+					sleep 0.1
+					expect {
+						-re $prompt {
+							append all_arp_output $expect_out(buffer);
+							lputs "ARP read complete" ;
+						}
+						default {
+							append all_arp_output $expect_out(buffer);
+							exp_continue ;
+						}
+
+						timeout {
+							lputs "timed out - ctxt - $_method_name : $cmd_context" ;
+						}
+						eof {
+							lputs "EOF occured - ctxt - $_method_name : $cmd_context" ;
+						}
+
+					}
+			   } 
+			}
+		}
+# convert all arp lines to dictionary structure for easy ocessing.
+		set all_arp_dict [parse_arp_entries [split $all_arp_output "\n"]] ;
+		
+		return $all_arp_dict ;
+
+	}
+
+	proc is_arp_line_valid {arp_line} {
+		set is_valid 1;
+
+		eval set arp_line_fields [list $arp_line ]
+		set field_count [llength $arp_line_fields] ;
+
+# Empty line check and check it contains all the fields i.e IP MAC EXPIRY Type, Interface
+# sometimes MAC may be missing. This check is for that.
+		if { [regexp "^$" $arp_line] || $field_count < 5 } { 
+			set is_valid 0 ;
+
+		} elseif { ! [regexp  "^(\[0-9]{1,3}\.){3}" [lindex $arp_line_fields 0] ] } {
+# is the line starting with valid IP address
+			set is_valid 0;
+
+		} elseif { [regexp -nocase "Oth" [lindex $arp_line_fields 3] ] } {
+			dputs "Skipping arp entry of type Oth ";
+			set is_valid 0 ;
+		}
+
+		return $is_valid 
+	}
+
+	method parse_arp_entries {arp_entries_list}  {
+
+		set arp_entries_dict {}
+
+#normalize arp output to a list, so each line 
+		foreach line $arp_entries_list {
+
+			set line [string trim $line];
+
+			dputs "processing $line" ;
+
+# Filter ARP output only for arp lines - leaving column header, footer, line, etc.,	
+			set line_valid  [is_arp_line_valid $line] ;
+
+			if {! $line_valid  } {
+				dputs "not valid arp entry"
+				continue ;
+			}
+
+			set arp_entry "" ;
+			set iface_only ""
+			set vlan       ""
+
+			if { [ regexp "^(.+?)\[ ]+(.+?)\[ ]+(.+?)\[ ]+(.+?)\[ ]+(.+?)$" $line dummy address mac expiry type iface] } { 
+				dputs "valid arp entry" ;
+# Create a temporary dictionary with field values scanned by regexp
+				set arp_entry [dict create mac $mac address $address expiry $expiry iface $iface type $type]
+
+				set iface_fields [split $iface ":"]
+				set vlan_fields [split [lindex $iface_fields 1] "."]
+
+				set iface_only [lindex $iface_fields 0];
+				set vlan  [lindex $vlan_fields 0 ];
+				set vxlan [lindex $vlan_fields 1 ];
+
+				set arp_entry [dict set arp_entry iface_only $iface_only] ;
+				set arp_entry [dict set arp_entry vlan $vlan ];
+				set arp_entry [dict set arp_entry vxlan $vxlan ];
+
+# Append the ARP entry dict to a master list.
+				lappend arp_entries_dict $arp_entry 
+			} else {
+				dputs "not valid arp entry" ;
+				continue ;
+			}
+
+		}
+		return $arp_entries_dict ;
+	}
+
+	method  get_ies_value {iface} {
+		set _proc_name [lindex [info level 1 ] 0 ]
+
+		set ies_value "<IES>" ;
+
+		set ies_value_found 0
+		set ies_cmd [format {admin display-config | match %s context all} $iface];
+
+		set iface [string trim $iface] ;
+
+		lputs "Finding IES value for Interface $iface " ;
+
+		set spawn_id  $active_spawn_id ;
+
+		set cmd_context "fetch_ies_value" ;
+		send -s  "\r" ;
+		set timeout 3 ;
+		expect {
+			-re $prompt {
+				if {$ies_value_found  == 0} {
+					send -s "$ies_cmd\r" ;
+					lputs "sent command: /$ies_cmd/" ;
+					sleep 0.1
+					expect {
+						-re "ies (.+?) name" {
+							set ies_value $expect_out(1,string);
+							lputs "Found: >$ies_value<" ;
+							set ies_value_found 1
+						}
+						-re "Error:" {
+							lputs "Error occured. skipping IES finding." "ERROR" 
+							set ies_value_found 1
+						}
+						-re $prompt {
+							lputs " --- IES pattern Not Found ---" - ;
+							set ies_value_found 1
+						}
+						timeout {
+							lputs "timed out - ctxt - $_proc_name: $cmd_context" ;
+						}
+						eof {
+							lputs "EOF occured - ctxt - $_proc_name: $cmd_context" ;
+						}
+
+					}
+			   } 
+			}
+		}
+
+		return $ies_value ;
+	}
+
+	method convert_dynamic_arp_to_static { {conn_agg_id ""} } {
+
+		set arps_as_dict [get_arp_entries $conn_agg_id ]
+
+		init_terminal
+
+		set non_static_arp_dict [filter_dynamic_arps $arps_as_dict ] ;
+
+		lputs "Found [llength $non_static_arp_dict] Dynamic entries out of Total [llength $arps_as_dict] ARP entries" ;
+
+		set set_arp_cmd_list [prepare_set_arp_cmd $non_static_arp_dict]
+
+		return $set_arp_cmd_list ;
+	}
+
+
+	method filter_dynamic_arps {all_arps} {
+
+		set dynamic_arp_dict {} ;
+# Filter Dynamic ARP entries by Type field
+		foreach entry $all_arps {
+			if { [regexp -nocase "dyn" [dict get $entry type] ] } {
+				lappend dynamic_arp_dict $entry 
+			}
+		}
+		return $dynamic_arp_dict ;
+	}
+
+	method exec_cmd_in_device {cmd}  {
+		set _method_name [lindex [info level 1 ] 0 ]
+		lputs "$_method_name not implmented yet" ;
+	}
+
+	method ping_target {target params} {
+		set _method_name [lindex [info level 1 ] 0 ]
+		lputs "$_method_name not implmented yet" ;
+	}
+
+	method get_prepared_commands {} {
+		return $cmd_queue ;
+	}
+
+}
+
+

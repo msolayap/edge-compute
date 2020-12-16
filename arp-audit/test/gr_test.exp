@@ -1,0 +1,12 @@
+
+source ../config.exp
+source ./util.exp
+source ./generic_router.itcl
+
+log_user 0
+
+generic_router router "100.80.15.102" ;
+router login "rancid" "level3" ;
+router detect_device_vendor ;
+router logout ;
+
