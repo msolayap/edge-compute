@@ -15,7 +15,7 @@ For Better experience look at this file at any of the [MARKDOWN viewer](https://
 
 ### Install
 ```sh
-tar -xzvf arp-sync-0.1.tar.gz
+tar -xzvf arp-audit-0.1.tar.gz
 cd arp-sync
 ```
 ### Configure
@@ -27,7 +27,7 @@ Rename the file to *site_devices.csv*
 ### Execute
 ```sh
 cd <base location>/edge-compute/arp-audit/bin
-expect ./arp_sync.exp
+expect ./arp-audit.exp
 ```
 ### Review/Monitor
 #### Log file
