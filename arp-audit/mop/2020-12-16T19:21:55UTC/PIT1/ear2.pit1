@@ -1,0 +1,35 @@
+
+#############################################################
+#
+#   Auto generated MOP file for
+#     - converting dynamic arp entries to static arp
+#     - to sync arp entries between both edge routers
+#
+#    PID: 2464  - PID of the execution generated this file. cross reference this in logfile for analysing the execution details
+# Device: ear2.pit1  - Name of the device to execute the following commands
+# Vendor: nokia  - Vendor of the device
+#   Date: 2020-12-16T19:21:55UTC  - date and time of this execution
+#
+##############################################################
+
+ 
+#  ---- dynamic to static ARP conversion --- 
+/configure service ies 0000 interface lag-5:3.* static-arp 216.202.198.26 d2:64:05:4a:83:36
+/admin save
+/configure service ies 0000 interface lag-5:6.* static-arp 216.202.198.2 82:b6:71:ef:77:15
+/admin save
+/configure service ies 0000 interface lag-5:7.* static-arp 216.202.198.6 0e:e0:a7:2c:85:cb
+/admin save
+/configure service ies 0000 interface lag-5:10.* static-arp 216.202.198.14 ea:01:82:6e:86:50
+/admin save
+/configure service ies 0000 interface lag-5:11.* static-arp 216.202.198.42 b2:7f:73:0c:f4:f7
+/admin save
+#------ ARP Sync commands -----
+/configure service ies 0000 interface lag-5:4 static-arp 216.202.198.18 c6:cc:1f:85:da:9b
+/admin save
+/configure service ies 0000 interface lag-5:5 static-arp 216.202.198.22 b6:7d:1a:9e:ef:9b
+/admin save
+/configure service ies 0000 interface lag-5:8 static-arp 216.202.198.10 82:17:0c:9f:d9:c8
+/admin save
+/configure service ies 0000 interface lag-5:9 static-arp 216.202.198.34 32:cd:c5:91:22:45
+/admin save

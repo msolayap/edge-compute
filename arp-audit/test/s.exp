@@ -1,0 +1,7 @@
+
+
+set cmd {ssh dc2owooadmpd01.it.savvis.net} ;
+
+if { ! [catch {eval spawn $cmd} err] } {
+interact ;
+}

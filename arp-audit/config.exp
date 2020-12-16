@@ -1,19 +1,19 @@
 
 # General configurations
 set envi  "dev" ;
-set mock_run 1;
+set mock_run 0;
 set DEBUG 1;
 set basedir [file normalize "$argv0/../.."]  
 set app_name "ARP audit" 
 
-set R_CMD "$basedir/bin/r"
+set R_CMD "./r"
 
 ## Logging related configuration
 # --for user
 set logging 1
 
 set app_tag "ARP_SYNC\[[pid]\]"
-set logfile {ec_arp_sync.log} ;
+set logfile {ec_arp_audit.log} ;
 set log_datefmt {%Y-%m-%dT%H:%M:%S%Z}
 set date_locale en_US
 # --for app
