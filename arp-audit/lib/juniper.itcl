@@ -22,7 +22,7 @@ itcl::class $_class_name {
 
 
 	protected variable cmd_context "none" ;
-	protected variable all_arp_output {}
+	public    variable all_arp_output {}
 
 	public variable all_arp_dict {}
 	public variable conn_agg_prefix "ae" ;
@@ -154,22 +154,26 @@ itcl::class $_class_name {
 
 		set _method_name [lindex [info level 1 ] 0 ]
 
-		set get_set_arp_cmd [format {show configuration interfaces %s | display set | match "address [0-9]{1,3}\."} $interface] ;
+		set set_arp_cmd_prfx [format {show configuration interfaces %s | display set | match "address [0-9]{1,3}\."} $interface] ;
 
+		set timeout 5 ;
 		set got_cmd 0;
 		set set_cmd "" ;
 		set cmd_context "show_config_interfaces" ;
 		set spawn_id $active_spawn_id 
+#clear the buffer
+		expect -glob "*" ;
 		send -s  "\r" ;
 		expect {
 			-re $prompt {
 				if {$got_cmd == 0} {
-					send "$get_set_arp_cmd\r" ;
-					lputs "sent command: /$get_set_arp_cmd/" ;
+					send "$set_arp_cmd_prfx\r" ;
+					lputs "sent command: /$set_arp_cmd_prfx/" ;
 					expect {
-						-re "set interfaces.*\r\n" {
-							set set_cmd $expect_out(0,string);
-							lputs "whole output:\n$expect_out(buffer)" ;
+						-re "set interfaces \[^\n]+\n" {
+							set set_cmd [string map { "\r" "" } $expect_out(0,string)];
+							set whole_output [string map { "\r" "" } $expect_out(buffer)]
+							lputs "whole output:\n$whole_output" ;
 							set got_cmd 1;
 						}
 						timeout {
@@ -177,6 +181,9 @@ itcl::class $_class_name {
 						}
 						eof {
 							lputs "EOF occured - ctxt - $_method_name : $cmd_context" ;
+						}
+						default {
+							dputs [string map { "\r" "" } $expect_out(buffer)] ;
 						}
 					}
 				}
@@ -186,7 +193,10 @@ itcl::class $_class_name {
 		}
 		if { $got_cmd } {
 			set set_cmd [string trim $set_cmd] ;
+			regsub -all -line {arp.*$} $set_cmd {} set_cmd
 			append set_cmd " arp $ip mac $mac ";
+		} else {
+			lputs "Could not obtain - set interface cmd prefix" "WARN"
 		}
 
 		return $set_cmd ;
@@ -214,12 +224,11 @@ itcl::class $_class_name {
 		}
 # Add Commit statements here
 		if  { $ac > 0 } {
-			lappend cmd_queue $commit_cmd ;
+#			lappend cmd_queue $commit_cmd ;
+			lputs [format "%d set arp commands prepared" $ac]
 		} else {
 			lputs "No commands prepared." ;
 		}
-
-		lputs [format "%d set arp commands prepared" $ac]
 
 		return $ac
 	}

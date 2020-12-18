@@ -22,7 +22,7 @@ itcl::class $_class_name {
 
 
 	protected variable cmd_context "none" ;
-	protected variable all_arp_output {}
+	public    variable all_arp_output {}
 
 	public    variable all_arp_dict {}
 	public    variable conn_agg_prefix "lag-" ;
@@ -37,7 +37,7 @@ itcl::class $_class_name {
 	common device_exit_cmd "logout" ;
 
 	public variable init_change_cmds {}
-	public variable commit_change_cmds {}
+	public variable commit_change_cmds {"/admin save"}
 
 	constructor {dev} {
 
@@ -185,7 +185,6 @@ itcl::class $_class_name {
 			unset -nocomplain iface address mac
 
 			lappend cmd_queue $set_arp_cmd ;
-			lappend cmd_queue $commit_cmd ;
 			incr ac 1
 			set set_arp_cmd ""
 		}
@@ -246,12 +245,12 @@ itcl::class $_class_name {
 						-re $prompt {
 							append all_arp_output $expect_out(buffer);
 							lputs "ARP read complete" ;
+							set arp_read_completed 1
 						}
 						default {
 							append all_arp_output $expect_out(buffer);
 							exp_continue ;
 						}
-
 						timeout {
 							lputs "timed out - ctxt - $_method_name : $cmd_context" ;
 						}
@@ -354,9 +353,7 @@ itcl::class $_class_name {
 			return "0000" ;
 		}
 
-		set ies_value "<IES>" ;
 
-		set ies_value_found 0
 		set ies_cmd [format {admin display-config | match %s context all} $iface];
 
 		set iface [string trim $iface] ;
@@ -365,12 +362,14 @@ itcl::class $_class_name {
 
 		set spawn_id  $active_spawn_id ;
 
+		set cmd_output {} ;
 		set cmd_context "fetch_ies_value" ;
 		send -s  "\r" ;
-		set timeout 3 ;
+		set timeout 30 ;
+		set ies_output_read 0 ;
 		expect {
 			-re $prompt {
-				if {$ies_value_found  == 0} {
+				if {$ies_output_read  == 0} {
 					send -s "$ies_cmd\r" ;
 					lputs "sent command: /$ies_cmd/" ;
 					sleep 0.1
@@ -378,15 +377,16 @@ itcl::class $_class_name {
 						-re "ies (.+?) name" {
 							set ies_value $expect_out(1,string);
 							lputs "Found: >$ies_value<" ;
-							set ies_value_found 1
+							set ies_output_read 1;
 						}
 						-re "Error:" {
 							lputs "Error occured. skipping IES finding." "ERROR" 
-							set ies_value_found 1
+							set ies_output_read ;
 						}
 						-re $prompt {
-							lputs " --- IES pattern Not Found ---" - ;
-							set ies_value_found 0
+							append cmd_output $expect_out(buffer);
+							lputs "output collection completed" ;
+							set ies_output_read 1 ;
 						}
 						timeout {
 							lputs "timed out - ctxt - $_proc_name: $cmd_context" ;
@@ -394,10 +394,31 @@ itcl::class $_class_name {
 						eof {
 							lputs "EOF occured - ctxt - $_proc_name: $cmd_context" ;
 						}
+						default {
+							append cmd_output $expect_out(buffer);
+							exp_continue ;
+						}
 
 					}
-			   } 
+			   }
 			}
+		}
+
+		lputs "---- Output obtained ----" ;
+		dputs "$cmd_output\n" ;
+
+		set ies_value "<IES>" ;
+		set ies_value_found 0
+		foreach line [split $cmd_output "\n"] {
+			set line [string trim $line] ;
+			if { [regexp -nocase "ies (.+?) " $line dummy ies_value] } {
+				lputs "Found IES value -- $ies_value" ;
+				set ies_value_found 1 
+				break;
+			}
+		}
+		if { ! $ies_value_found } {
+			lputs "-- IES pattern NOT FOUND --"  "WARN" 
 		}
 
 		return $ies_value ;

@@ -1,0 +1,9 @@
+
+
+set arpline "set interfaces ae17 unit 4 family inet address 216.202.195.5/30 arp 216.202.195.6 mac ee:7a:07:66:e9:7a" ;
+
+puts $arpline ;
+
+regsub -all -line {arp.*$} $arpline {} arpline
+
+puts $arpline ;

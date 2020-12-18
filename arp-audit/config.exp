@@ -12,7 +12,7 @@ set R_CMD "./r"
 # --for user
 set logging 1
 
-set app_tag "ARP_SYNC\[[pid]\]"
+set app_tag "ARP_AUDIT\[[pid]\]"
 set logfile {ec_arp_audit.log} ;
 set log_datefmt {%Y-%m-%dT%H:%M:%S%Z}
 set date_locale en_US

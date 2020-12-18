@@ -1,0 +1,8 @@
+
+set arp_out "4.69.159.102    a4:7b:2c:03:70:01 00h00m00s Oth    system\r\n10.56.7.2                         00h00m00s Oth    ae-201\r\n"
+
+puts -nonewline $arp_out ;
+
+set arp_out [string map { "\r" "" } $arp_out ]
+
+puts -nonewline $arp_out

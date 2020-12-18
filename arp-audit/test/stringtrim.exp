@@ -1,0 +1,14 @@
+
+
+
+set mystring "set interfaces ae3 unit 3501 family inet address 10.69.172.2/30\r\n" ;
+
+puts ">$mystring<"
+set mystring [string trim $mystring]
+puts ">$mystring<"
+
+puts [expr [string is space "  "] ? "yes" : "no" ]
+
+append mystring " arp  101.101.101.101 mac ee:ee:Ee:ee:ee:ee" ;
+
+puts $mystring 

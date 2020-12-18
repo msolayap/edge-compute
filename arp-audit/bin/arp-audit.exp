@@ -74,6 +74,7 @@ proc convert_arp {devicekey args} {
 	store_result "$sitename,$devicekey,cag"    $cag ;
 	store_result "$sitename,$devicekey,vendor" $vendor
 	store_result "$sitename,$devicekey,arp_dict"   [device_obj cget -all_arp_dict] ;
+	store_result "$sitename,$devicekey,arp_output" [device_obj cget -all_arp_output] ;
 	store_result "$sitename,$devicekey,dyn2sta"  [device_obj cget -cmd_queue ];
 
 	if { [itcl::is object device_obj]  } {
@@ -236,7 +237,7 @@ proc write_mop { sitename } {
 
 	set datedir $master_data(date);
 	set pid     $master_data(pid);
-	set mopdir  "$basedir/mop/$datedir/$sitename" ;
+	set mopdir  "$basedir/mop/$datedir/" ;
 
 	lputs "preparing MOP dir" ;
 
@@ -254,11 +255,9 @@ proc write_mop { sitename } {
 
 	foreach dev [list "device1" "device2"] {
 
-
-
 		set ven $master_data($sitename,$dev,vendor);
 		set device $master_data($sitename,$dev,device);
-		set mopfile [format "%s" $device] ;
+		set mopfile [format "%s_%s_%s" $sitename $device [get_date]] ;
 		set begin_txn {}
 		set end_txn   {}
 
@@ -268,6 +267,9 @@ proc write_mop { sitename } {
 			set begin_txn [dobj cget -init_change_cmds]
 			set end_txn   [dobj cget -commit_change_cmds]
 			itcl::delete object dobj 
+		} else {
+			lputs "Nothing to do in device $device. skipping MOP file generation" ;
+			return 0;
 		}
 
 		if { [ catch {set mopfh [open "$mopdir/$mopfile" "a"]} err ] } {
@@ -287,11 +289,31 @@ proc write_mop { sitename } {
 # Vendor: %s  - Vendor of the device
 #   Date: %s  - date and time of this execution
 #
-##############################################################
+# --- SITE record  ---
+# 
+} $pid $device $ven $datedir ];
 
- } $pid $device $ven $datedir ];
+ 		puts -nonewline $mopfh $fileheader ;
 
- 		puts $mopfh $fileheader ;
+
+		dict for {k v} $master_data($sitename,record) {
+			puts $mopfh [format {# %35s - %-s} $k $v] ;
+		}
+		puts $mopfh "# ";
+
+	
+		if { 0<[string length $master_data($sitename,$dev,arp_output)] }  {
+			puts $mopfh "# --- Actual arp OUTPUT ---" ;
+			foreach line [split $master_data($sitename,$dev,arp_output) "\n"] {
+				set line [string trim $line] ;
+				puts $mopfh [format {#  %-s} $line] ;
+			}
+			unset -nocomplain line 
+		} else {
+			puts $mopfh  "#  ARP output not found";
+		}
+
+		puts $mopfh "##############################################################" ;
 
 		foreach c  $begin_txn {
 			puts $mopfh $c ;
@@ -360,6 +382,8 @@ foreach dev_record  $device_list {
 	set device_1_cag  [dict get $dev_record "ear_1_connection_aggregate"]  ;
 	set device_2_cag  [dict get $dev_record "ear_2_connection_aggregate"]  ;
 	
+	store_result "$sitename,record" $dev_record;
+
 # Process Device 1 or Node A of the pair
 	convert_arp "device1" $sitename  $device_1 $device_1_cag ;
 
