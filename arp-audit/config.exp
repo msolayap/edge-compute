@@ -1,12 +1,12 @@
 
 # General configurations
-set envi  "dev" ;
+set envi  "prod" ;
 set mock_run 0;
 set DEBUG 1;
 set basedir [file normalize "$argv0/../.."]  
 set app_name "ARP audit" 
 
-set R_CMD "./r"
+set R_CMD "roci"
 
 ## Logging related configuration
 # --for user

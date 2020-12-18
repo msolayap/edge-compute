@@ -32,7 +32,7 @@ itcl::class $_class_name {
 # Device specific commands
 	common vendor "Nokia" ;
 	common prompt "(%|#|\\\$|>) *$" ;
-	common arp_get_cmd "show router arp" ;
+	common arp_get_cmd "show router arp | match Oth invert-match " ;
 	common init_term_cmds [list "environment no more" ];
 	common device_exit_cmd "logout" ;
 
@@ -180,7 +180,8 @@ itcl::class $_class_name {
 
 			set ies_value "<dummy_ies>" 
 			dict with arp_entry {
-				set set_arp_cmd [get_set_arp_cmd $iface $address $mac] ;
+				set iface_with_star [format "%s.*" $iface] ;
+				set set_arp_cmd [get_set_arp_cmd $iface_with_star $address $mac] ;
 			}
 			unset -nocomplain iface address mac
 
