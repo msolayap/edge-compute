@@ -257,7 +257,7 @@ proc write_mop { sitename } {
 
 		set ven $master_data($sitename,$dev,vendor);
 		set device $master_data($sitename,$dev,device);
-		set mopfile [format "%s_%s_%s" $sitename $device [get_date]] ;
+		set mopfile [format "%s_%s_%s" $device $sitename [get_date]] ;
 		set begin_txn {}
 		set end_txn   {}
 
@@ -302,15 +302,28 @@ proc write_mop { sitename } {
 		puts $mopfh "# ";
 
 	
-		if { 0<[string length $master_data($sitename,$dev,arp_output)] }  {
-			puts $mopfh "# --- Actual arp OUTPUT ---" ;
-			foreach line [split $master_data($sitename,$dev,arp_output) "\n"] {
+		set d1k  "device1" 
+		set d2k  "device2"
+		puts $mopfh "#\n# --- Actual arp OUTPUT of Device 1 ---" ;
+		if { 0<[string length $master_data($sitename,$d1k,arp_output)] }  {
+			foreach line [split $master_data($sitename,$d1k,arp_output) "\n"] {
 				set line [string trim $line] ;
 				puts $mopfh [format {#  %-s} $line] ;
 			}
 			unset -nocomplain line 
 		} else {
-			puts $mopfh  "#  ARP output not found";
+			puts $mopfh  "#  ARP output not found for the provided filters";
+		}
+
+		puts $mopfh "#\n# --- Actual arp OUTPUT of Device 2 ---" ;
+		if { 0<[string length $master_data($sitename,$d2k,arp_output)] }  {
+			foreach line [split $master_data($sitename,$d2k,arp_output) "\n"] {
+				set line [string trim $line] ;
+				puts $mopfh [format {#  %-s} $line] ;
+			}
+			unset -nocomplain line 
+		} else {
+			puts $mopfh  "#  ARP output not found for the provided filters";
 		}
 
 		puts $mopfh "##############################################################" ;
@@ -382,6 +395,7 @@ foreach dev_record  $device_list {
 	set device_1_cag  [dict get $dev_record "ear_1_connection_aggregate"]  ;
 	set device_2_cag  [dict get $dev_record "ear_2_connection_aggregate"]  ;
 	
+	lputs " --- Start processing for site -- $sitename with devices $device_1 and $device_2 --- " ;
 	store_result "$sitename,record" $dev_record;
 
 # Process Device 1 or Node A of the pair
@@ -396,5 +410,6 @@ foreach dev_record  $device_list {
 	write_mop $sitename ;
 
 }
+	lputs "--- Execution Completed for [llength $device_list] site(s) ---" ;
 
 exit 0;

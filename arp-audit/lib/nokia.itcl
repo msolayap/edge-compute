@@ -202,7 +202,7 @@ itcl::class $_class_name {
 	method get_arp_entries { {conn_agg_id ""} } {
 
 
-		global mock_run mock_data
+		global mock_run mock_data ;
 
 		if { $mock_run } {
 			lputs "returning mock arp output for $device" ;
@@ -354,7 +354,7 @@ itcl::class $_class_name {
 		}
 
 
-		set ies_cmd [format {admin display-config | match %s context all} $iface];
+		set ies_cmd [format {/admin display-config | match "%s" context all} $iface];
 
 		set iface [string trim $iface] ;
 
@@ -364,8 +364,10 @@ itcl::class $_class_name {
 
 		set cmd_output {} ;
 		set cmd_context "fetch_ies_value" ;
+# lets clear the buffer before we interact.
+		expect -glob "*" 
 		send -s  "\r" ;
-		set timeout 30 ;
+		set timeout 10 ;
 		set ies_output_read 0 ;
 		expect {
 			-re $prompt {
@@ -374,14 +376,14 @@ itcl::class $_class_name {
 					lputs "sent command: /$ies_cmd/" ;
 					sleep 0.1
 					expect {
-						-re "ies (.+?) name" {
-							set ies_value $expect_out(1,string);
-							lputs "Found: >$ies_value<" ;
-							set ies_output_read 1;
-						}
+#						-re "ies (.+?) name" {
+#							set ies_value $expect_out(1,string);
+#							lputs "Found: >$ies_value<" ;
+#							set ies_output_read 1;
+#						}
 						-re "Error:" {
 							lputs "Error occured. skipping IES finding." "ERROR" 
-							set ies_output_read ;
+							set ies_output_read 1;
 						}
 						-re $prompt {
 							append cmd_output $expect_out(buffer);

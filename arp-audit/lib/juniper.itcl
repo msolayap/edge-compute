@@ -278,15 +278,14 @@ itcl::class $_class_name {
 					lputs "sent command: /$showarp/" ;
 					sleep 0.1
 					expect {
-						-re "\r?\n?..:..:..:\[^\r]+\r\n" {
-							append all_arp_output $expect_out(0,string) ;
-							#lputs "Found arp line: $expect_out(0,string)" ;
-							exp_continue ;
-						}
 						-re $prompt {
+							append all_arp_output $expect_out(buffer);
 							lputs "ARP read complete";
+							set arp_read_completed 1 ;
 						}
 						default  { 
+							append all_arp_output $expect_out(buffer);
+							exp_continue ;
 						}
 						timeout {
 							lputs "timed out - ctxt - $_method_name : $cmd_context" ;
