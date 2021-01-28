@@ -161,6 +161,10 @@ itcl::class $_class_name {
 
 		set set_cmd [format "$set_arp_fmt" $ies_value $interface $ip $mac] ;
 
+		if { [ regexp "\<IES\>" $set_cmd ] } {
+			set set_cmd [ concat  "# " $set_cmd ]
+		}
+
 		lputs "prepared set cmd: $set_cmd" ;
 
 		return $set_cmd ;
