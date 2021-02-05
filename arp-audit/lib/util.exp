@@ -156,10 +156,12 @@ proc close_mop {} {
 proc get_device_list {} {
 
 # defined in config
-	global devices_list_file ;
+	global devices_list_file basedir ;
 
 	set LS "\n";
 	set FS "," ;
+
+	catch {[exec cd $basedir/bin && ./api_to_csv.sh ]} err
 	
 	set device_list {}
 
@@ -191,7 +193,7 @@ proc get_device_list {} {
 			set siterecord {}
 # take necessary fields based on index.
 
-			foreach fi {0 7 10 17 20} {
+			foreach fi {0 1 2 3 4} {
 # if any of the column is empty, skip the row.
 				if { [ regexp "^$" $fi ] } {
 					lputs "one or more mandatory columns missing at : $rownum. skipping to next record" "WARN"

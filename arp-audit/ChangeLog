@@ -1,0 +1,9 @@
+# ChangeLog
+All notable changes to this project will be documented in this file
+
+## [0.6] - 2021-02-05
+### Added
+- Bash script bin/api_to_csv.sh to consume API endpoint for device details and
+prepare a CSV file suitable for automation to consume
+- Added code in get_devices_list method to invoke the api_to_csv script before
+reading csv file.
