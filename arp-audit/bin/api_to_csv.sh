@@ -1,14 +1,16 @@
 #!/bin/bash
 
+site_file_dir=`dirname $0` ;
+
 api_output=`mktemp`;
 tmpfile=`mktemp`;
-site_file=site_devices.csv
+site_file=$site_file_dir/site_devices.csv
 
 curl -s --insecure https://houdini.edg.centurylink.net/api/v1/peportconfig/?limit=1000000\&offset=0 >$api_output  2>&1
 
 if [ $? -eq 0 ];
 then
-	cat $api_output | jq -r '[.results[]|select(.role|startswith("edge"))|{site,role,router_hostname,connection_aggregate}]|group_by(.site)|flatten(1)|.[]|to_entries|map(.value)|@csv' | sort -u |  tr -d '"' | uniq --check-chars=16 >$tmpfile ;
+	cat $api_output | ./jq -r '[.results[]|select(.role|startswith("edge"))|{site,role,router_hostname,connection_aggregate}]|group_by(.site)|flatten(1)|.[]|to_entries|map(.value)|@csv' | sort -u |  tr -d '"' | uniq --check-chars=16 >$tmpfile ;
 
 	if [ $? -ne 0 ]
 	then

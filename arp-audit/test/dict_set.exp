@@ -1,0 +1,18 @@
+
+
+
+set arp_entry [dict create .txt "Text file" .html "Web File" .pdf "Document" .db "Database"]
+
+
+dict for {k v}  $arp_entry {
+	puts "$k -> $v" ;
+}
+
+set arp_entry [dict set arp_entry .pbi  "PowerbI"] ;
+
+dict for {k v}  $arp_entry {
+	puts "$k -> $v" ;
+}
+
+
+

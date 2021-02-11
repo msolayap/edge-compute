@@ -6,7 +6,7 @@ set DEBUG 1;
 set basedir [file normalize "$argv0/../.."]  
 set app_name "ARP audit" 
 
-set R_CMD "roci"
+set R_CMD "./r"
 
 ## Logging related configuration
 # --for user
@@ -27,7 +27,10 @@ set log_syslog 1;
 set syslog_ready  0;
 
 ## core
+# decide whether to fetch site details from Houdini API Service.
+set fetch_site_data_from_api 1;
 # file where device lists are stored as csv
+
 if { $mock_run } {
 	set devices_list_file "mock_site_devices.csv" ;
 } else {

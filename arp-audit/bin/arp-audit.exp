@@ -304,7 +304,7 @@ proc write_mop { sitename } {
 	
 		set d1k  "device1" 
 		set d2k  "device2"
-		puts $mopfh "#\n# --- Actual arp OUTPUT of Device 1 ---" ;
+		puts $mopfh [format {# --- Actual arp OUTPUT of %s ---} $master_data($sitename,$d1k,device)] ;
 		if { 0<[string length $master_data($sitename,$d1k,arp_output)] }  {
 			foreach line [split $master_data($sitename,$d1k,arp_output) "\n"] {
 				set line [string trim $line] ;
@@ -315,7 +315,7 @@ proc write_mop { sitename } {
 			puts $mopfh  "#  ARP output not found for the provided filters";
 		}
 
-		puts $mopfh "#\n# --- Actual arp OUTPUT of Device 2 ---" ;
+		puts $mopfh [format {# --- Actual arp OUTPUT of %s ---} $master_data($sitename,$d2k,device)] ;
 		if { 0<[string length $master_data($sitename,$d2k,arp_output)] }  {
 			foreach line [split $master_data($sitename,$d2k,arp_output) "\n"] {
 				set line [string trim $line] ;
@@ -399,10 +399,16 @@ foreach dev_record  $device_list {
 	store_result "$sitename,record" $dev_record;
 
 # Process Device 1 or Node A of the pair
-	convert_arp "device1" $sitename  $device_1 $device_1_cag ;
+	if { [catch {convert_arp "device1" $sitename  $device_1 $device_1_cag } err]  } {
+		lputs "Issue connecting to $device_1. Moving on to next one" ;
+		continue ;
+	}
 
 # Process Device 2 or Node B of the pair
-	convert_arp "device2" $sitename $device_2 $device_2_cag ;
+	if { [catch {convert_arp "device2" $sitename $device_2 $device_2_cag } err ] } {
+		lputs "Issue connecting to $device_2. Moving on to next one" ;
+		continue ;
+	}
 
 # sync arp entries between device1 and device2
 	sync_arp $sitename

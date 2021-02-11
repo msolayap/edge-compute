@@ -150,14 +150,14 @@ itcl::class $_class_name {
 		return 1;
 	}
 
-	method get_set_arp_cmd {interface ip mac} {
+	method get_set_arp_cmd {interface ip mac ifws} {
 
 		set _method_name [lindex [info level 1 ] 0 ]
 
 		set ies_value "<dummy_IES>" ;
 		set set_arp_fmt  "/configure service ies %s interface %s static-arp %s %s" ;
 
-		set ies_value [get_ies_value $interface]
+		set ies_value [get_ies_value $ifws]
 
 		set set_cmd [format "$set_arp_fmt" $ies_value $interface $ip $mac] ;
 
@@ -185,7 +185,7 @@ itcl::class $_class_name {
 			set ies_value "<dummy_ies>" 
 			dict with arp_entry {
 				set iface_with_star [format "%s.*" $iface] ;
-				set set_arp_cmd [get_set_arp_cmd $iface_with_star $address $mac] ;
+				set set_arp_cmd [get_set_arp_cmd $iface_with_star $address $mac $iface] ;
 			}
 			unset -nocomplain iface address mac
 
@@ -379,13 +379,8 @@ itcl::class $_class_name {
 				if {$ies_output_read  == 0} {
 					send -s "$ies_cmd\r" ;
 					lputs "sent command: /$ies_cmd/" ;
-					sleep 0.1
+					sleep 2
 					expect {
-#						-re "ies (.+?) name" {
-#							set ies_value $expect_out(1,string);
-#							lputs "Found: >$ies_value<" ;
-#							set ies_output_read 1;
-#						}
 						-re "Error:" {
 							lputs "Error occured. skipping IES finding." "ERROR" 
 							set ies_output_read 1;

@@ -156,12 +156,15 @@ proc close_mop {} {
 proc get_device_list {} {
 
 # defined in config
-	global devices_list_file basedir ;
+	global devices_list_file basedir fetch_site_data_from_api ;
 
 	set LS "\n";
 	set FS "," ;
 
-	catch {[exec cd $basedir/bin && ./api_to_csv.sh ]} err
+	if { [is_true $fetch_site_data_from_api] }  {
+		lputs "Fetching SITE data from Houdini API service" ;
+		catch {[exec cd $basedir/bin && ./api_to_csv.sh ]} err
+	}
 	
 	set device_list {}
 
