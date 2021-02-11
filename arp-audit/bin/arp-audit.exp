@@ -10,7 +10,7 @@ source ../lib/juniper.itcl
 source ../lib/nokia.itcl
 
 # disable in real run.
-source ../lib/mock_data.exp
+#source ../lib/mock_data.exp
 
 log_user 0;
 
@@ -69,6 +69,14 @@ proc convert_arp {devicekey args} {
 	device_obj convert_dynamic_arp_to_static $cag
 	device_obj logout
 
+	lputs "Dict after parsing and preparation" ;
+	foreach adict [device_obj cget -all_arp_dict] {
+		dict for {k v} $adict {
+			lputs "$k --> $v" ;
+		}
+	}
+	wait_for_key ;
+
 # Fetch result and store it for processing
 	store_result "$sitename,$devicekey,device" $dev
 	store_result "$sitename,$devicekey,cag"    $cag ;
@@ -91,7 +99,8 @@ proc form_iface {ven cag vlan} {
 			set iface [format "ae%s.%s" $cag $vlan] ;
 		}
 		"nokia" {
-			set iface [format "lag-%s:%s" $cag $vlan] ;
+			#set iface [format "lag-%s:%s" $cag $vlan] ;
+			set iface [format "lag-%s:%s" $cag $vlan  ] ;
 		} 
 	}
 	return $iface;
@@ -203,7 +212,7 @@ global user pass
 		get_router_object $d1v $d1
 		rename router d1obj
 		d1obj login $user $pass
-		d1obj prepare_set_arp_cmd $to_create_in_d1 ;
+		d1obj prepare_set_arp_cmd_sync $to_create_in_d1 ;
 		d1obj logout
 # -----------------
 		set mar($sitename,$d1k,arpsync) {} ;
@@ -218,7 +227,7 @@ global user pass
 		get_router_object $d2v $d2
 		rename router d2obj 
 		d2obj login $user $pass
-		d2obj prepare_set_arp_cmd $to_create_in_d2 ;
+		d2obj prepare_set_arp_cmd_sync $to_create_in_d2 ;
 		d2obj logout
 # -----------------
 		set mar($sitename,$d2k,arpsync) {} ;
@@ -250,8 +259,6 @@ proc write_mop { sitename } {
 	if { [catch {exec bash -c "cd $basedir/mop/ ; rm -f recent ; ln -sf $datedir recent" } err ] } {
 		lputs "Linking to recent MOP directory failed" "WARN" ;
 	}
-
-
 
 	foreach dev [list "device1" "device2"] {
 
@@ -411,7 +418,19 @@ foreach dev_record  $device_list {
 	}
 
 # sync arp entries between device1 and device2
+dputs "xxxxxxxxxxxxx"
+foreach {k v}  [array get master_data] {
+	dputs "Key: $k ; Val : $v" ;
+}
+dputs "xxxxxxxxxxxxx" ;
+
 	sync_arp $sitename
+
+dputs "xxxxxxxxxxxxx"
+foreach {k v}  [array get master_data] {
+	dputs "Key: $k ; Val : $v" ;
+}
+dputs "xxxxxxxxxxxxx" ;
 
 	write_mop $sitename ;
 

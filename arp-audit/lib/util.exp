@@ -4,6 +4,14 @@
 
 # proc to provide basic info about current execution environment
 
+proc wait_for_key {} {
+	global envi ;
+	if { ! [regexp -nocase "prod" $envi]  } {
+		dputs "Press ENTER to continue ... " ;
+		gets stdin ;
+	}
+}
+
 proc script_host_info {}  {
 	global tcl_platform 
 	set msg {} ;
@@ -163,7 +171,9 @@ proc get_device_list {} {
 
 	if { [is_true $fetch_site_data_from_api] }  {
 		lputs "Fetching SITE data from Houdini API service" ;
-		catch {[exec cd $basedir/bin && ./api_to_csv.sh ]} err
+		if { [catch {exec ./api_to_csv.sh } err] } {
+			lputs "Error while contact Houdini API. Error: $err" "WARN"; 
+		}
 	}
 	
 	set device_list {}

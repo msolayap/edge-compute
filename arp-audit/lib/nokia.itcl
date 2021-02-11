@@ -150,16 +150,16 @@ itcl::class $_class_name {
 		return 1;
 	}
 
-	method get_set_arp_cmd {interface ip mac ifws} {
+	method get_set_arp_cmd {iface_full ip mac {iface_only ""} {iface_with_star ""} } {
 
 		set _method_name [lindex [info level 1 ] 0 ]
 
 		set ies_value "<dummy_IES>" ;
 		set set_arp_fmt  "/configure service ies %s interface %s static-arp %s %s" ;
 
-		set ies_value [get_ies_value $ifws]
+		set ies_value [get_ies_value $iface_only]
 
-		set set_cmd [format "$set_arp_fmt" $ies_value $interface $ip $mac] ;
+		set set_cmd [format "$set_arp_fmt" $ies_value $iface_full $ip $mac] ;
 
 		if { [ regexp "\<IES\>" $set_cmd ] } {
 			set set_cmd [ concat  "# " $set_cmd ]
@@ -170,7 +170,12 @@ itcl::class $_class_name {
 		return $set_cmd ;
 	}
 
+
 	method prepare_set_arp_cmd {arp_entries_list } {
+		lputs "ARP entries list passed to prepare_set_arp_cmd" ;
+		lputs "$arp_entries_list" ;
+		wait_for_key ;
+
 		set _method_name [lindex [info level 1 ] 0 ]
 
 		set cmd_queue {}
@@ -180,12 +185,15 @@ itcl::class $_class_name {
 		lputs "preparing set arp commands for device : $device " ;
 
 		set ac 0 
+		set iface_only {}
+		set iface_with_star {}
 		foreach arp_entry $arp_entries_list  {
 
 			set ies_value "<dummy_ies>" 
+
 			dict with arp_entry {
-				set iface_with_star [format "%s.*" $iface] ;
-				set set_arp_cmd [get_set_arp_cmd $iface_with_star $address $mac $iface] ;
+				set iface_with_star [format "%s.*" $iface_only] ;
+				set set_arp_cmd [get_set_arp_cmd $iface $address $mac $iface_only $iface_with_star] ;
 			}
 			unset -nocomplain iface address mac
 
@@ -203,9 +211,75 @@ itcl::class $_class_name {
 		return $ac
 	}
 
+	method get_set_arp_cmd_sync {iface ip mac } {
+
+		set _method_name [lindex [info level 1 ] 0 ]
+
+		set ies_value "<dummy_IES>" ;
+		set set_arp_fmt  "/configure service ies %s interface %s.* static-arp %s %s" ;
+
+		set ies_value [get_ies_value $iface]
+
+		set set_cmd [format "$set_arp_fmt" $ies_value $iface $ip $mac] ;
+
+		if { [ regexp "\<IES\>" $set_cmd ] } {
+			set set_cmd [ concat  "# " $set_cmd ]
+		}
+
+		lputs "prepared set cmd: $set_cmd" ;
+
+		return $set_cmd ;
+	}
+
+
+	method prepare_set_arp_cmd_sync {arp_entries_list } {
+		init_terminal ;
+
+		lputs "ARP entries list passed to prepare_set_arp_cmd_sync" ;
+		lputs "$arp_entries_list" ;
+		wait_for_key ;
+
+		set _method_name [lindex [info level 1 ] 0 ]
+
+		set cmd_queue {}
+		set set_arp_cmd ""
+		set commit_cmd "/admin save" ;
+
+		lputs "preparing set arp commands for device : $device " ;
+
+		set ac 0 
+		set iface_only {}
+		set iface_with_star {}
+		foreach arp_entry $arp_entries_list  {
+
+			set ies_value "<dummy_ies>" 
+
+			lputs "arp_entry : $arp_entry" ;
+			wait_for_key ;
+
+			dict with arp_entry {
+				set iface_with_star [format "%s.*" $iface] ;
+				lputs "set set_arp_cmd \[get_set_arp_cmd_sync $iface $address $mac\]"
+				set set_arp_cmd [get_set_arp_cmd_sync $iface $address $mac] ;
+				wait_for_key ;
+			}
+
+			lappend cmd_queue $set_arp_cmd ;
+			incr ac 1
+			set set_arp_cmd ""
+		}
+# Add Commit statements here
+		if  { $ac < 1 } {
+			lputs "No commands prepared." ;
+		}
+
+		lputs [format "%d set arp commands prepared" $ac]
+
+		return $ac
+	}
+
 
 	method get_arp_entries { {conn_agg_id ""} } {
-
 
 		global mock_run mock_data ;
 
@@ -232,7 +306,7 @@ itcl::class $_class_name {
 
 
 		if { [regexp "^.+$" $conn_agg_id] } {
-			set arp_filter [format "\"%s%s:\"" $conn_agg_prefix $conn_agg_id]
+			set arp_filter [format "\"%s%s\"" $conn_agg_prefix $conn_agg_id]
 			lputs "applying arp_filter $arp_filter"
 			append showarp " | match $arp_filter" ;
 		}
@@ -268,8 +342,9 @@ itcl::class $_class_name {
 			}
 		}
 # convert all arp lines to dictionary structure for easy ocessing.
+#
 		set all_arp_dict [parse_arp_entries [split $all_arp_output "\n"]] ;
-		
+
 		return $all_arp_dict ;
 
 	}
@@ -290,7 +365,7 @@ itcl::class $_class_name {
 			set is_valid 0;
 
 		} elseif { [regexp -nocase "Oth" [lindex $arp_line_fields 3] ] } {
-			set is_valid 0 ;
+			set is_valid 1 ;
 		}
 
 		return $is_valid 
@@ -337,6 +412,12 @@ itcl::class $_class_name {
 				set arp_entry [dict set arp_entry vlan $vlan ];
 				set arp_entry [dict set arp_entry vxlan $vxlan ];
 
+				dputs "Dictionary" ;
+				dict for {k v} $arp_entry {
+					dputs "$k -> $v" ;
+				}
+				wait_for_key ;
+
 # Append the ARP entry dict to a master list.
 				lappend arp_entries_dict $arp_entry 
 			} else {
@@ -357,7 +438,6 @@ itcl::class $_class_name {
 			lputs "returning mock ies value" ;
 			return "0000" ;
 		}
-
 
 		set ies_cmd [format {/admin display-config | match "%s" context all} $iface];
 

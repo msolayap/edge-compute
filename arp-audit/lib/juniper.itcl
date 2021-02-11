@@ -142,6 +142,7 @@ itcl::class $_class_name {
 		return 1;
 	}
 
+
 	method get_set_arp_cmd {interface ip mac} {
 
 		global mock_run
@@ -200,6 +201,10 @@ itcl::class $_class_name {
 		}
 
 		return $set_cmd ;
+	}
+
+	method prepare_set_arp_cmd_sync { arp_entries_list } {
+		return [prepare_set_arp_cmd $arp_entries_list ]
 	}
 
 	method prepare_set_arp_cmd {arp_entries_list } {
@@ -300,6 +305,13 @@ itcl::class $_class_name {
 		}
 # convert all arp lines to dictionary structure for easy ocessing.
 		set all_arp_dict [parse_arp_entries [split $all_arp_output "\n"]] ;
+		foreach adict $all_arp_dict {
+			dict for {k v} $adict  {
+
+				dputs "$k ---> $v" ;
+			}
+		}
+		wait_for_key ;
 		
 		return $all_arp_dict ;
 
@@ -354,8 +366,8 @@ itcl::class $_class_name {
 				#set arp_entry [dict create mac $mac address $address name $name iface $iface flags $flags]
 				set arp_entry [dict create mac $mac address $address iface $iface flags $flags]
 
-				if { [regexp "^(.*?)\\.(.*?)$" [dict get $arp_entry iface] dummy iface vlan] } {
-					set iface_only $iface
+				if { [regexp "^(.*?)\\.(.*?)$" [dict get $arp_entry iface] dummy ifaceb4vlan vlan] } {
+					set iface_only $ifaceb4vlan
 					set vlan $vlan
 				} else {
 					set iface_only ""

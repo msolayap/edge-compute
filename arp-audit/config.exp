@@ -1,6 +1,7 @@
 
 # General configurations
-set envi  "prod" ;
+# if set to anything other than PROD will enable debugging, waiting in standard input, etc
+set envi  "PROD" ;
 set mock_run 0;
 set DEBUG 1;
 set basedir [file normalize "$argv0/../.."]  
@@ -27,15 +28,11 @@ set log_syslog 1;
 set syslog_ready  0;
 
 ## core
-# decide whether to fetch site details from Houdini API Service.
-set fetch_site_data_from_api 1;
-# file where device lists are stored as csv
+#enable/disable contact API for device data
+set fetch_site_data_from_api 0
 
-if { $mock_run } {
-	set devices_list_file "mock_site_devices.csv" ;
-} else {
-	set devices_list_file "site_devices.csv" ;
-}
+# file where device lists are stored as csv
+set devices_list_file "site_devices.csv" ;
 set device_auth  0
 set default_user "rancid"
 set default_pass "level3"
