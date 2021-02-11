@@ -418,23 +418,23 @@ foreach dev_record  $device_list {
 	}
 
 # sync arp entries between device1 and device2
-dputs "xxxxxxxxxxxxx"
-foreach {k v}  [array get master_data] {
-	dputs "Key: $k ; Val : $v" ;
-}
-dputs "xxxxxxxxxxxxx" ;
-
-	sync_arp $sitename
-
-dputs "xxxxxxxxxxxxx"
-foreach {k v}  [array get master_data] {
-	dputs "Key: $k ; Val : $v" ;
-}
-dputs "xxxxxxxxxxxxx" ;
-
-	write_mop $sitename ;
-
-}
+#dputs "xxxxxxxxxxxxx"
+#foreach {k v}  [array get master_data] {
+#	dputs "Key: $k ; Val : $v" ;
+#}
+#dputs "xxxxxxxxxxxxx" ;
+#
+#	sync_arp $sitename
+#
+#dputs "xxxxxxxxxxxxx"
+#foreach {k v}  [array get master_data] {
+#	dputs "Key: $k ; Val : $v" ;
+#}
+#dputs "xxxxxxxxxxxxx" ;
+#
+#	write_mop $sitename ;
+#
+#}
 	lputs "--- Execution Completed for [llength $device_list] site(s) ---" ;
 
 exit 0;

@@ -306,7 +306,7 @@ itcl::class $_class_name {
 
 
 		if { [regexp "^.+$" $conn_agg_id] } {
-			set arp_filter [format "\"%s%s\"" $conn_agg_prefix $conn_agg_id]
+			set arp_filter [format "\"%s%s:\"" $conn_agg_prefix $conn_agg_id]
 			lputs "applying arp_filter $arp_filter"
 			append showarp " | match $arp_filter" ;
 		}
