@@ -13,14 +13,15 @@ For Better experience look this file in any of the [MARKDOWN viewer](https://dil
 
 ### Install
 ```sh
-tar -xzvf arp-audit-0.1.tar.gz
+tar -xzvf arp-audit-0.x.tar.gz
 cd arp-sync
 ```
 ### Configure
 #### CSV File with device data
-copy the csv file (as generated from [houdini site](https://houdini.edg.centurylink.net/login/)). with device, site and other metadata. 
-Rename the file to *site_devices.csv*
->For Mock Run - prepare the file accordingly and rename the file to mock_site_devices.csv. Please note that lib/mock_data.exp to be prepared prior to using mock run.
+SITE and device details gets pulled from Houdini API (as generated from [houdini site](https://houdini.edg.centurylink.net/login/)). Each execution of the main script i.e arp-audit.exp contact the API service at the beginning and generate the *site_devices.csv* for further processing. 
+
+>If you want to disable API fetching for device data and only expect the script to work on local copy of data (i.e site_devices.csv), set 0 to config value
+*fetch_site_data_from_api*
 
 ### Execute
 ```sh
@@ -46,6 +47,6 @@ The MOP files would be generated inside the "mop" directory in follwing hierarch
 
 | Purpose | Contact|
 |-------|---------|
-| **TOOL owner** | Stephen J Akers
+| **TOOL owner** | Stephen J Akers, Gregg Labranche
 
 

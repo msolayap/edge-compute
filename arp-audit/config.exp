@@ -1,13 +1,13 @@
 
 # General configurations
-# if set to anything other than PROD will enable debugging, waiting in standard input, etc
+# if set to PROD  it will run fully. For any other value, it stops at certain points for keystroke, so to analyze the output.
 set envi  "PROD" ;
 set mock_run 0;
 set DEBUG 1;
 set basedir [file normalize "$argv0/../.."]  
 set app_name "ARP audit" 
 
-set R_CMD "./r"
+set R_CMD "roci"
 
 ## Logging related configuration
 # --for user
@@ -29,7 +29,7 @@ set syslog_ready  0;
 
 ## core
 #enable/disable contact API for device data
-set fetch_site_data_from_api 0
+set fetch_site_data_from_api 1
 
 # file where device lists are stored as csv
 set devices_list_file "site_devices.csv" ;
