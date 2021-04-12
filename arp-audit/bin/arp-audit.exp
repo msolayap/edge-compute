@@ -424,7 +424,7 @@ foreach dev_record  $device_list {
 #}
 #dputs "xxxxxxxxxxxxx" ;
 #
-#	sync_arp $sitename
+	sync_arp $sitename
 #
 #dputs "xxxxxxxxxxxxx"
 #foreach {k v}  [array get master_data] {
@@ -432,9 +432,9 @@ foreach dev_record  $device_list {
 #}
 #dputs "xxxxxxxxxxxxx" ;
 #
-#	write_mop $sitename ;
+	write_mop $sitename ;
 #
-#}
+}
 	lputs "--- Execution Completed for [llength $device_list] site(s) ---" ;
 
 exit 0;
