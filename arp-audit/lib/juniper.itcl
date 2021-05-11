@@ -32,7 +32,7 @@ itcl::class $_class_name {
 	public variable commit_change_cmds [list "show | compare" "commit check"  "commit and-quit"];
 
 # Device specific commands
-	protected variable arp_get_cmd "show arp no-resolve" ;
+	protected variable arp_get_cmd "show arp no-resolve | no-more " ;
 	protected variable init_term_cmds [list "set cli screen-length 0" ];
 	protected variable device_exit_cmd "exit" ;
 

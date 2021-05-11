@@ -157,7 +157,8 @@ itcl::class $_class_name {
 		set ies_value "<dummy_IES>" ;
 		set set_arp_fmt  "/configure service ies %s interface %s static-arp %s %s" ;
 
-		set ies_value [get_ies_value $iface_only]
+#		set ies_value [get_ies_value $iface_only]
+		set ies_value [get_ies_value $iface_full]
 
 		set set_cmd [format "$set_arp_fmt" $ies_value $iface_full $ip $mac] ;
 
@@ -508,9 +509,9 @@ itcl::class $_class_name {
 
 	method convert_dynamic_arp_to_static { {conn_agg_id ""} } {
 
-		set arps_as_dict [get_arp_entries $conn_agg_id ]
-
 		init_terminal
+
+		set arps_as_dict [get_arp_entries $conn_agg_id ]
 
 		set non_static_arp_dict [filter_dynamic_arps $arps_as_dict ] ;
 
