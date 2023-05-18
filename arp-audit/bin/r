@@ -5,6 +5,7 @@ if { [llength $argv]==0 } {
 	exit 1;
 }
 set device [lindex $argv 0]
+# This should go to Config file.
 set user "rancid"
 set pass "level3" ;
 

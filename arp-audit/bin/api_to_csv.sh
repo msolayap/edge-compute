@@ -1,11 +1,18 @@
 #!/bin/bash
 
+# This is a standalone script that needs to be executed in a periodical order.
+# This will fetch the site details from API end point and update a local file with that info.
+# The generated CSV file will be used for the main audit script.
+
+# derive absolute path for the current directory
 site_file_dir=`dirname $0` ;
 
 api_output=`mktemp`;
 tmpfile=`mktemp`;
 site_file=$site_file_dir/site_devices.csv
 
+# Houdini URL to be kept in configuration.
+# all curl options to be kept in configuration
 curl -s --insecure https://houdini.edg.centurylink.net/api/v1/peportconfig/?limit=1000000\&offset=0 >$api_output  2>&1
 
 if [ $? -eq 0 ];

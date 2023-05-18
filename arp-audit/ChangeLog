@@ -1,13 +1,21 @@
 # ChangeLog
 All notable changes to this project will be documented in this file
+
+## [0.8] - 2023-05-18
+# Modified
+
+  - Added few comments in many files for verbosity.
+  - This is just an exercise to learn git-flow in sourcetree tool.
+
 ## [0.7] - 2021-02-12
 # Modified
-- Fixed a bug related to "lag" syntax in configure arp command for Nokia
+  - Fixed a bug related to "lag" syntax in configure arp command for Nokia
 devices.
-- Fixed a syntax error in providing lag value to find IES value.
+  - Fixed a syntax error in providing lag value to find IES value.
+
 ## [0.6] - 2021-02-05
 ### Added
-- Bash script bin/api_to_csv.sh to consume API endpoint for device details and
+  - Bash script bin/api_to_csv.sh to consume API endpoint for device details and
 prepare a CSV file suitable for automation to consume
-- Added code in get_devices_list method to invoke the api_to_csv script before
+  - Added code in get_devices_list method to invoke the api_to_csv script before
 reading csv file.

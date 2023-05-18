@@ -6,6 +6,8 @@
 
 proc wait_for_key {} {
 	global envi ;
+	# Stop for output analysis.
+	# Only if the envi variable is PROD/prod.
 	if { ! [regexp -nocase "prod" $envi]  } {
 		dputs "Press ENTER to continue ... " ;
 		gets stdin ;

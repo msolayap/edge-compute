@@ -9,6 +9,7 @@ source ../lib/generic_router.itcl
 source ../lib/juniper.itcl
 source ../lib/nokia.itcl
 
+# This is for standalone testing in case the network to the target device is not available.
 # disable in real run.
 #source ../lib/mock_data.exp
 
@@ -26,18 +27,22 @@ proc get_device_vendor {dev usr pswd} {
 		lputs "returning model of $dev as $v" ;
 		return $v ;
 	}
-
+    # Instance an abstract class for the device. At the begining we are not aware of
+	# the device type/vendor. Based on certain command execution and its output, 
+	# the vendor of this device will be identified.
 	itcl::local generic_router grouter $dev
 	grouter login $usr $pswd
 	set v [grouter detect_device_vendor];
 	grouter logout ;
 
+	# We do need the abstract router object once we identify the device vendor.
 	itcl::delete object grouter
 	return $v ;
 }
 
 proc get_router_object {ven dev} {
 
+	# Instantiate appropriate Object based on the device vendor.
 	switch -nocase -glob $ven {
 		"juniper" {
 			Juniper router $dev
