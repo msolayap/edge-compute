@@ -1,4 +1,5 @@
-
+# This is mock data in the native expect data format and ready to consume inside the code.
+# This is for local testing.
 
 array set mock_data {
 
