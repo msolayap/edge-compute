@@ -27,6 +27,7 @@ itcl::class $_class_name {
 		set active_spawn_id "none" ;
 		set device $dev
 
+		# This should go to config file.
 		set user "rancid" ;
 		set pass "level3"
 
@@ -146,7 +147,7 @@ itcl::class $_class_name {
 		set spawn_id $active_spawn_id 
 		set myclass [$this info class]
 
-		lputs "Exiting device: $device" ;
+		lputs "Logout of device: $device" ;
 
 		if { [catch {send -h "exit\r"} err] } {
 			lputs "$myclass:$device - Initializing terminal failed with error: $err" ;

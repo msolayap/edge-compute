@@ -6,6 +6,8 @@ api_output=`mktemp`;
 tmpfile=`mktemp`;
 site_file=$site_file_dir/site_devices.csv
 
+# Houdini URL to be kept in configuration.
+# all curl options to be kept in configuration
 curl -s --insecure https://houdini.edg.centurylink.net/api/v1/peportconfig/?limit=1000000\&offset=0 >$api_output  2>&1
 
 if [ $? -eq 0 ];
