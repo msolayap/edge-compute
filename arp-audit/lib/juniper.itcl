@@ -4,12 +4,15 @@ package require Itcl ;
 
 set _class_name "Juniper" ;
 
+# One of the beautiful feature of Expect language.
+# Conditionally loading of a Class object.
 if { $_class_name in [itcl::find classes] } {
 # class loaded already
 # 	puts "class  |$_class_name| loaded already" ;
 	return 0;
 }
 
+# This class is for Juniper devices.
 itcl::class $_class_name {
 
 
