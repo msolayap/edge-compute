@@ -55,6 +55,7 @@ proc get_router_object {ven dev} {
 }
 
 proc store_result {key val} {
+	# Store the result in Global variable.
 	upvar #0 master_data md
 	array set md [list "$key" "$val"];
 }
@@ -70,7 +71,7 @@ proc convert_arp {devicekey args} {
 #
 	rename router device_obj
 
-	device_obj login $user $pass
+	device_obj login "$user" "$pass"
 	device_obj convert_dynamic_arp_to_static $cag
 	device_obj logout
 
