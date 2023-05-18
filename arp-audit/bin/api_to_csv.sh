@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# This is a standalone script that needs to be executed in a periodical order.
+# This will fetch the site details from API end point and update a local file with that info.
+# The generated CSV file will be used for the main audit script.
+
+# derive absolute path for the current directory
 site_file_dir=`dirname $0` ;
 
 api_output=`mktemp`;
